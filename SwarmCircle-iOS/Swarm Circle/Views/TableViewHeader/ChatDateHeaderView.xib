@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gilroy-Medium.ttf">
+            <string>Gilroy-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view opaque="NO" contentMode="scaleToFill" id="iN0-l3-epB" customClass="ChatDateHeaderView" customModule="Swarm_Circle" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="617" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z4Z-Sh-bCs">
+                    <rect key="frame" x="254.00000000000003" y="0.0" width="109.33333333333334" height="95"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24/10/2022" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIB-c0-BAj">
+                            <rect key="frame" x="20" y="5" width="69.333333333333329" height="85"/>
+                            <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="13"/>
+                            <color key="textColor" name="lightTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="FieldsBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="FIB-c0-BAj" firstAttribute="leading" secondItem="z4Z-Sh-bCs" secondAttribute="leading" constant="20" id="3Ek-yl-v0p"/>
+                        <constraint firstAttribute="trailing" secondItem="FIB-c0-BAj" secondAttribute="trailing" constant="20" id="Cjg-a7-xT7"/>
+                        <constraint firstAttribute="bottom" secondItem="FIB-c0-BAj" secondAttribute="bottom" constant="5" id="Si3-Ry-rAJ"/>
+                        <constraint firstItem="FIB-c0-BAj" firstAttribute="top" secondItem="z4Z-Sh-bCs" secondAttribute="top" constant="5" id="ruK-TI-b2V"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="z4Z-Sh-bCs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0MX-va-zH9"/>
+                <constraint firstItem="z4Z-Sh-bCs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="T2O-Ar-HB2"/>
+                <constraint firstAttribute="bottom" secondItem="z4Z-Sh-bCs" secondAttribute="bottom" constant="5" id="XPL-FA-Vi6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="conversationDateLbl" destination="FIB-c0-BAj" id="Hs8-PN-rK9"/>
+            </connections>
+            <point key="canvasLocation" x="305.38461538461536" y="58.293838862559241"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="FieldsBackgroundColor">
+            <color red="0.96899998188018799" green="0.97299998998641968" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightTextColor">
+            <color red="0.64300000667572021" green="0.64300000667572021" blue="0.67799997329711914" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

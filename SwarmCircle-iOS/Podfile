@@ -1,0 +1,36 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '11.0'
+
+target 'Swarm Circle' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  
+  # Pods for Swarm Circle
+  
+	pod 'Alamofire'
+	pod 'SwiftyJSON', '~> 4.0'
+	pod 'Moya'
+	pod 'Kingfisher'
+	#pod 'Firebase/InAppMessaging'
+  	pod 'Firebase/Messaging'
+  	#pod 'Firebase/Auth'
+  	pod 'Stripe', '~> 23.4.1'
+  	pod 'PayPalCheckout'
+  	pod 'SwiftSignalRClient'
+	pod 'OpenTok', '~> 2.24.1'
+    pod 'FirebaseCrashlytics', '~> 10.3'
+    pod 'FlagPhoneNumber'
+    #pod 'ActiveLabel'
+    
+pod 'ActiveLabel', :path => 'LocalPods/ActiveLabel'
+
+  target 'Swarm CircleTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+  
+  target 'Swarm CircleUITests' do
+    # Pods for testing
+  end
+  
+end

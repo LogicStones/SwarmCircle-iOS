@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gilroy-SemiBold.ttf">
+            <string>Gilroy-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PollQuestionView" customModule="Swarm_Circle" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ZC2-UX-0Zm" customClass="PollQuestionView" customModule="Swarm_Circle" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="655" height="124"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jfF-rF-mjL">
+                    <rect key="frame" x="20" y="20" width="615" height="50"/>
+                    <subviews>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dvU-5s-6Rg">
+                            <rect key="frame" x="0.0" y="0.0" width="120" height="20"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friend List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyh-xo-tC8">
+                                    <rect key="frame" x="20" y="10" width="80" height="0.0"/>
+                                    <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy-SemiBold" pointSize="12"/>
+                                    <color key="textColor" name="Accent"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Yyh-xo-tC8" secondAttribute="trailing" constant="20" id="AMr-Ul-nZi"/>
+                                <constraint firstItem="Yyh-xo-tC8" firstAttribute="top" secondItem="dvU-5s-6Rg" secondAttribute="top" constant="10" id="a4p-eZ-roM"/>
+                                <constraint firstItem="Yyh-xo-tC8" firstAttribute="centerY" secondItem="dvU-5s-6Rg" secondAttribute="centerY" id="cMB-d2-aG4"/>
+                                <constraint firstItem="Yyh-xo-tC8" firstAttribute="leading" secondItem="dvU-5s-6Rg" secondAttribute="leading" constant="20" id="cXd-81-Z8T"/>
+                                <constraint firstItem="Yyh-xo-tC8" firstAttribute="centerX" secondItem="dvU-5s-6Rg" secondAttribute="centerX" id="eee-G1-vZz"/>
+                                <constraint firstAttribute="bottom" secondItem="Yyh-xo-tC8" secondAttribute="bottom" constant="10" id="smg-Qv-pnQ"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Out-NU-RhV">
+                            <rect key="frame" x="0.0" y="0.0" width="603" height="50"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="751" text="Are you an early bird or a night owl? Are you an early bird or a night owl?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FbR-L8-g64">
+                                    <rect key="frame" x="0.0" y="0.0" width="603" height="18"/>
+                                    <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy-SemiBold" pointSize="18"/>
+                                    <color key="textColor" red="0.1019607843" green="0.062745098040000002" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="751" text="Are you an early bird or a night owl?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rem-QK-ci2">
+                                    <rect key="frame" x="0.0" y="36" width="603" height="14"/>
+                                    <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy-SemiBold" pointSize="14"/>
+                                    <color key="textColor" name="lightTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="NUX-8J-kdJ"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="NUX-8J-kdJ" firstAttribute="trailing" secondItem="jfF-rF-mjL" secondAttribute="trailing" constant="20" id="FlO-XF-BhR"/>
+                <constraint firstItem="jfF-rF-mjL" firstAttribute="leading" secondItem="NUX-8J-kdJ" secondAttribute="leading" constant="20" id="OHZ-qA-s6s"/>
+                <constraint firstItem="NUX-8J-kdJ" firstAttribute="bottom" secondItem="jfF-rF-mjL" secondAttribute="bottom" constant="20" id="bQ4-6M-uh9"/>
+                <constraint firstItem="jfF-rF-mjL" firstAttribute="top" secondItem="ZC2-UX-0Zm" secondAttribute="top" constant="20" id="cRe-fC-tTZ"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="447.10144927536237" y="-229.6875"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Accent">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightTextColor">
+            <color red="0.64300000667572021" green="0.64300000667572021" blue="0.67799997329711914" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gilroy-SemiBold.ttf">
+            <string>Gilroy-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PastPollCell" rowHeight="674" id="KGk-i7-Jjw" customClass="PastPollCell" customModule="Swarm_Circle" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1315" height="674"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="1315" height="674"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wI6-Ml-qV7" customClass="CardViewMaterial" customModule="Swarm_Circle" customModuleProvider="target">
+                        <rect key="frame" x="10" y="10" width="1295" height="654"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2OV-Fr-OGf">
+                                <rect key="frame" x="20" y="161.5" width="1255" height="462.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4tP-6q-vGv">
+                                        <rect key="frame" x="0.0" y="0.0" width="1255" height="76.5"/>
+                                        <subviews>
+                                            <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="jMd-Vm-wK4">
+                                                <rect key="frame" x="0.0" y="0.0" width="1255" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="ZCn-3B-kfc"/>
+                                                </constraints>
+                                                <color key="progressTintColor" name="FontColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </progressView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Early Bird" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bax-tI-nC0">
+                                                <rect key="frame" x="20" y="0.0" width="1235" height="50"/>
+                                                <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy-SemiBold" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="fXd-pc-7i9">
+                                                <rect key="frame" x="0.0" y="52.5" width="159.5" height="24"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="EJg-1A-4fA" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="0vR-QA-snP"/>
+                                                            <constraint firstAttribute="height" constant="24" id="QX8-wK-ZMA"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="Rde-GC-eMl" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="19" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="Buz-N5-mtq"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="VAX-BW-Ola" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="38" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="wLb-7S-I6E"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="7Oa-cv-FfY" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="57" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="veR-Ep-rCz"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="yB6-k6-zqr" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="76" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="t4G-f3-MQn"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <view contentMode="scaleToFill" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="Qa4-tb-1dn">
+                                                        <rect key="frame" x="95" y="0.0" width="64.5" height="24"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" text="95 Votes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDB-E9-LrW">
+                                                                <rect key="frame" x="10" y="0.0" width="54.5" height="24"/>
+                                                                <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy-SemiBold" pointSize="14"/>
+                                                                <color key="textColor" name="lightTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="GDB-E9-LrW" firstAttribute="top" secondItem="Qa4-tb-1dn" secondAttribute="top" id="10f-7t-ZnC"/>
+                                                            <constraint firstAttribute="bottom" secondItem="GDB-E9-LrW" secondAttribute="bottom" id="Gwz-wd-Ceb"/>
+                                                            <constraint firstAttribute="trailing" secondItem="GDB-E9-LrW" secondAttribute="trailing" id="sho-f2-j8L"/>
+                                                            <constraint firstItem="GDB-E9-LrW" firstAttribute="leading" secondItem="Qa4-tb-1dn" secondAttribute="leading" constant="10" id="vPe-cW-Y4j"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gR-6q-Dcb">
+                                                <rect key="frame" x="0.0" y="52.5" width="159.5" height="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="3gR-6q-Dcb" firstAttribute="top" secondItem="fXd-pc-7i9" secondAttribute="top" id="1uR-16-Btk"/>
+                                            <constraint firstItem="Bax-tI-nC0" firstAttribute="bottom" secondItem="jMd-Vm-wK4" secondAttribute="bottom" id="6oA-Ht-dXu"/>
+                                            <constraint firstAttribute="bottom" secondItem="fXd-pc-7i9" secondAttribute="bottom" id="8PQ-u1-eZb"/>
+                                            <constraint firstItem="fXd-pc-7i9" firstAttribute="top" secondItem="jMd-Vm-wK4" secondAttribute="bottom" constant="2.5" id="PHc-24-CR1"/>
+                                            <constraint firstItem="Bax-tI-nC0" firstAttribute="leading" secondItem="jMd-Vm-wK4" secondAttribute="leading" constant="20" id="PfV-1e-Ml1"/>
+                                            <constraint firstItem="3gR-6q-Dcb" firstAttribute="trailing" secondItem="fXd-pc-7i9" secondAttribute="trailing" id="TXy-2D-RJ3"/>
+                                            <constraint firstItem="Bax-tI-nC0" firstAttribute="top" secondItem="jMd-Vm-wK4" secondAttribute="top" id="Yqh-eK-nzc"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fXd-pc-7i9" secondAttribute="trailing" id="Zpe-bA-NXr"/>
+                                            <constraint firstItem="jMd-Vm-wK4" firstAttribute="leading" secondItem="4tP-6q-vGv" secondAttribute="leading" id="aAp-ti-pvj"/>
+                                            <constraint firstItem="3gR-6q-Dcb" firstAttribute="bottom" secondItem="fXd-pc-7i9" secondAttribute="bottom" id="gH7-Z1-oMG"/>
+                                            <constraint firstItem="jMd-Vm-wK4" firstAttribute="top" secondItem="4tP-6q-vGv" secondAttribute="top" id="k1N-kD-xyN"/>
+                                            <constraint firstItem="Bax-tI-nC0" firstAttribute="trailing" secondItem="jMd-Vm-wK4" secondAttribute="trailing" id="kYu-Wn-oxQ"/>
+                                            <constraint firstItem="3gR-6q-Dcb" firstAttribute="leading" secondItem="fXd-pc-7i9" secondAttribute="leading" id="oX2-6V-znH"/>
+                                            <constraint firstItem="fXd-pc-7i9" firstAttribute="leading" secondItem="4tP-6q-vGv" secondAttribute="leading" id="pk7-1e-rNh"/>
+                                            <constraint firstAttribute="trailing" secondItem="jMd-Vm-wK4" secondAttribute="trailing" id="wuU-Vl-Oza"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHM-Qr-Lyg">
+                                        <rect key="frame" x="0.0" y="96.5" width="1255" height="76.5"/>
+                                        <subviews>
+                                            <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.60000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="8nB-JV-LGY">
+                                                <rect key="frame" x="0.0" y="0.0" width="1255" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Y4c-Hg-fql"/>
+                                                </constraints>
+                                                <color key="progressTintColor" red="0.66274509800000003" green="0.35294117650000001" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </progressView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Early Bird" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjK-tJ-wLf">
+                                                <rect key="frame" x="20" y="0.0" width="1235" height="50"/>
+                                                <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy-SemiBold" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="Vp3-KB-OoF">
+                                                <rect key="frame" x="0.0" y="52.5" width="159.5" height="24"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="Rea-TQ-r77" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="6XS-2o-NqB"/>
+                                                            <constraint firstAttribute="height" constant="24" id="h1D-2Q-gGS"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="JHj-eS-zxX" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="19" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="Wpi-Vx-JHh"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="mkR-qL-SjM" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="38" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="Qdn-tD-V8j"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="PcD-SN-HGY" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="57" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="Zjn-zl-dyq"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="t1A-mR-0Gj" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="76" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="ekW-5z-bdH"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwl-IY-aQb">
+                                                        <rect key="frame" x="95" y="0.0" width="64.5" height="24"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="95 Votes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AB-2r-JqV">
+                                                                <rect key="frame" x="10" y="0.0" width="54.5" height="24"/>
+                                                                <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy-SemiBold" pointSize="14"/>
+                                                                <color key="textColor" name="lightTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="1AB-2r-JqV" secondAttribute="trailing" id="NN0-Nw-vqT"/>
+                                                            <constraint firstItem="1AB-2r-JqV" firstAttribute="leading" secondItem="gwl-IY-aQb" secondAttribute="leading" constant="10" id="Ukb-YQ-cKi"/>
+                                                            <constraint firstAttribute="bottom" secondItem="1AB-2r-JqV" secondAttribute="bottom" id="ePE-AT-tLp"/>
+                                                            <constraint firstItem="1AB-2r-JqV" firstAttribute="top" secondItem="gwl-IY-aQb" secondAttribute="top" id="q5g-Ep-71U"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vre-en-F9y">
+                                                <rect key="frame" x="0.0" y="52.5" width="159.5" height="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="mjK-tJ-wLf" firstAttribute="trailing" secondItem="8nB-JV-LGY" secondAttribute="trailing" id="4cQ-SU-rzU"/>
+                                            <constraint firstItem="Vre-en-F9y" firstAttribute="top" secondItem="Vp3-KB-OoF" secondAttribute="top" id="7VA-J5-TfJ"/>
+                                            <constraint firstItem="Vre-en-F9y" firstAttribute="bottom" secondItem="Vp3-KB-OoF" secondAttribute="bottom" id="GcG-MV-c6t"/>
+                                            <constraint firstItem="Vre-en-F9y" firstAttribute="trailing" secondItem="Vp3-KB-OoF" secondAttribute="trailing" id="HZC-BW-FcT"/>
+                                            <constraint firstAttribute="trailing" secondItem="8nB-JV-LGY" secondAttribute="trailing" id="Ltl-Ee-Od2"/>
+                                            <constraint firstItem="8nB-JV-LGY" firstAttribute="leading" secondItem="SHM-Qr-Lyg" secondAttribute="leading" id="QcZ-dR-2fU"/>
+                                            <constraint firstItem="mjK-tJ-wLf" firstAttribute="top" secondItem="8nB-JV-LGY" secondAttribute="top" id="X0s-Zh-5Lr"/>
+                                            <constraint firstItem="mjK-tJ-wLf" firstAttribute="leading" secondItem="8nB-JV-LGY" secondAttribute="leading" constant="20" id="Y6V-UV-9UT"/>
+                                            <constraint firstItem="Vp3-KB-OoF" firstAttribute="top" secondItem="8nB-JV-LGY" secondAttribute="bottom" constant="2.5" id="avq-w0-4od"/>
+                                            <constraint firstItem="Vre-en-F9y" firstAttribute="leading" secondItem="Vp3-KB-OoF" secondAttribute="leading" id="itM-tJ-hBa"/>
+                                            <constraint firstAttribute="bottom" secondItem="Vp3-KB-OoF" secondAttribute="bottom" id="kim-H6-rqK"/>
+                                            <constraint firstItem="Vp3-KB-OoF" firstAttribute="leading" secondItem="SHM-Qr-Lyg" secondAttribute="leading" id="mwh-CM-8L9"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Vp3-KB-OoF" secondAttribute="trailing" id="nhq-Zd-Wf9"/>
+                                            <constraint firstItem="mjK-tJ-wLf" firstAttribute="bottom" secondItem="8nB-JV-LGY" secondAttribute="bottom" id="ont-ve-lpX"/>
+                                            <constraint firstItem="8nB-JV-LGY" firstAttribute="top" secondItem="SHM-Qr-Lyg" secondAttribute="top" id="vFH-nD-Lyp"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FOk-PQ-w0p">
+                                        <rect key="frame" x="0.0" y="193" width="1255" height="76.5"/>
+                                        <subviews>
+                                            <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.60000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="hpH-gR-XUG">
+                                                <rect key="frame" x="0.0" y="0.0" width="1255" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="XsJ-XB-57j"/>
+                                                </constraints>
+                                                <color key="progressTintColor" red="0.66274509800000003" green="0.35294117650000001" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </progressView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Early Bird" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vl0-zI-eUF">
+                                                <rect key="frame" x="20" y="0.0" width="1235" height="50"/>
+                                                <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy-SemiBold" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="y0f-Wb-2p9">
+                                                <rect key="frame" x="0.0" y="52.5" width="159.5" height="24"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="Wcd-4x-85R" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="24" id="M5x-4U-fRQ"/>
+                                                            <constraint firstAttribute="width" constant="24" id="sv6-KC-M3W"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="rMu-tG-o9i" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="19" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="gcP-Dq-sYm"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="jmK-Yg-ffI" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="38" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="mxR-Q6-wN2"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="k59-aC-M6K" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="57" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="7bY-eG-E3h"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="Axf-2y-y93" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="76" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="spS-Cu-I4q"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbW-wK-gFP">
+                                                        <rect key="frame" x="95" y="0.0" width="64.5" height="24"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="95 Votes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zA-1x-9Rk">
+                                                                <rect key="frame" x="10" y="0.0" width="54.5" height="24"/>
+                                                                <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy-SemiBold" pointSize="14"/>
+                                                                <color key="textColor" name="lightTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="0zA-1x-9Rk" secondAttribute="trailing" id="4J2-xQ-eWg"/>
+                                                            <constraint firstItem="0zA-1x-9Rk" firstAttribute="leading" secondItem="sbW-wK-gFP" secondAttribute="leading" constant="10" id="8nU-9E-I70"/>
+                                                            <constraint firstItem="0zA-1x-9Rk" firstAttribute="top" secondItem="sbW-wK-gFP" secondAttribute="top" id="QrV-z3-Gcx"/>
+                                                            <constraint firstAttribute="bottom" secondItem="0zA-1x-9Rk" secondAttribute="bottom" id="Vvi-TI-hea"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RI8-5n-66b">
+                                                <rect key="frame" x="0.0" y="52.5" width="159.5" height="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="y0f-Wb-2p9" secondAttribute="bottom" id="0c6-sT-2yy"/>
+                                            <constraint firstItem="RI8-5n-66b" firstAttribute="top" secondItem="y0f-Wb-2p9" secondAttribute="top" id="34w-M5-BU9"/>
+                                            <constraint firstItem="Vl0-zI-eUF" firstAttribute="top" secondItem="hpH-gR-XUG" secondAttribute="top" id="Bj0-QQ-5CT"/>
+                                            <constraint firstItem="y0f-Wb-2p9" firstAttribute="top" secondItem="hpH-gR-XUG" secondAttribute="bottom" constant="2.5" id="DNt-Ps-E9K"/>
+                                            <constraint firstItem="hpH-gR-XUG" firstAttribute="leading" secondItem="FOk-PQ-w0p" secondAttribute="leading" id="IMj-bC-mJ7"/>
+                                            <constraint firstItem="y0f-Wb-2p9" firstAttribute="leading" secondItem="FOk-PQ-w0p" secondAttribute="leading" id="J2F-sx-0Y8"/>
+                                            <constraint firstItem="Vl0-zI-eUF" firstAttribute="leading" secondItem="hpH-gR-XUG" secondAttribute="leading" constant="20" id="dmU-EF-E7u"/>
+                                            <constraint firstItem="hpH-gR-XUG" firstAttribute="top" secondItem="FOk-PQ-w0p" secondAttribute="top" id="e04-iW-F8f"/>
+                                            <constraint firstItem="RI8-5n-66b" firstAttribute="trailing" secondItem="y0f-Wb-2p9" secondAttribute="trailing" id="heX-gZ-jsQ"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="y0f-Wb-2p9" secondAttribute="trailing" id="p5A-C6-08j"/>
+                                            <constraint firstItem="RI8-5n-66b" firstAttribute="bottom" secondItem="y0f-Wb-2p9" secondAttribute="bottom" id="qPr-WN-2CD"/>
+                                            <constraint firstItem="RI8-5n-66b" firstAttribute="leading" secondItem="y0f-Wb-2p9" secondAttribute="leading" id="s10-zJ-wzk"/>
+                                            <constraint firstAttribute="trailing" secondItem="hpH-gR-XUG" secondAttribute="trailing" id="t2D-S7-Rzt"/>
+                                            <constraint firstItem="Vl0-zI-eUF" firstAttribute="trailing" secondItem="hpH-gR-XUG" secondAttribute="trailing" id="xxp-6e-x0w"/>
+                                            <constraint firstItem="Vl0-zI-eUF" firstAttribute="bottom" secondItem="hpH-gR-XUG" secondAttribute="bottom" id="yKf-f8-SgE"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZU-Zp-6cH">
+                                        <rect key="frame" x="0.0" y="289.5" width="1255" height="76.5"/>
+                                        <subviews>
+                                            <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.60000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="bWv-TY-ROb">
+                                                <rect key="frame" x="0.0" y="0.0" width="1255" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="WDB-Ny-b1A"/>
+                                                </constraints>
+                                                <color key="progressTintColor" red="0.66274509800000003" green="0.35294117650000001" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </progressView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Early Bird" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQB-cd-MBc">
+                                                <rect key="frame" x="20" y="0.0" width="1235" height="50"/>
+                                                <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy-SemiBold" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="J9j-Lc-a4t">
+                                                <rect key="frame" x="0.0" y="52.5" width="159.5" height="24"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="rwM-OQ-2zw" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="24" id="FOA-rm-xxH"/>
+                                                            <constraint firstAttribute="width" constant="24" id="wJ8-9T-9jK"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="lSH-0D-34n" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="19" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="9IM-Jq-Fkw"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="1n5-ta-lU0" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="38" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="iG7-KT-83r"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="iDJ-tz-sR6" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="57" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="EtS-ha-GyI"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="8uq-pr-hXi" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="76" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="kGN-5p-MKZ"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eMs-Gb-vG0">
+                                                        <rect key="frame" x="95" y="0.0" width="64.5" height="24"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="95 Votes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uom-w1-dDh">
+                                                                <rect key="frame" x="10" y="0.0" width="54.5" height="24"/>
+                                                                <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy-SemiBold" pointSize="14"/>
+                                                                <color key="textColor" name="lightTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="Uom-w1-dDh" secondAttribute="trailing" id="6mM-UY-edi"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Uom-w1-dDh" secondAttribute="bottom" id="QqB-HR-V3J"/>
+                                                            <constraint firstItem="Uom-w1-dDh" firstAttribute="leading" secondItem="eMs-Gb-vG0" secondAttribute="leading" constant="10" id="kgE-ki-jIp"/>
+                                                            <constraint firstItem="Uom-w1-dDh" firstAttribute="top" secondItem="eMs-Gb-vG0" secondAttribute="top" id="y7j-ic-4Cq"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdA-de-hjG">
+                                                <rect key="frame" x="0.0" y="52.5" width="159.5" height="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="wdA-de-hjG" firstAttribute="top" secondItem="J9j-Lc-a4t" secondAttribute="top" id="91N-vb-mZi"/>
+                                            <constraint firstItem="J9j-Lc-a4t" firstAttribute="leading" secondItem="PZU-Zp-6cH" secondAttribute="leading" id="A7u-bI-2L8"/>
+                                            <constraint firstItem="EQB-cd-MBc" firstAttribute="top" secondItem="bWv-TY-ROb" secondAttribute="top" id="CDb-xO-o2a"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="J9j-Lc-a4t" secondAttribute="trailing" id="D9e-o2-5pm"/>
+                                            <constraint firstItem="EQB-cd-MBc" firstAttribute="leading" secondItem="bWv-TY-ROb" secondAttribute="leading" constant="20" id="IpI-KV-zeQ"/>
+                                            <constraint firstItem="bWv-TY-ROb" firstAttribute="top" secondItem="PZU-Zp-6cH" secondAttribute="top" id="UI3-d2-aR7"/>
+                                            <constraint firstItem="J9j-Lc-a4t" firstAttribute="top" secondItem="bWv-TY-ROb" secondAttribute="bottom" constant="2.5" id="WcH-1V-j1I"/>
+                                            <constraint firstItem="bWv-TY-ROb" firstAttribute="leading" secondItem="PZU-Zp-6cH" secondAttribute="leading" id="Wxp-3B-8d1"/>
+                                            <constraint firstItem="EQB-cd-MBc" firstAttribute="trailing" secondItem="bWv-TY-ROb" secondAttribute="trailing" id="YPk-2F-3ha"/>
+                                            <constraint firstItem="EQB-cd-MBc" firstAttribute="bottom" secondItem="bWv-TY-ROb" secondAttribute="bottom" id="bKe-Qb-7tQ"/>
+                                            <constraint firstItem="wdA-de-hjG" firstAttribute="trailing" secondItem="J9j-Lc-a4t" secondAttribute="trailing" id="bqg-xh-Cas"/>
+                                            <constraint firstAttribute="trailing" secondItem="bWv-TY-ROb" secondAttribute="trailing" id="ezs-JN-F63"/>
+                                            <constraint firstAttribute="bottom" secondItem="J9j-Lc-a4t" secondAttribute="bottom" id="m4q-7q-72f"/>
+                                            <constraint firstItem="wdA-de-hjG" firstAttribute="bottom" secondItem="J9j-Lc-a4t" secondAttribute="bottom" id="vhg-e7-mvr"/>
+                                            <constraint firstItem="wdA-de-hjG" firstAttribute="leading" secondItem="J9j-Lc-a4t" secondAttribute="leading" id="xNS-Yu-Xc5"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCb-ct-3Fb">
+                                        <rect key="frame" x="0.0" y="386" width="1255" height="76.5"/>
+                                        <subviews>
+                                            <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.60000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="kdl-iR-ww9">
+                                                <rect key="frame" x="0.0" y="0.0" width="1255" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="JFj-fL-VJo"/>
+                                                </constraints>
+                                                <color key="progressTintColor" red="0.66274509800000003" green="0.35294117650000001" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </progressView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Early Bird" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWD-ii-g9q">
+                                                <rect key="frame" x="20" y="0.0" width="1235" height="50"/>
+                                                <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy-SemiBold" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="KaF-mL-YNQ">
+                                                <rect key="frame" x="0.0" y="52.5" width="159.5" height="24"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="YfK-EP-B0R" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="24" id="vy0-WI-VgY"/>
+                                                            <constraint firstAttribute="width" constant="24" id="wvp-De-yYw"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="sLF-V6-vxo" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="19" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="nQY-qx-qih"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="BLT-vw-gxV" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="38" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="a93-aF-z5V"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="S0y-zn-brD" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="57" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="Fqv-Kj-XNY"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="flU-Jd-7RH" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                                        <rect key="frame" x="76" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="iAJ-kp-auc"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dwh-Ef-cOg">
+                                                        <rect key="frame" x="95" y="0.0" width="64.5" height="24"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="95 Votes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4h-ta-rjo">
+                                                                <rect key="frame" x="10" y="0.0" width="54.5" height="24"/>
+                                                                <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy-SemiBold" pointSize="14"/>
+                                                                <color key="textColor" name="lightTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="Q4h-ta-rjo" firstAttribute="top" secondItem="Dwh-Ef-cOg" secondAttribute="top" id="0BD-vJ-hQC"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Q4h-ta-rjo" secondAttribute="trailing" id="GRx-eZ-J4D"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Q4h-ta-rjo" secondAttribute="bottom" id="hrd-89-uvX"/>
+                                                            <constraint firstItem="Q4h-ta-rjo" firstAttribute="leading" secondItem="Dwh-Ef-cOg" secondAttribute="leading" constant="10" id="m0y-bK-wlr"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWa-dq-YAi">
+                                                <rect key="frame" x="0.0" y="52.5" width="159.5" height="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="KWa-dq-YAi" firstAttribute="bottom" secondItem="KaF-mL-YNQ" secondAttribute="bottom" id="1qa-3k-MXt"/>
+                                            <constraint firstItem="kdl-iR-ww9" firstAttribute="leading" secondItem="iCb-ct-3Fb" secondAttribute="leading" id="5uI-4n-X5U"/>
+                                            <constraint firstItem="KWa-dq-YAi" firstAttribute="trailing" secondItem="KaF-mL-YNQ" secondAttribute="trailing" id="6cC-cA-Pqo"/>
+                                            <constraint firstAttribute="bottom" secondItem="KaF-mL-YNQ" secondAttribute="bottom" id="7IH-Ex-7RV"/>
+                                            <constraint firstAttribute="trailing" secondItem="kdl-iR-ww9" secondAttribute="trailing" id="8Hm-hZ-bWx"/>
+                                            <constraint firstItem="KWa-dq-YAi" firstAttribute="leading" secondItem="KaF-mL-YNQ" secondAttribute="leading" id="Csw-Bf-9O9"/>
+                                            <constraint firstItem="kdl-iR-ww9" firstAttribute="top" secondItem="iCb-ct-3Fb" secondAttribute="top" id="GVG-fa-v2A"/>
+                                            <constraint firstItem="PWD-ii-g9q" firstAttribute="top" secondItem="kdl-iR-ww9" secondAttribute="top" id="cSB-lc-h22"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KaF-mL-YNQ" secondAttribute="trailing" id="gWp-kr-Bmi"/>
+                                            <constraint firstItem="PWD-ii-g9q" firstAttribute="trailing" secondItem="kdl-iR-ww9" secondAttribute="trailing" id="gei-wv-f4W"/>
+                                            <constraint firstItem="PWD-ii-g9q" firstAttribute="leading" secondItem="kdl-iR-ww9" secondAttribute="leading" constant="20" id="jB9-gQ-mue"/>
+                                            <constraint firstItem="KWa-dq-YAi" firstAttribute="top" secondItem="KaF-mL-YNQ" secondAttribute="top" id="l62-8s-XiT"/>
+                                            <constraint firstItem="KaF-mL-YNQ" firstAttribute="leading" secondItem="iCb-ct-3Fb" secondAttribute="leading" id="o5d-Ql-Du4"/>
+                                            <constraint firstItem="KaF-mL-YNQ" firstAttribute="top" secondItem="kdl-iR-ww9" secondAttribute="bottom" constant="2.5" id="wSr-ZT-iIK"/>
+                                            <constraint firstItem="PWD-ii-g9q" firstAttribute="bottom" secondItem="kdl-iR-ww9" secondAttribute="bottom" id="xH2-Wf-it2"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="checked" translatesAutoresizingMaskIntoConstraints="NO" id="Iw2-8D-6EF">
+                                <rect key="frame" x="1255" y="20" width="20" height="20"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Are you an early bird or a night owl?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlA-te-JmB">
+                                <rect key="frame" x="20" y="30" width="1227" height="97.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy-SemiBold" pointSize="18"/>
+                                <color key="textColor" red="0.1019607843" green="0.062745098040000002" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button autoresizesSubviews="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaL-8G-jGR">
+                                <rect key="frame" x="1257" y="68" width="18" height="22"/>
+                                <color key="tintColor" name="FontColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="binIconPurple">
+                                    <color key="titleColor" name="FontColor"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Poll created by Alexander Kane" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIT-h7-ATR">
+                                <rect key="frame" x="20" y="132.5" width="1255" height="14"/>
+                                <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy-SemiBold" pointSize="14"/>
+                                <color key="textColor" name="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2OV-Fr-OGf" firstAttribute="top" secondItem="TIT-h7-ATR" secondAttribute="bottom" constant="15" id="0vM-zQ-6v5"/>
+                            <constraint firstAttribute="bottom" secondItem="2OV-Fr-OGf" secondAttribute="bottom" constant="30" id="24d-cp-8rK"/>
+                            <constraint firstItem="jaL-8G-jGR" firstAttribute="centerY" secondItem="ZlA-te-JmB" secondAttribute="centerY" id="Glc-Dt-uXH"/>
+                            <constraint firstAttribute="trailing" secondItem="TIT-h7-ATR" secondAttribute="trailing" constant="20" id="IwR-G7-d2P"/>
+                            <constraint firstItem="TIT-h7-ATR" firstAttribute="top" secondItem="ZlA-te-JmB" secondAttribute="bottom" constant="5" id="JTQ-O5-SpI"/>
+                            <constraint firstAttribute="trailing" secondItem="2OV-Fr-OGf" secondAttribute="trailing" constant="20" id="Z5O-M5-df0"/>
+                            <constraint firstAttribute="trailing" secondItem="jaL-8G-jGR" secondAttribute="trailing" constant="20" id="aTc-EY-9Gb"/>
+                            <constraint firstItem="2OV-Fr-OGf" firstAttribute="leading" secondItem="wI6-Ml-qV7" secondAttribute="leading" constant="20" id="fEd-sk-g8l"/>
+                            <constraint firstAttribute="trailing" secondItem="Iw2-8D-6EF" secondAttribute="trailing" constant="20" id="jhc-Pf-sqH"/>
+                            <constraint firstItem="ZlA-te-JmB" firstAttribute="top" secondItem="wI6-Ml-qV7" secondAttribute="top" constant="30" id="lwF-zt-gbC"/>
+                            <constraint firstItem="jaL-8G-jGR" firstAttribute="leading" secondItem="ZlA-te-JmB" secondAttribute="trailing" constant="10" id="n0u-xK-6gp"/>
+                            <constraint firstItem="ZlA-te-JmB" firstAttribute="leading" secondItem="TIT-h7-ATR" secondAttribute="leading" id="rAe-Ro-151"/>
+                            <constraint firstItem="TIT-h7-ATR" firstAttribute="leading" secondItem="wI6-Ml-qV7" secondAttribute="leading" constant="20" id="v2T-0A-SNq"/>
+                            <constraint firstItem="Iw2-8D-6EF" firstAttribute="top" secondItem="wI6-Ml-qV7" secondAttribute="top" constant="20" id="vPa-qK-Sy2"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="wI6-Ml-qV7" secondAttribute="bottom" constant="10" id="75E-Ld-PlQ"/>
+                    <constraint firstAttribute="trailing" secondItem="wI6-Ml-qV7" secondAttribute="trailing" constant="10" id="cin-KV-elG"/>
+                    <constraint firstItem="wI6-Ml-qV7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="iaR-9R-3bO"/>
+                    <constraint firstItem="wI6-Ml-qV7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="rVL-YX-udC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="deleteBtn" destination="jaL-8G-jGR" id="EMz-4j-Q8n"/>
+                <outlet property="option1Btn" destination="3gR-6q-Dcb" id="96p-SA-hap"/>
+                <outlet property="option2Btn" destination="Vre-en-F9y" id="I8m-50-dpP"/>
+                <outlet property="option3Btn" destination="RI8-5n-66b" id="wMi-02-z5S"/>
+                <outlet property="option4Btn" destination="wdA-de-hjG" id="L9q-tX-Af9"/>
+                <outlet property="option5Btn" destination="KWa-dq-YAi" id="G4b-Wd-lV5"/>
+                <outlet property="pollCreatedByLbl" destination="TIT-h7-ATR" id="XDO-JK-nJ7"/>
+                <outlet property="questionLBL" destination="ZlA-te-JmB" id="dKk-48-zKx"/>
+                <outlet property="selectionIcon" destination="Iw2-8D-6EF" id="SN4-1i-OyE"/>
+                <outletCollection property="optionViewCollection" destination="4tP-6q-vGv" collectionClass="NSMutableArray" id="rhB-fx-9kN"/>
+                <outletCollection property="optionViewCollection" destination="SHM-Qr-Lyg" collectionClass="NSMutableArray" id="5uv-dz-44G"/>
+                <outletCollection property="optionViewCollection" destination="FOk-PQ-w0p" collectionClass="NSMutableArray" id="DLg-eU-blj"/>
+                <outletCollection property="optionViewCollection" destination="PZU-Zp-6cH" collectionClass="NSMutableArray" id="Vvo-Wr-fGn"/>
+                <outletCollection property="optionViewCollection" destination="iCb-ct-3Fb" collectionClass="NSMutableArray" id="4Qy-9P-Pum"/>
+                <outletCollection property="votesCountLblCollection" destination="GDB-E9-LrW" collectionClass="NSMutableArray" id="W3a-ac-6Se"/>
+                <outletCollection property="votesCountLblCollection" destination="1AB-2r-JqV" collectionClass="NSMutableArray" id="bfK-Jr-X60"/>
+                <outletCollection property="votesCountLblCollection" destination="0zA-1x-9Rk" collectionClass="NSMutableArray" id="VTd-ms-jhH"/>
+                <outletCollection property="votesCountLblCollection" destination="Uom-w1-dDh" collectionClass="NSMutableArray" id="PeQ-fd-P1F"/>
+                <outletCollection property="votesCountLblCollection" destination="Q4h-ta-rjo" collectionClass="NSMutableArray" id="D6h-c5-ujK"/>
+                <outletCollection property="optionLblCollection" destination="Bax-tI-nC0" collectionClass="NSMutableArray" id="tkZ-M7-4cd"/>
+                <outletCollection property="optionLblCollection" destination="mjK-tJ-wLf" collectionClass="NSMutableArray" id="9J0-D2-uqV"/>
+                <outletCollection property="optionLblCollection" destination="Vl0-zI-eUF" collectionClass="NSMutableArray" id="6E2-C2-Hkj"/>
+                <outletCollection property="optionLblCollection" destination="EQB-cd-MBc" collectionClass="NSMutableArray" id="feY-nE-wbJ"/>
+                <outletCollection property="optionLblCollection" destination="PWD-ii-g9q" collectionClass="NSMutableArray" id="rbQ-42-LLE"/>
+                <outletCollection property="progressViewCollection" destination="jMd-Vm-wK4" collectionClass="NSMutableArray" id="ATV-XI-Bgm"/>
+                <outletCollection property="progressViewCollection" destination="8nB-JV-LGY" collectionClass="NSMutableArray" id="fk3-sh-gQ7"/>
+                <outletCollection property="progressViewCollection" destination="hpH-gR-XUG" collectionClass="NSMutableArray" id="ZgL-7p-fqr"/>
+                <outletCollection property="progressViewCollection" destination="bWv-TY-ROb" collectionClass="NSMutableArray" id="L8F-Ei-HJd"/>
+                <outletCollection property="progressViewCollection" destination="kdl-iR-ww9" collectionClass="NSMutableArray" id="1rP-ce-1SU"/>
+                <outletCollection property="option1ImgViewCollection" destination="EJg-1A-4fA" collectionClass="NSMutableArray" id="69f-iW-B77"/>
+                <outletCollection property="option1ImgViewCollection" destination="Rde-GC-eMl" collectionClass="NSMutableArray" id="TAL-9y-zWb"/>
+                <outletCollection property="option1ImgViewCollection" destination="VAX-BW-Ola" collectionClass="NSMutableArray" id="4IS-CS-xbX"/>
+                <outletCollection property="option1ImgViewCollection" destination="7Oa-cv-FfY" collectionClass="NSMutableArray" id="Q0K-Sz-WrP"/>
+                <outletCollection property="option1ImgViewCollection" destination="yB6-k6-zqr" collectionClass="NSMutableArray" id="TUN-YO-KRQ"/>
+                <outletCollection property="option2ImgViewCollection" destination="Rea-TQ-r77" collectionClass="NSMutableArray" id="7Cg-hK-7dH"/>
+                <outletCollection property="option2ImgViewCollection" destination="JHj-eS-zxX" collectionClass="NSMutableArray" id="r1d-S8-9RY"/>
+                <outletCollection property="option2ImgViewCollection" destination="mkR-qL-SjM" collectionClass="NSMutableArray" id="Tof-RU-iOn"/>
+                <outletCollection property="option2ImgViewCollection" destination="PcD-SN-HGY" collectionClass="NSMutableArray" id="PAD-SQ-6fh"/>
+                <outletCollection property="option2ImgViewCollection" destination="t1A-mR-0Gj" collectionClass="NSMutableArray" id="vBj-6k-aoB"/>
+                <outletCollection property="option3ImgViewCollection" destination="Wcd-4x-85R" collectionClass="NSMutableArray" id="nUS-Ih-DDL"/>
+                <outletCollection property="option3ImgViewCollection" destination="rMu-tG-o9i" collectionClass="NSMutableArray" id="oze-aC-xqC"/>
+                <outletCollection property="option3ImgViewCollection" destination="jmK-Yg-ffI" collectionClass="NSMutableArray" id="RM1-K5-JNu"/>
+                <outletCollection property="option3ImgViewCollection" destination="k59-aC-M6K" collectionClass="NSMutableArray" id="xT0-80-jct"/>
+                <outletCollection property="option3ImgViewCollection" destination="Axf-2y-y93" collectionClass="NSMutableArray" id="T5x-9h-x8y"/>
+                <outletCollection property="option4ImgViewCollection" destination="rwM-OQ-2zw" collectionClass="NSMutableArray" id="p6d-er-Q5a"/>
+                <outletCollection property="option4ImgViewCollection" destination="lSH-0D-34n" collectionClass="NSMutableArray" id="9HT-2D-Uwq"/>
+                <outletCollection property="option4ImgViewCollection" destination="1n5-ta-lU0" collectionClass="NSMutableArray" id="LZc-xw-8Dy"/>
+                <outletCollection property="option4ImgViewCollection" destination="iDJ-tz-sR6" collectionClass="NSMutableArray" id="UsR-yX-RyK"/>
+                <outletCollection property="option4ImgViewCollection" destination="8uq-pr-hXi" collectionClass="NSMutableArray" id="l1l-ge-aB0"/>
+                <outletCollection property="option5ImgViewCollection" destination="YfK-EP-B0R" collectionClass="NSMutableArray" id="9jd-qv-D2a"/>
+                <outletCollection property="option5ImgViewCollection" destination="sLF-V6-vxo" collectionClass="NSMutableArray" id="6MP-H0-zV8"/>
+                <outletCollection property="option5ImgViewCollection" destination="BLT-vw-gxV" collectionClass="NSMutableArray" id="Hyt-YS-E8d"/>
+                <outletCollection property="option5ImgViewCollection" destination="S0y-zn-brD" collectionClass="NSMutableArray" id="8zN-ks-7f1"/>
+                <outletCollection property="option5ImgViewCollection" destination="flU-Jd-7RH" collectionClass="NSMutableArray" id="aia-zh-eof"/>
+            </connections>
+            <point key="canvasLocation" x="197.82608695652175" y="119.86607142857142"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="1n5-ta-lU0">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="7Oa-cv-FfY">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="8uq-pr-hXi">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="Axf-2y-y93">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="BLT-vw-gxV">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="EJg-1A-4fA">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="JHj-eS-zxX">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="PcD-SN-HGY">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="Rde-GC-eMl">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="Rea-TQ-r77">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="S0y-zn-brD">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="VAX-BW-Ola">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="Wcd-4x-85R">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="YfK-EP-B0R">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="flU-Jd-7RH">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="iDJ-tz-sR6">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="jmK-Yg-ffI">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="k59-aC-M6K">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="lSH-0D-34n">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="mkR-qL-SjM">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="rMu-tG-o9i">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="rwM-OQ-2zw">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="sLF-V6-vxo">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="t1A-mR-0Gj">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="yB6-k6-zqr">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="binIconPurple" width="18" height="18"/>
+        <image name="checked" width="20" height="20"/>
+        <image name="profilePic" width="225" height="225"/>
+        <namedColor name="FontColor">
+            <color red="0.66299998760223389" green="0.3529999852180481" blue="0.92500001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightTextColor">
+            <color red="0.64300000667572021" green="0.64300000667572021" blue="0.67799997329711914" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

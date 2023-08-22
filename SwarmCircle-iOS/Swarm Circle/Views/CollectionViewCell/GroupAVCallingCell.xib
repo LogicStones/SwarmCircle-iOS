@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gilroy-Regular.ttf">
+            <string>Gilroy-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GroupAVCallingCell" customModule="Swarm_Circle" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="443" height="306"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="443" height="306"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xba-B0-229">
+                        <rect key="frame" x="5" y="5" width="433" height="296"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="BiL-G3-Qo4">
+                                <rect key="frame" x="0.0" y="0.0" width="433" height="296"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SfB-PV-PUU">
+                                <rect key="frame" x="406" y="269" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="TQx-gc-lEr"/>
+                                    <constraint firstAttribute="width" secondItem="SfB-PV-PUU" secondAttribute="height" multiplier="1:1" id="idH-uG-OmM"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="waveSound"/>
+                                <state key="selected" image="micMuteIcon"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Person" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45S-VJ-G6U">
+                                <rect key="frame" x="5" y="281" width="396" height="10"/>
+                                <fontDescription key="fontDescription" name="Gilroy-Regular" family="Gilroy-Regular" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BiL-G3-Qo4" secondAttribute="trailing" id="4Jq-5P-6Bf"/>
+                            <constraint firstAttribute="bottom" secondItem="SfB-PV-PUU" secondAttribute="bottom" constant="5" id="Bp9-xH-5wE"/>
+                            <constraint firstItem="BiL-G3-Qo4" firstAttribute="leading" secondItem="xba-B0-229" secondAttribute="leading" id="NaQ-Sa-Ba5"/>
+                            <constraint firstItem="BiL-G3-Qo4" firstAttribute="top" secondItem="xba-B0-229" secondAttribute="top" id="PuJ-fS-u92"/>
+                            <constraint firstItem="SfB-PV-PUU" firstAttribute="leading" secondItem="45S-VJ-G6U" secondAttribute="trailing" constant="5" id="RVT-3e-sEz"/>
+                            <constraint firstAttribute="bottom" secondItem="45S-VJ-G6U" secondAttribute="bottom" constant="5" id="UL1-JD-9ue"/>
+                            <constraint firstItem="45S-VJ-G6U" firstAttribute="leading" secondItem="xba-B0-229" secondAttribute="leading" constant="5" id="W7h-C1-M3y"/>
+                            <constraint firstAttribute="bottom" secondItem="BiL-G3-Qo4" secondAttribute="bottom" id="gR7-88-GUi"/>
+                            <constraint firstAttribute="trailing" secondItem="SfB-PV-PUU" secondAttribute="trailing" constant="5" id="lRs-xt-RJQ"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="xba-B0-229" secondAttribute="bottom" constant="5" id="6hc-WS-2ha"/>
+                <constraint firstItem="xba-B0-229" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="B4t-Xm-liG"/>
+                <constraint firstItem="xba-B0-229" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="XLb-4S-VXE"/>
+                <constraint firstAttribute="trailing" secondItem="xba-B0-229" secondAttribute="trailing" constant="5" id="zFx-wq-Ae3"/>
+            </constraints>
+            <size key="customSize" width="443" height="306"/>
+            <connections>
+                <outlet property="microphoneBtn" destination="SfB-PV-PUU" id="oPy-oc-6wM"/>
+                <outlet property="profileImgView" destination="BiL-G3-Qo4" id="5SE-Qx-jMX"/>
+                <outlet property="userNameLbl" destination="45S-VJ-G6U" id="pLk-hy-hTn"/>
+                <outlet property="videoPlayerView" destination="xba-B0-229" id="LKT-pQ-kFb"/>
+            </connections>
+            <point key="canvasLocation" x="433.07692307692304" y="78.909952606635073"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="micMuteIcon" width="45.333332061767578" height="45.333332061767578"/>
+        <image name="profilePic" width="225" height="225"/>
+        <image name="waveSound" width="22" height="22"/>
+    </resources>
+</document>

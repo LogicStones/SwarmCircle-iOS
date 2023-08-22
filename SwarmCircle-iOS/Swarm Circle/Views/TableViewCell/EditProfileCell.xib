@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gilroy-SemiBold.ttf">
+            <string>Gilroy-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="EditProfileCell" rowHeight="68" id="KGk-i7-Jjw" customClass="EditProfileCell" customModule="Swarm_Circle" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="402" height="68"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="402" height="68"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upm-ar-nqo">
+                        <rect key="frame" x="54" y="20" width="328" height="28"/>
+                        <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy-SemiBold" pointSize="14"/>
+                        <color key="textColor" name="lightTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="edit" translatesAutoresizingMaskIntoConstraints="NO" id="otR-gN-hLK">
+                        <rect key="frame" x="20" y="24.5" width="19" height="19"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="otR-gN-hLK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="YHQ-IZ-p4W"/>
+                    <constraint firstItem="otR-gN-hLK" firstAttribute="centerY" secondItem="Upm-ar-nqo" secondAttribute="centerY" id="bQU-p5-OG3"/>
+                    <constraint firstAttribute="trailing" secondItem="Upm-ar-nqo" secondAttribute="trailing" constant="20" id="eOW-bD-FAI"/>
+                    <constraint firstAttribute="bottom" secondItem="Upm-ar-nqo" secondAttribute="bottom" constant="20" id="mV8-3J-e4g"/>
+                    <constraint firstItem="Upm-ar-nqo" firstAttribute="leading" secondItem="otR-gN-hLK" secondAttribute="trailing" constant="15" id="nqA-DB-JoX"/>
+                    <constraint firstItem="Upm-ar-nqo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="pF1-xw-eAk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="optionIcon" destination="otR-gN-hLK" id="yfL-0f-7gp"/>
+                <outlet property="optionTitleLBL" destination="Upm-ar-nqo" id="WkZ-GR-Xgl"/>
+            </connections>
+            <point key="canvasLocation" x="197.10144927536234" y="117.85714285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="edit" width="19" height="19"/>
+        <namedColor name="lightTextColor">
+            <color red="0.64300000667572021" green="0.64300000667572021" blue="0.67799997329711914" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

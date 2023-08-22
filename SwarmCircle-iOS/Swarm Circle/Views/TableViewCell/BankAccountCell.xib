@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gilroy-Regular.ttf">
+            <string>Gilroy-Regular</string>
+        </array>
+        <array key="Gilroy-SemiBold.ttf">
+            <string>Gilroy-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="BankAccountCell" rowHeight="225" id="KGk-i7-Jjw" customClass="BankAccountCell" customModule="Swarm_Circle" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="529" height="225"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="529" height="225"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="gray-Radio" translatesAutoresizingMaskIntoConstraints="NO" id="EoZ-DY-mED">
+                        <rect key="frame" x="25" y="25" width="15" height="15"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bank" translatesAutoresizingMaskIntoConstraints="NO" id="IPy-pt-hB7">
+                        <rect key="frame" x="45" y="23.666666666666671" width="18" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="aOG-kK-Ggj"/>
+                            <constraint firstAttribute="width" constant="18" id="nuF-bE-GTY"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stripe Test Account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMJ-0R-gdY">
+                        <rect key="frame" x="73" y="25.666666666666671" width="124.66666666666669" height="14"/>
+                        <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy-SemiBold" pointSize="14"/>
+                        <color key="textColor" name="lightTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Account No: 0001243" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvr-je-Wz8">
+                        <rect key="frame" x="45.000000000000007" y="59" width="115.66666666666669" height="12"/>
+                        <fontDescription key="fontDescription" name="Gilroy-Regular" family="Gilroy-Regular" pointSize="12"/>
+                        <color key="textColor" name="lightTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Routing No: 0001243" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9u-g2-dDd">
+                        <rect key="frame" x="44.999999999999993" y="81" width="112.33333333333331" height="118"/>
+                        <fontDescription key="fontDescription" name="Gilroy-Regular" family="Gilroy-Regular" pointSize="12"/>
+                        <color key="textColor" name="lightTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z24-aG-G2d">
+                        <rect key="frame" x="212.66666666666666" y="15.666666666666664" width="76.999999999999972" height="34"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VERIFIED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VU5-i2-fHI">
+                                <rect key="frame" x="10" y="10" width="57" height="14"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy-SemiBold" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="FontColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VU5-i2-fHI" secondAttribute="trailing" constant="10" id="7i8-Qa-oal"/>
+                            <constraint firstAttribute="bottom" secondItem="VU5-i2-fHI" secondAttribute="bottom" constant="10" id="PdF-oP-k1J"/>
+                            <constraint firstItem="VU5-i2-fHI" firstAttribute="top" secondItem="z24-aG-G2d" secondAttribute="top" constant="10" id="WAT-3V-Ee3"/>
+                            <constraint firstAttribute="height" constant="34" id="Zas-Pj-NBp"/>
+                            <constraint firstItem="VU5-i2-fHI" firstAttribute="leading" secondItem="z24-aG-G2d" secondAttribute="leading" constant="10" id="xnh-LM-Qh7"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="17"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="W9u-g2-dDd" firstAttribute="top" secondItem="mvr-je-Wz8" secondAttribute="bottom" constant="10" id="975-u5-vHc"/>
+                    <constraint firstItem="z24-aG-G2d" firstAttribute="centerY" secondItem="gMJ-0R-gdY" secondAttribute="centerY" id="Egr-mZ-bqk"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="z24-aG-G2d" secondAttribute="trailing" constant="10" id="MMJ-Dv-GBD"/>
+                    <constraint firstItem="gMJ-0R-gdY" firstAttribute="leading" secondItem="IPy-pt-hB7" secondAttribute="trailing" constant="10" id="UJm-ab-j0f"/>
+                    <constraint firstItem="EoZ-DY-mED" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="Vrd-I2-wJy"/>
+                    <constraint firstItem="IPy-pt-hB7" firstAttribute="centerY" secondItem="EoZ-DY-mED" secondAttribute="centerY" id="WaT-S8-9bS"/>
+                    <constraint firstItem="IPy-pt-hB7" firstAttribute="leading" secondItem="EoZ-DY-mED" secondAttribute="trailing" constant="5" id="hIC-Hq-JFH"/>
+                    <constraint firstItem="mvr-je-Wz8" firstAttribute="leading" secondItem="IPy-pt-hB7" secondAttribute="leading" id="kl4-El-bf5"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="W9u-g2-dDd" secondAttribute="bottom" constant="15" id="mSg-6o-kLc"/>
+                    <constraint firstItem="mvr-je-Wz8" firstAttribute="top" secondItem="IPy-pt-hB7" secondAttribute="bottom" constant="17.5" id="rUt-3M-e9Y"/>
+                    <constraint firstItem="EoZ-DY-mED" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="sMe-MG-Ccm"/>
+                    <constraint firstItem="gMJ-0R-gdY" firstAttribute="centerY" secondItem="IPy-pt-hB7" secondAttribute="centerY" id="uuF-eq-S22"/>
+                    <constraint firstItem="z24-aG-G2d" firstAttribute="leading" secondItem="gMJ-0R-gdY" secondAttribute="trailing" constant="15" id="wfq-UL-bIs"/>
+                    <constraint firstItem="W9u-g2-dDd" firstAttribute="leading" secondItem="mvr-je-Wz8" secondAttribute="leading" id="yZh-sR-7Oe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="accNumberLbl" destination="mvr-je-Wz8" id="m6Y-oi-oAR"/>
+                <outlet property="accountStatusLbl" destination="VU5-i2-fHI" id="Bax-oa-bzs"/>
+                <outlet property="accountStatusView" destination="z24-aG-G2d" id="PPd-26-AQc"/>
+                <outlet property="bankNameLbl" destination="gMJ-0R-gdY" id="e2A-hh-3sa"/>
+                <outlet property="routingNumberLbl" destination="W9u-g2-dDd" id="pGA-cG-AOi"/>
+                <outlet property="selectionIcon" destination="EoZ-DY-mED" id="tEh-f3-WOb"/>
+            </connections>
+            <point key="canvasLocation" x="126.92307692307692" y="7.4644549763033172"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bank" width="15" height="15"/>
+        <image name="gray-Radio" width="15" height="15"/>
+        <namedColor name="FontColor">
+            <color red="0.66299998760223389" green="0.3529999852180481" blue="0.92500001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightTextColor">
+            <color red="0.64300000667572021" green="0.64300000667572021" blue="0.67799997329711914" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

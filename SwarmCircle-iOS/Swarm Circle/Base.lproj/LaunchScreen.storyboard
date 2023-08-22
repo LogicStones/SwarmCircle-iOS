@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fe3-Ps-1xn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topCircle" translatesAutoresizingMaskIntoConstraints="NO" id="yaQ-P0-qA5">
+                                <rect key="frame" x="0.0" y="0.0" width="154" height="147.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottomCircle" translatesAutoresizingMaskIntoConstraints="NO" id="hI5-b8-EOq">
+                                <rect key="frame" x="-14" y="532" width="428" height="364"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swarm-logo-shadow" translatesAutoresizingMaskIntoConstraints="NO" id="hcd-G4-Fps">
+                                <rect key="frame" x="158" y="305.5" width="98.5" height="98.5"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mxd-kB-o9z">
+                                <rect key="frame" x="83.5" y="424" width="247" height="48"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Swarm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1r-jA-4c3" userLabel="Swarm">
+                                        <rect key="frame" x="0.0" y="0.0" width="129" height="48"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Circle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXG-z7-tKI" userLabel="Circle">
+                                        <rect key="frame" x="139" y="0.0" width="108" height="48"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <color key="textColor" name="FontColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="hXG-z7-tKI" secondAttribute="bottom" id="3U5-sg-wne"/>
+                                    <constraint firstItem="t1r-jA-4c3" firstAttribute="leading" secondItem="Mxd-kB-o9z" secondAttribute="leading" id="MHn-8H-WIC"/>
+                                    <constraint firstItem="hXG-z7-tKI" firstAttribute="top" secondItem="Mxd-kB-o9z" secondAttribute="top" id="ctB-Hu-tTI"/>
+                                    <constraint firstAttribute="trailing" secondItem="hXG-z7-tKI" secondAttribute="trailing" id="ibU-ZW-vmr"/>
+                                    <constraint firstItem="hXG-z7-tKI" firstAttribute="leading" secondItem="t1r-jA-4c3" secondAttribute="trailing" constant="10" id="sbJ-RP-bbm"/>
+                                    <constraint firstItem="t1r-jA-4c3" firstAttribute="top" secondItem="Mxd-kB-o9z" secondAttribute="top" id="sbN-mB-FIB"/>
+                                    <constraint firstAttribute="bottom" secondItem="t1r-jA-4c3" secondAttribute="bottom" id="xjU-rv-LZp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hCP-Yn-8Rx"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="hI5-b8-EOq" secondAttribute="bottom" id="auN-Ac-pI8"/>
+                            <constraint firstItem="yaQ-P0-qA5" firstAttribute="top" secondItem="Fe3-Ps-1xn" secondAttribute="top" id="bJa-hh-7U5"/>
+                            <constraint firstItem="Mxd-kB-o9z" firstAttribute="centerY" secondItem="Fe3-Ps-1xn" secondAttribute="centerY" id="dfA-ah-zQV"/>
+                            <constraint firstItem="hcd-G4-Fps" firstAttribute="centerX" secondItem="Fe3-Ps-1xn" secondAttribute="centerX" id="eRf-cZ-3dE"/>
+                            <constraint firstItem="Mxd-kB-o9z" firstAttribute="top" secondItem="hcd-G4-Fps" secondAttribute="bottom" constant="20" id="ic6-6F-6kb"/>
+                            <constraint firstItem="Mxd-kB-o9z" firstAttribute="centerX" secondItem="Fe3-Ps-1xn" secondAttribute="centerX" id="lX7-9B-vPC"/>
+                            <constraint firstItem="hI5-b8-EOq" firstAttribute="trailing" secondItem="hCP-Yn-8Rx" secondAttribute="trailing" id="mfn-pv-zAl"/>
+                            <constraint firstItem="yaQ-P0-qA5" firstAttribute="leading" secondItem="hCP-Yn-8Rx" secondAttribute="leading" id="sKX-sX-pwF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bottomCircle" width="428" height="364"/>
+        <image name="swarm-logo-shadow" width="98.5" height="98.5"/>
+        <image name="topCircle" width="154" height="147.5"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.10199999809265137" green="0.063000001013278961" blue="0.21199999749660492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FontColor">
+            <color red="0.66299998760223389" green="0.3529999852180481" blue="0.92500001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

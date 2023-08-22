@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B131A2EA-19ED-4874-BB49-B5013EE19D01"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A3EB6B0E-27C7-49EE-95B9-D900938968CB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Swarm Circle/OT/OTDefaultAudioDevice.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "595"
+            endingLineNumber = "595"
+            landmarkName = "configureAudioSessionWithDesiredAudioRoute(desiredAudioRoute:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A3EB6B0E-27C7-49EE-95B9-D900938968CB - 9bc7b7a0e557e3c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Swarm_Circle.OTDefaultAudioDevice.configureAudioSessionWithDesiredAudioRoute(desiredAudioRoute: Swift.String) -&gt; ()"
+                  moduleName = "Swarm Circle"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac/Documents/Projects/swarm-circle/Swarm%20Circle/OT/OTDefaultAudioDevice.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "599"
+                  endingLineNumber = "599"
+                  offsetFromSymbolStart = "1843">
+               </Location>
+               <Location
+                  uuid = "A3EB6B0E-27C7-49EE-95B9-D900938968CB - 9bc7b7a0e557e3c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Swarm_Circle.OTDefaultAudioDevice.configureAudioSessionWithDesiredAudioRoute(desiredAudioRoute: Swift.String) -&gt; ()"
+                  moduleName = "Swarm Circle"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac/Documents/Projects/swarm-circle/Swarm%20Circle/OT/OTDefaultAudioDevice.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "599"
+                  endingLineNumber = "599"
+                  offsetFromSymbolStart = "2448">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9C5860C6-748A-4078-B74B-E2A0BA231A2F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Swarm Circle/OT/OTDefaultAudioDevice.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "586"
+            endingLineNumber = "586"
+            landmarkName = "configureAudioSessionWithDesiredAudioRoute(desiredAudioRoute:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0A7B9760-EC76-4171-87FC-C250AC627BD2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Swarm Circle/OT/OTDefaultAudioDevice.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "605"
+            endingLineNumber = "605"
+            landmarkName = "OTDefaultAudioDevice"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

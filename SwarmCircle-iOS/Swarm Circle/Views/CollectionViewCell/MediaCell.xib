@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" reuseIdentifier="MediaCell" id="gdN-yR-Mep" customClass="MediaCell" customModule="Swarm_Circle" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="404" height="324"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Tsu-9a-tuU">
+                <rect key="frame" x="0.0" y="0.0" width="404" height="324"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="9kf-dm-bsY">
+                        <rect key="frame" x="0.0" y="0.0" width="404" height="324"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YeZ-E2-meQ">
+                        <rect key="frame" x="0.0" y="0.0" width="404" height="324"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UmC-gG-7Q4">
+                        <rect key="frame" x="145.5" y="105.5" width="113" height="113"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="UmC-gG-7Q4" secondAttribute="height" id="45E-pg-tRf"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="playVideoCircle"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="UmC-gG-7Q4" firstAttribute="centerY" secondItem="Tsu-9a-tuU" secondAttribute="centerY" id="6gE-Sf-Op4"/>
+                    <constraint firstAttribute="bottom" secondItem="YeZ-E2-meQ" secondAttribute="bottom" id="PVn-Jc-Ab6"/>
+                    <constraint firstItem="YeZ-E2-meQ" firstAttribute="leading" secondItem="Tsu-9a-tuU" secondAttribute="leading" id="S73-qF-Qkh"/>
+                    <constraint firstAttribute="bottom" secondItem="9kf-dm-bsY" secondAttribute="bottom" id="SLM-Ti-i2u"/>
+                    <constraint firstAttribute="trailing" secondItem="9kf-dm-bsY" secondAttribute="trailing" id="brF-gh-mgB"/>
+                    <constraint firstItem="9kf-dm-bsY" firstAttribute="top" secondItem="Tsu-9a-tuU" secondAttribute="top" id="chZ-lc-I2a"/>
+                    <constraint firstItem="UmC-gG-7Q4" firstAttribute="centerX" secondItem="Tsu-9a-tuU" secondAttribute="centerX" id="en5-VC-fKH"/>
+                    <constraint firstItem="9kf-dm-bsY" firstAttribute="leading" secondItem="Tsu-9a-tuU" secondAttribute="leading" id="grd-Xw-rmg"/>
+                    <constraint firstAttribute="trailing" secondItem="YeZ-E2-meQ" secondAttribute="trailing" id="jhm-r8-oAO"/>
+                    <constraint firstItem="UmC-gG-7Q4" firstAttribute="height" secondItem="YeZ-E2-meQ" secondAttribute="height" multiplier="0.35" id="qGe-FZ-yIy"/>
+                    <constraint firstItem="YeZ-E2-meQ" firstAttribute="top" secondItem="Tsu-9a-tuU" secondAttribute="top" id="tAT-rM-By5"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="404" height="324"/>
+            <connections>
+                <outlet property="mediaImgView" destination="9kf-dm-bsY" id="aCk-Tn-DME"/>
+                <outlet property="videoPlayButton" destination="UmC-gG-7Q4" id="aCS-Pu-vKo"/>
+                <outlet property="videoPlayerView" destination="YeZ-E2-meQ" id="gdv-xr-zOL"/>
+            </connections>
+            <point key="canvasLocation" x="839.13043478260875" y="68.303571428571431"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="playVideoCircle" width="108" height="106"/>
+        <image name="profilePic" width="225" height="225"/>
+    </resources>
+</document>

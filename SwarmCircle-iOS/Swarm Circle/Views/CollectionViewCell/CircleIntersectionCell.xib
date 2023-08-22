@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gilroy-SemiBold.ttf">
+            <string>Gilroy-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CircleIntersectionCell" id="gTV-IL-0wX" customClass="CircleIntersectionCell" customModule="Swarm_Circle" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="244" height="246"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="244" height="246"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4L-Yv-thX" customClass="CardViewMaterial" customModule="Swarm_Circle" customModuleProvider="target">
+                        <rect key="frame" x="9" y="10" width="226" height="226"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZg-DS-sjr">
+                                <rect key="frame" x="20" y="20" width="186" height="186"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Add Another Circle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67w-ra-9Sq">
+                                        <rect key="frame" x="10" y="110.5" width="166" height="16"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy-SemiBold" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="5B7-q5-2ss">
+                                        <rect key="frame" x="33" y="0.0" width="120" height="80"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="INv-dZ-5yg"/>
+                                            <constraint firstAttribute="height" constant="80" id="ri3-z5-sc7"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cKk-kz-NNa">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                    </collectionView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circleIntersection" translatesAutoresizingMaskIntoConstraints="NO" id="8hl-c2-gY7">
+                                        <rect key="frame" x="70.5" y="55.5" width="45" height="45"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="lmB-Qa-Fb9"/>
+                                            <constraint firstAttribute="height" constant="45" id="zpj-XU-9fp"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="67w-ra-9Sq" secondAttribute="trailing" constant="10" id="0eF-Ye-mpd"/>
+                                    <constraint firstItem="8hl-c2-gY7" firstAttribute="centerY" secondItem="cZg-DS-sjr" secondAttribute="centerY" constant="-15" id="7MN-Lr-LlI"/>
+                                    <constraint firstItem="67w-ra-9Sq" firstAttribute="leading" secondItem="cZg-DS-sjr" secondAttribute="leading" constant="10" id="BhN-Jd-0ZX"/>
+                                    <constraint firstItem="67w-ra-9Sq" firstAttribute="top" secondItem="8hl-c2-gY7" secondAttribute="bottom" constant="10" id="Oq0-6r-4Jh"/>
+                                    <constraint firstItem="8hl-c2-gY7" firstAttribute="centerX" secondItem="cZg-DS-sjr" secondAttribute="centerX" id="nsN-0A-pDh"/>
+                                    <constraint firstItem="5B7-q5-2ss" firstAttribute="centerX" secondItem="cZg-DS-sjr" secondAttribute="centerX" id="tJM-Ud-096"/>
+                                    <constraint firstItem="5B7-q5-2ss" firstAttribute="top" secondItem="cZg-DS-sjr" secondAttribute="top" id="tem-JI-NMX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="c4L-Yv-thX" secondAttribute="height" id="28X-io-bSx"/>
+                            <constraint firstItem="cZg-DS-sjr" firstAttribute="centerX" secondItem="c4L-Yv-thX" secondAttribute="centerX" id="3AR-dR-Vog"/>
+                            <constraint firstItem="cZg-DS-sjr" firstAttribute="leading" secondItem="c4L-Yv-thX" secondAttribute="leading" constant="20" id="6ix-6R-Aq6"/>
+                            <constraint firstAttribute="bottom" secondItem="cZg-DS-sjr" secondAttribute="bottom" constant="20" id="PFl-7D-6zA"/>
+                            <constraint firstAttribute="trailing" secondItem="cZg-DS-sjr" secondAttribute="trailing" constant="20" id="guT-j4-cMb"/>
+                            <constraint firstItem="cZg-DS-sjr" firstAttribute="centerY" secondItem="c4L-Yv-thX" secondAttribute="centerY" id="luM-a8-96f"/>
+                            <constraint firstItem="cZg-DS-sjr" firstAttribute="top" secondItem="c4L-Yv-thX" secondAttribute="top" constant="20" id="tOF-u0-QJN"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.25"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="c4L-Yv-thX" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="FQz-3c-NmX"/>
+                <constraint firstAttribute="bottom" secondItem="c4L-Yv-thX" secondAttribute="bottom" constant="10" id="e5P-De-ucY"/>
+                <constraint firstItem="c4L-Yv-thX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="wEP-EC-YJy"/>
+            </constraints>
+            <size key="customSize" width="244" height="246"/>
+            <connections>
+                <outlet property="cardView" destination="c4L-Yv-thX" id="wtD-uS-j9X"/>
+                <outlet property="collectionView" destination="5B7-q5-2ss" id="Pos-bx-Wav"/>
+                <outlet property="iconImage" destination="8hl-c2-gY7" id="KG0-BV-m5v"/>
+                <outlet property="titleLBL" destination="67w-ra-9Sq" id="A62-HP-aSw"/>
+            </connections>
+            <point key="canvasLocation" x="278.26086956521743" y="136.60714285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="circleIntersection" width="60" height="60"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gilroy-Medium.ttf">
+            <string>Gilroy-Medium</string>
+        </array>
+        <array key="Gilroy-Regular.ttf">
+            <string>Gilroy-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedsMediaCell" rowHeight="672" id="KGk-i7-Jjw" customClass="FeedsMediaCell" customModule="Swarm_Circle" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="430" height="672"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="430" height="672"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qP7-GF-2Uc" customClass="CardViewMaterial" customModule="Swarm_Circle" customModuleProvider="target">
+                        <rect key="frame" x="2" y="12" width="417" height="655"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="5UZ-yn-Xn0" customClass="CircleImage" customModule="Swarm_Circle" customModuleProvider="target">
+                                <rect key="frame" x="20" y="25" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5UZ-yn-Xn0" secondAttribute="height" id="NnL-62-RR8"/>
+                                    <constraint firstAttribute="height" constant="40" id="bJW-pC-tkH"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alexander Kane" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUd-WB-V6S" customClass="ActiveLabel" customModule="ActiveLabel">
+                                <rect key="frame" x="67.5" y="30" width="299.5" height="20"/>
+                                <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Just Now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ER8-4G-96F">
+                                <rect key="frame" x="67.5" y="55" width="51" height="14"/>
+                                <fontDescription key="fontDescription" name="Gilroy-Regular" family="Gilroy-Regular" pointSize="12"/>
+                                <color key="textColor" name="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0K-Ss-g19">
+                                <rect key="frame" x="377" y="25" width="20" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="yp6-pw-DVM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="tintColor" name="lightTextColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="dotsButton">
+                                    <color key="titleColor" name="lightTextColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZI-x7-JYd" customClass="ActiveLabel" customModule="ActiveLabel">
+                                <rect key="frame" x="20" y="79" width="377" height="198"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Gilroy-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="hashtagColor">
+                                        <color key="value" systemColor="linkColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sG7-l5-JBi">
+                                <rect key="frame" x="22" y="572" width="0.0" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" id="buQ-e1-dB8"/>
+                                    <constraint firstAttribute="height" constant="15" id="q2m-tB-3f7"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.01666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <imageReference key="image" image="heartIcon" symbolScale="default" renderingMode="original"/>
+                                </state>
+                                <state key="selected" image="heartFillIcon"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ln8-xT-e5b">
+                                <rect key="frame" x="22" y="571.5" width="44.5" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="14"/>
+                                <color key="textColor" name="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWj-Va-edL">
+                                <rect key="frame" x="76.5" y="572" width="1.5" height="15"/>
+                                <color key="backgroundColor" name="seperatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1.25" id="NtG-Yr-fAl"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PY2-Lg-BiM">
+                                <rect key="frame" x="88" y="571.5" width="88.5" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="14"/>
+                                <color key="textColor" name="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yBi-Ox-ENv">
+                                <rect key="frame" x="0.0" y="607" width="417" height="1"/>
+                                <color key="backgroundColor" name="seperatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Bii-1C-jpn"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="7.5" translatesAutoresizingMaskIntoConstraints="NO" id="dOP-sC-A8u">
+                                <rect key="frame" x="0.0" y="623" width="417" height="17"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEO-Kj-pwQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="134" height="17"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="14"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title=" Like">
+                                            <color key="titleColor" name="lightTextColor"/>
+                                            <imageReference key="image" image="heartIcon"/>
+                                        </state>
+                                        <state key="selected" title=" Like" image="heartFillIcon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4s-iB-eVw">
+                                        <rect key="frame" x="141.5" y="0.0" width="134" height="17"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="14"/>
+                                        <color key="tintColor" name="lightTextColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title=" Comment">
+                                            <color key="titleColor" name="lightTextColor"/>
+                                            <imageReference key="image" image="commentIcon"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H00-w0-j3r">
+                                        <rect key="frame" x="283" y="0.0" width="134" height="17"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy-Medium" pointSize="14"/>
+                                        <color key="tintColor" name="lightTextColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title=" Share">
+                                            <color key="titleColor" name="lightTextColor"/>
+                                            <imageReference key="image" image="shareIcon"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YB0-ZJ-OcC" userLabel="mediaBox">
+                                <rect key="frame" x="0.0" y="317.5" width="417" height="234.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YB0-ZJ-OcC" secondAttribute="height" multiplier="16:9" id="Hf3-WD-60I"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4ZQ-bQ-su0">
+                                <rect key="frame" x="20" y="277" width="69" height="28.5"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MbL-SX-zjE">
+                                        <rect key="frame" x="0.0" y="0.0" width="69" height="28.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Read more">
+                                                    <attributes>
+                                                        <color key="NSColor" name="BackgroundColor"/>
+                                                        <font key="NSFont" size="14" name="Gilroy-Medium"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        <integer key="NSUnderline" value="1"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <state key="disabled">
+                                            <attributedString key="attributedTitle"/>
+                                        </state>
+                                        <state key="selected">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Read less">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.10196078431372549" green="0.062745098039215685" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="14" name="Gilroy-Medium"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        <integer key="NSUnderline" value="1"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMY-6W-pep">
+                                <rect key="frame" x="20" y="25" width="40" height="40"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="everyoneIcon" translatesAutoresizingMaskIntoConstraints="NO" id="SLH-Kb-OEU">
+                                <rect key="frame" x="123.5" y="56" width="12" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SLH-Kb-OEU" secondAttribute="height" id="Fhb-TT-J00"/>
+                                    <constraint firstAttribute="width" constant="12" id="e4E-et-YjN"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dOP-sC-A8u" firstAttribute="leading" secondItem="qP7-GF-2Uc" secondAttribute="leading" id="0MD-QN-37P"/>
+                            <constraint firstItem="oWj-Va-edL" firstAttribute="centerY" secondItem="Ln8-xT-e5b" secondAttribute="centerY" id="14Y-Ph-Jrg"/>
+                            <constraint firstItem="Ln8-xT-e5b" firstAttribute="centerY" secondItem="sG7-l5-JBi" secondAttribute="centerY" id="2OS-Ey-LcT"/>
+                            <constraint firstItem="YB0-ZJ-OcC" firstAttribute="leading" secondItem="qP7-GF-2Uc" secondAttribute="leading" id="2no-CX-DbJ"/>
+                            <constraint firstItem="L0K-Ss-g19" firstAttribute="top" secondItem="5UZ-yn-Xn0" secondAttribute="top" id="3MX-Yw-f79"/>
+                            <constraint firstItem="oWj-Va-edL" firstAttribute="height" secondItem="sG7-l5-JBi" secondAttribute="height" id="4C4-aG-y51"/>
+                            <constraint firstItem="ER8-4G-96F" firstAttribute="top" secondItem="CUd-WB-V6S" secondAttribute="bottom" constant="5" id="689-F4-YrH"/>
+                            <constraint firstItem="EZI-x7-JYd" firstAttribute="top" secondItem="ER8-4G-96F" secondAttribute="bottom" constant="10" id="81B-Lk-RYX"/>
+                            <constraint firstItem="EZI-x7-JYd" firstAttribute="trailing" secondItem="L0K-Ss-g19" secondAttribute="trailing" id="88K-33-ds3"/>
+                            <constraint firstItem="L0K-Ss-g19" firstAttribute="leading" secondItem="CUd-WB-V6S" secondAttribute="trailing" constant="10" id="9Ey-Sq-0H2"/>
+                            <constraint firstItem="CUd-WB-V6S" firstAttribute="top" secondItem="5UZ-yn-Xn0" secondAttribute="top" constant="5" id="Agk-28-bWh"/>
+                            <constraint firstAttribute="trailing" secondItem="YB0-ZJ-OcC" secondAttribute="trailing" id="Bsg-YK-4M6"/>
+                            <constraint firstItem="JMY-6W-pep" firstAttribute="trailing" secondItem="5UZ-yn-Xn0" secondAttribute="trailing" id="HtE-AR-uI2"/>
+                            <constraint firstAttribute="bottom" secondItem="dOP-sC-A8u" secondAttribute="bottom" constant="15" id="JBp-Hi-83c"/>
+                            <constraint firstItem="YB0-ZJ-OcC" firstAttribute="width" secondItem="qP7-GF-2Uc" secondAttribute="width" id="JLH-pb-So6"/>
+                            <constraint firstAttribute="trailing" secondItem="L0K-Ss-g19" secondAttribute="trailing" constant="20" id="LbY-Tq-Wgu"/>
+                            <constraint firstItem="CUd-WB-V6S" firstAttribute="leading" secondItem="5UZ-yn-Xn0" secondAttribute="trailing" constant="7.5" id="M02-rm-nT7"/>
+                            <constraint firstItem="YB0-ZJ-OcC" firstAttribute="top" secondItem="4ZQ-bQ-su0" secondAttribute="bottom" constant="12" id="NrW-pG-iOe"/>
+                            <constraint firstItem="sG7-l5-JBi" firstAttribute="top" secondItem="YB0-ZJ-OcC" secondAttribute="bottom" constant="20" id="OxY-GQ-2eD"/>
+                            <constraint firstItem="yBi-Ox-ENv" firstAttribute="leading" secondItem="qP7-GF-2Uc" secondAttribute="leading" id="RUH-rn-T8K"/>
+                            <constraint firstItem="yBi-Ox-ENv" firstAttribute="top" secondItem="sG7-l5-JBi" secondAttribute="bottom" constant="20" id="RiY-0b-foq"/>
+                            <constraint firstItem="4ZQ-bQ-su0" firstAttribute="leading" secondItem="EZI-x7-JYd" secondAttribute="leading" id="T4Z-sE-ksC"/>
+                            <constraint firstItem="JMY-6W-pep" firstAttribute="leading" secondItem="5UZ-yn-Xn0" secondAttribute="leading" id="TCR-FX-ccx"/>
+                            <constraint firstItem="Ln8-xT-e5b" firstAttribute="leading" secondItem="sG7-l5-JBi" secondAttribute="trailing" id="UYp-aa-NoG"/>
+                            <constraint firstItem="5UZ-yn-Xn0" firstAttribute="leading" secondItem="qP7-GF-2Uc" secondAttribute="leading" constant="20" id="Vv4-gb-YT2"/>
+                            <constraint firstItem="oWj-Va-edL" firstAttribute="leading" secondItem="Ln8-xT-e5b" secondAttribute="trailing" constant="10" id="XvC-2B-0MK"/>
+                            <constraint firstItem="PY2-Lg-BiM" firstAttribute="centerY" secondItem="Ln8-xT-e5b" secondAttribute="centerY" id="YCw-WP-XWN"/>
+                            <constraint firstItem="dOP-sC-A8u" firstAttribute="top" secondItem="yBi-Ox-ENv" secondAttribute="bottom" constant="15" id="c3U-Mt-iJF"/>
+                            <constraint firstItem="SLH-Kb-OEU" firstAttribute="leading" secondItem="ER8-4G-96F" secondAttribute="trailing" constant="5" id="cYI-Gt-jbt"/>
+                            <constraint firstItem="L0K-Ss-g19" firstAttribute="bottom" secondItem="5UZ-yn-Xn0" secondAttribute="bottom" id="dIn-ew-YXb"/>
+                            <constraint firstAttribute="trailing" secondItem="yBi-Ox-ENv" secondAttribute="trailing" id="feG-xD-tBh"/>
+                            <constraint firstItem="ER8-4G-96F" firstAttribute="leading" secondItem="CUd-WB-V6S" secondAttribute="leading" id="k3r-f9-56G"/>
+                            <constraint firstItem="5UZ-yn-Xn0" firstAttribute="top" secondItem="qP7-GF-2Uc" secondAttribute="top" constant="25" id="khY-Pr-glN"/>
+                            <constraint firstItem="JMY-6W-pep" firstAttribute="bottom" secondItem="5UZ-yn-Xn0" secondAttribute="bottom" id="lTB-A8-rNm"/>
+                            <constraint firstItem="SLH-Kb-OEU" firstAttribute="centerY" secondItem="ER8-4G-96F" secondAttribute="centerY" id="mka-cd-wWo"/>
+                            <constraint firstItem="4ZQ-bQ-su0" firstAttribute="top" secondItem="EZI-x7-JYd" secondAttribute="bottom" id="pxX-6v-MS4"/>
+                            <constraint firstItem="PY2-Lg-BiM" firstAttribute="leading" secondItem="oWj-Va-edL" secondAttribute="trailing" constant="10" id="r9R-8D-a9E"/>
+                            <constraint firstItem="sG7-l5-JBi" firstAttribute="leading" secondItem="EZI-x7-JYd" secondAttribute="leading" constant="2" id="sHe-8P-kzQ"/>
+                            <constraint firstAttribute="trailing" secondItem="dOP-sC-A8u" secondAttribute="trailing" id="uH1-3R-Rl9"/>
+                            <constraint firstItem="EZI-x7-JYd" firstAttribute="leading" secondItem="5UZ-yn-Xn0" secondAttribute="leading" id="uww-1o-NLR"/>
+                            <constraint firstItem="JMY-6W-pep" firstAttribute="top" secondItem="5UZ-yn-Xn0" secondAttribute="top" id="yyd-5H-vMQ"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="qP7-GF-2Uc" secondAttribute="bottom" constant="5" id="5Mh-Pv-bKg"/>
+                    <constraint firstItem="qP7-GF-2Uc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="2" id="Vo3-pT-E42"/>
+                    <constraint firstAttribute="trailing" secondItem="qP7-GF-2Uc" secondAttribute="trailing" constant="11" id="hm7-xa-Z6q"/>
+                    <constraint firstItem="qP7-GF-2Uc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="zBy-2g-1cz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cmtBtn" destination="W4s-iB-eVw" id="5DK-yI-iUU"/>
+                <outlet property="cmtCountLbl" destination="PY2-Lg-BiM" id="jwf-SJ-4lK"/>
+                <outlet property="feedTextLbl" destination="EZI-x7-JYd" id="fXb-RY-f8X"/>
+                <outlet property="likeBtn" destination="aEO-Kj-pwQ" id="Saz-PC-zNY"/>
+                <outlet property="likeCountLbl" destination="Ln8-xT-e5b" id="GMi-5s-8aA"/>
+                <outlet property="likesBtn" destination="sG7-l5-JBi" id="dm5-cb-lAm"/>
+                <outlet property="mediaBox" destination="YB0-ZJ-OcC" id="P7L-K3-V8o"/>
+                <outlet property="menuBtn" destination="L0K-Ss-g19" id="x5l-Eu-JMY"/>
+                <outlet property="nameLbl" destination="CUd-WB-V6S" id="aIs-KG-WUP"/>
+                <outlet property="postTimeLbl" destination="ER8-4G-96F" id="vmc-G6-RDY"/>
+                <outlet property="privacyIcon" destination="SLH-Kb-OEU" id="bQK-6R-OOS"/>
+                <outlet property="profileImgView" destination="5UZ-yn-Xn0" id="gda-cr-Yr6"/>
+                <outlet property="profilePicBtn" destination="JMY-6W-pep" id="HeD-TI-al0"/>
+                <outlet property="readBtn" destination="MbL-SX-zjE" id="LoY-5p-jXe"/>
+                <outlet property="shareBtn" destination="H00-w0-j3r" id="gIn-Aw-gA6"/>
+            </connections>
+            <point key="canvasLocation" x="217.39130434782609" y="297.32142857142856"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="5UZ-yn-Xn0">
+            <size key="intrinsicContentSize" width="225" height="225"/>
+        </designable>
+        <designable name="CUd-WB-V6S">
+            <size key="intrinsicContentSize" width="113" height="20"/>
+        </designable>
+        <designable name="EZI-x7-JYd">
+            <size key="intrinsicContentSize" width="2638" height="29"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="commentIcon" width="15" height="15"/>
+        <image name="dotsButton" width="5.5" height="19"/>
+        <image name="everyoneIcon" width="15" height="15"/>
+        <image name="heartFillIcon" width="14" height="12"/>
+        <image name="heartIcon" width="15" height="15"/>
+        <image name="profilePic" width="225" height="225"/>
+        <image name="shareIcon" width="15" height="15"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.10196078431372549" green="0.062745098039215685" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightTextColor">
+            <color red="0.64300000667572021" green="0.64300000667572021" blue="0.67799997329711914" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="seperatorColor">
+            <color red="0.92900002002716064" green="0.95300000905990601" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

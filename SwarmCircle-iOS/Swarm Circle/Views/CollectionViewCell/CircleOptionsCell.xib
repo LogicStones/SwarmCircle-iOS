@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gilroy-SemiBold.ttf">
+            <string>Gilroy-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CircleOptionsCell" id="gTV-IL-0wX" customClass="CircleOptionsCell" customModule="Swarm_Circle" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="243" height="214"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="243" height="214"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7N5-ET-VUU" customClass="CardViewMaterial" customModule="Swarm_Circle" customModuleProvider="target">
+                        <rect key="frame" x="24.5" y="10" width="194" height="194"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QxS-Sn-oHa">
+                                <rect key="frame" x="31.5" y="61.5" width="131.5" height="71"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Create a Circle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7G-N6-U08">
+                                        <rect key="frame" x="10" y="55" width="111.5" height="16"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy-SemiBold" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circleRound" translatesAutoresizingMaskIntoConstraints="NO" id="0AT-h5-k8w">
+                                        <rect key="frame" x="43" y="0.0" width="45" height="45"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="f7G-N6-U08" firstAttribute="leading" secondItem="QxS-Sn-oHa" secondAttribute="leading" constant="10" id="I9G-EA-cjK"/>
+                                    <constraint firstAttribute="bottom" secondItem="f7G-N6-U08" secondAttribute="bottom" id="Ozj-55-g6D"/>
+                                    <constraint firstAttribute="trailing" secondItem="f7G-N6-U08" secondAttribute="trailing" constant="10" id="gUb-Mz-3lK"/>
+                                    <constraint firstItem="0AT-h5-k8w" firstAttribute="top" secondItem="QxS-Sn-oHa" secondAttribute="top" id="koh-dF-QNL"/>
+                                    <constraint firstItem="0AT-h5-k8w" firstAttribute="bottom" secondItem="f7G-N6-U08" secondAttribute="top" constant="-10" id="r0u-Q5-CY3"/>
+                                    <constraint firstItem="0AT-h5-k8w" firstAttribute="centerX" secondItem="QxS-Sn-oHa" secondAttribute="centerX" id="u9T-YG-g56"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QxS-Sn-oHa" firstAttribute="centerY" secondItem="7N5-ET-VUU" secondAttribute="centerY" id="Qe0-1f-UgE"/>
+                            <constraint firstAttribute="width" secondItem="7N5-ET-VUU" secondAttribute="height" id="h50-DN-Ab7"/>
+                            <constraint firstItem="QxS-Sn-oHa" firstAttribute="centerX" secondItem="7N5-ET-VUU" secondAttribute="centerX" id="nOW-mf-5Af"/>
+                            <constraint firstItem="QxS-Sn-oHa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7N5-ET-VUU" secondAttribute="leading" constant="20" id="uzB-89-XKN"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QxS-Sn-oHa" secondAttribute="trailing" constant="20" id="vHe-Th-5iM"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.25"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="7N5-ET-VUU" secondAttribute="bottom" constant="10" id="Dh0-yo-QeM"/>
+                <constraint firstItem="7N5-ET-VUU" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Fmt-y3-Ck7"/>
+                <constraint firstItem="7N5-ET-VUU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="c2g-TY-XcN"/>
+            </constraints>
+            <size key="customSize" width="243" height="214"/>
+            <connections>
+                <outlet property="cardView" destination="7N5-ET-VUU" id="Bgj-Oj-wQW"/>
+                <outlet property="featureIcon" destination="0AT-h5-k8w" id="gAw-qj-pOj"/>
+                <outlet property="titleLBL" destination="f7G-N6-U08" id="Wky-Nv-t15"/>
+            </connections>
+            <point key="canvasLocation" x="277.536231884058" y="164.73214285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="circleRound" width="45" height="45"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gilroy-SemiBold.ttf">
+            <string>Gilroy-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="178" id="KGk-i7-Jjw" customClass="UserCell" customModule="Swarm_Circle" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="389" height="178"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="389" height="178"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="fJZ-V0-Lvh">
+                        <rect key="frame" x="20" y="66.666666666666671" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="mE3-gB-6wz"/>
+                            <constraint firstAttribute="width" secondItem="fJZ-V0-Lvh" secondAttribute="height" id="syW-xs-ZGa"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="22.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3E0-fw-Ru5">
+                        <rect key="frame" x="75" y="82" width="69" height="14"/>
+                        <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy-SemiBold" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verifiedIcon" translatesAutoresizingMaskIntoConstraints="NO" id="TSc-dA-Vzs">
+                        <rect key="frame" x="149" y="83" width="12" height="12"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3E0-fw-Ru5" secondAttribute="bottom" constant="5" id="6nA-ns-gjg"/>
+                    <constraint firstItem="3E0-fw-Ru5" firstAttribute="centerY" secondItem="fJZ-V0-Lvh" secondAttribute="centerY" id="7e6-2g-DOq"/>
+                    <constraint firstItem="3E0-fw-Ru5" firstAttribute="leading" secondItem="fJZ-V0-Lvh" secondAttribute="trailing" constant="10" id="IHz-SP-A5c"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fJZ-V0-Lvh" secondAttribute="bottom" constant="5" id="Vyf-Pk-jd3"/>
+                    <constraint firstItem="fJZ-V0-Lvh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="a51-T7-irb"/>
+                    <constraint firstItem="TSc-dA-Vzs" firstAttribute="centerY" secondItem="3E0-fw-Ru5" secondAttribute="centerY" id="av1-PJ-CMl"/>
+                    <constraint firstItem="TSc-dA-Vzs" firstAttribute="leading" secondItem="3E0-fw-Ru5" secondAttribute="trailing" constant="5" id="e4d-eV-BAU"/>
+                    <constraint firstItem="fJZ-V0-Lvh" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="nhj-i4-4iF"/>
+                    <constraint firstItem="fJZ-V0-Lvh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="pbY-Y7-XSA"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="TSc-dA-Vzs" secondAttribute="trailing" constant="20" id="ukH-4C-xEH"/>
+                    <constraint firstItem="3E0-fw-Ru5" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="vHn-7k-bwB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="nameLbl" destination="3E0-fw-Ru5" id="zCn-lA-FRl"/>
+                <outlet property="profileImgView" destination="fJZ-V0-Lvh" id="gvz-Hk-7Di"/>
+                <outlet property="verifiedIcon" destination="TSc-dA-Vzs" id="Xih-ds-YIq"/>
+            </connections>
+            <point key="canvasLocation" x="-39.230769230769226" y="-32.701421800947863"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="profilePic" width="225" height="225"/>
+        <image name="verifiedIcon" width="12" height="12"/>
+    </resources>
+</document>

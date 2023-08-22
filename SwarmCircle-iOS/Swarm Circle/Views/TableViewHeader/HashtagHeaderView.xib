@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gilroy-Regular.ttf">
+            <string>Gilroy-Regular</string>
+        </array>
+        <array key="Gilroy-SemiBold.ttf">
+            <string>Gilroy-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HashtagHeaderView" customModule="Swarm_Circle" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="672" height="272"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="leM-pE-5C3" userLabel="TFView">
+                    <rect key="frame" x="10" y="57" width="652" height="60"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="#Cycling" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vdE-3Q-rXn">
+                            <rect key="frame" x="20" y="0.0" width="578" height="60"/>
+                            <color key="tintColor" systemColor="linkColor"/>
+                            <fontDescription key="fontDescription" name="Gilroy-Regular" family="Gilroy-Regular" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yS-pI-dkh">
+                            <rect key="frame" x="608" y="19" width="24" height="22"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title=" " image="search"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="vdE-3Q-rXn" firstAttribute="top" secondItem="leM-pE-5C3" secondAttribute="top" id="D2h-FK-L7l"/>
+                        <constraint firstAttribute="bottom" secondItem="vdE-3Q-rXn" secondAttribute="bottom" id="EEN-g9-6oE"/>
+                        <constraint firstItem="8yS-pI-dkh" firstAttribute="centerY" secondItem="vdE-3Q-rXn" secondAttribute="centerY" id="QBg-cx-pCl"/>
+                        <constraint firstItem="8yS-pI-dkh" firstAttribute="leading" secondItem="vdE-3Q-rXn" secondAttribute="trailing" constant="10" id="Vyt-1o-ENm"/>
+                        <constraint firstAttribute="height" constant="60" id="cTI-Ro-7wa"/>
+                        <constraint firstAttribute="trailing" secondItem="8yS-pI-dkh" secondAttribute="trailing" constant="20" id="kpC-g1-Kht"/>
+                        <constraint firstItem="vdE-3Q-rXn" firstAttribute="leading" secondItem="leM-pE-5C3" secondAttribute="leading" constant="20" id="zuP-p2-lwb"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="BorderColor"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#Cycling" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Mq-uW-8uZ">
+                    <rect key="frame" x="10" y="149.66666666666666" width="652" height="56"/>
+                    <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy-SemiBold" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="leM-pE-5C3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="5e1-yz-z8R"/>
+                <constraint firstItem="4Mq-uW-8uZ" firstAttribute="top" secondItem="leM-pE-5C3" secondAttribute="bottom" constant="32.5" id="D7Z-tM-xdW"/>
+                <constraint firstItem="4Mq-uW-8uZ" firstAttribute="leading" secondItem="leM-pE-5C3" secondAttribute="leading" id="De9-Tu-cmP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="4Mq-uW-8uZ" secondAttribute="bottom" constant="32.5" id="MNv-4z-eeH"/>
+                <constraint firstItem="leM-pE-5C3" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="TH9-Li-37t"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="leM-pE-5C3" secondAttribute="trailing" constant="10" id="XY1-CU-hxT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4Mq-uW-8uZ" secondAttribute="trailing" constant="10" id="dVA-rn-Rs3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="hastagLbl" destination="4Mq-uW-8uZ" id="8j5-O7-o7m"/>
+                <outlet property="hastagTF" destination="vdE-3Q-rXn" id="SL5-Aq-hzn"/>
+            </connections>
+            <point key="canvasLocation" x="347.69230769230768" y="227.48815165876775"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="search" width="19" height="19"/>
+        <namedColor name="BorderColor">
+            <color red="0.81999999284744263" green="0.81999999284744263" blue="0.84700000286102295" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
