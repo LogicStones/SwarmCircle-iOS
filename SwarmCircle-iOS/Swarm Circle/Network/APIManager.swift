@@ -627,6 +627,31 @@ class APIManager: Networkable {
         request(target: .verifyAMLKYC(frontImage: frontImage, backImage: backImage), completion: completion)
     }
     
+    //Mark Subscriptions
+    func getSubscriptionsList(completion: @escaping (Result<BaseResponse<[SubscriptionListDM]>, Error>) -> ()) {
+        request(target: .getSubcriptionList, completion: completion)
+    }
+    
+    func getSubcriptionDetail(completion: @escaping (Result<BaseResponse<SubscriptionListDM>, Error>) -> ()) {
+        request(target: .getSubcriptionDetail, completion: completion)
+    }
+    
+    func subscriptionThroughWallet(params: [String : Any], completion: @escaping (Result<BaseResponse<Bool>, Error>) -> ()) {
+        request(target: .subscriptionThroughWallet(params: params), completion: completion)
+    }
+    
+    func subscriptionThroughNewCard(params: [String : Any], completion: @escaping (Result<BaseResponse<Bool>, Error>) -> ()) {
+        request(target: .subscriptionThroughNewCard(params: params), completion: completion)
+    }
+    
+    func subscriptionThroughSaveCard(params: [String : Any], completion: @escaping (Result<BaseResponse<Bool>, Error>) -> ()) {
+        request(target: .subscriptionThroughSaveCard(params: params), completion: completion)
+    }
+    
+    func postDowngradSubscription(params: [String : Any], completion: @escaping (Result<BaseResponse<Bool>, Error>) -> ()) {
+        request(target: .downgradeSubscription(params: params), completion: completion)
+    }
+    
 }
 private extension APIManager {
     private func request<T: Decodable>(target: API, completion: @escaping (Result<T, Error>) -> ()) {

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -324,6 +324,14 @@
                                                             <action selector="videoCallBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="KmM-oK-Z8R"/>
                                                         </connections>
                                                     </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiH-iB-AOR">
+                                                        <rect key="frame" x="24.5" y="140" width="60" height="60"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="audio_call"/>
+                                                        <connections>
+                                                            <action selector="audioCallBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ySL-PM-NWb"/>
+                                                        </connections>
+                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kg-Lu-wPD">
                                                         <rect key="frame" x="237" y="50" width="60" height="60"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -338,14 +346,6 @@
                                                         <state key="normal" image="mail"/>
                                                         <connections>
                                                             <action selector="emailBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="nzp-7W-gpB"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiH-iB-AOR">
-                                                        <rect key="frame" x="24.5" y="140" width="60" height="60"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="audio_call"/>
-                                                        <connections>
-                                                            <action selector="audioCallBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ySL-PM-NWb"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -524,6 +524,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnAudioOL" destination="RiH-iB-AOR" id="FCc-Yx-fzf"/>
+                        <outlet property="btnVideoOL" destination="D1c-kl-qjD" id="6oE-nu-Gzy"/>
                         <outlet property="circleImgView" destination="lig-y1-F2k" id="Hhf-uB-Xgh"/>
                         <outlet property="circleMemberCountLbl" destination="Ogu-l6-Bzc" id="hyM-Tf-Hfb"/>
                         <outlet property="circleNameLbl" destination="5GY-HY-TAf" id="UAp-bT-UTi"/>

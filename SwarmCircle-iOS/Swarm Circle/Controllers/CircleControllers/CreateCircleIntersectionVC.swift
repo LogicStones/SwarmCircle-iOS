@@ -18,7 +18,7 @@ class CreateCircleIntersectionVC: BaseViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var setPrivacyBtn: UIButton!
     
-    let privacyOptions: [(String, UIAlertAction.Style)] = [
+    var privacyOptions: [(String, UIAlertAction.Style)] = [
         ("Public", UIAlertAction.Style.default),
         ("Friends", UIAlertAction.Style.default),
         ("Only Members", UIAlertAction.Style.default),
@@ -43,8 +43,6 @@ class CreateCircleIntersectionVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         self.initUI()
         self.initVariable()
     }
@@ -375,5 +373,6 @@ extension CreateCircleIntersectionVC: NetworkResponseProtocols {
         } else {
             self.showToast(message: viewModel.didGetCircleMemberByCircleIdsListResponse?.message ?? "Some error occured", delay: 2, toastType: .red)
         }
-    }
+    }    
+    
 }

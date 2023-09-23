@@ -8,6 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		23E28AFF97D9AA015B888D96 /* Pods_Swarm_Circle_Swarm_CircleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F64F76A74BAAABC76639B3 /* Pods_Swarm_Circle_Swarm_CircleUITests.framework */; };
+		6A2918BA2AB1E1800067BBBB /* SubscriptionListDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2918B92AB1E1800067BBBB /* SubscriptionListDM.swift */; };
+		6A5028012AAF2D1F00E3B398 /* Subscription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A5028002AAF2D1F00E3B398 /* Subscription.storyboard */; };
+		6A6942C42AAF476F003D7813 /* Gilroy-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A6942B02AAF476B003D7813 /* Gilroy-Black.ttf */; };
+		6A6942C52AAF476F003D7813 /* Gilroy-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A6942B12AAF476B003D7813 /* Gilroy-Medium.ttf */; };
+		6A6942C62AAF476F003D7813 /* Gilroy-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A6942B22AAF476B003D7813 /* Gilroy-Heavy.ttf */; };
+		6A6942C72AAF476F003D7813 /* Gilroy-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A6942B32AAF476C003D7813 /* Gilroy-Light.ttf */; };
+		6A6942C82AAF476F003D7813 /* Gilroy-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A6942B42AAF476C003D7813 /* Gilroy-MediumItalic.ttf */; };
+		6A6942C92AAF476F003D7813 /* Gilroy-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A6942B52AAF476C003D7813 /* Gilroy-RegularItalic.ttf */; };
+		6A6942CA2AAF476F003D7813 /* Gilroy-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A6942B62AAF476C003D7813 /* Gilroy-Thin.ttf */; };
+		6A6942CB2AAF476F003D7813 /* Gilroy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A6942B72AAF476C003D7813 /* Gilroy-Regular.ttf */; };
+		6A6942CC2AAF476F003D7813 /* Gilroy-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A6942B82AAF476C003D7813 /* Gilroy-ExtraBold.ttf */; };
+		6A6942CD2AAF476F003D7813 /* Gilroy-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A6942B92AAF476D003D7813 /* Gilroy-BlackItalic.ttf */; };
+		6A6942CE2AAF476F003D7813 /* Gilroy-UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A6942BA2AAF476D003D7813 /* Gilroy-UltraLight.ttf */; };
+		6A6942CF2AAF476F003D7813 /* Gilroy-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A6942BB2AAF476D003D7813 /* Gilroy-BoldItalic.ttf */; };
+		6A6942D02AAF476F003D7813 /* Gilroy-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A6942BC2AAF476D003D7813 /* Gilroy-SemiBold.ttf */; };
+		6A6942D12AAF476F003D7813 /* Gilroy-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A6942BD2AAF476D003D7813 /* Gilroy-LightItalic.ttf */; };
+		6A6942D22AAF476F003D7813 /* Gilroy-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A6942BE2AAF476E003D7813 /* Gilroy-ExtraBoldItalic.ttf */; };
+		6A6942D32AAF476F003D7813 /* Gilroy-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A6942BF2AAF476E003D7813 /* Gilroy-ThinItalic.ttf */; };
+		6A6942D42AAF476F003D7813 /* Gilroy-UltraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A6942C02AAF476E003D7813 /* Gilroy-UltraLightItalic.ttf */; };
+		6A6942D52AAF476F003D7813 /* Gilroy-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A6942C12AAF476E003D7813 /* Gilroy-SemiBoldItalic.ttf */; };
+		6A6942D62AAF476F003D7813 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A6942C22AAF476E003D7813 /* Gilroy-Bold.ttf */; };
+		6A6942D72AAF476F003D7813 /* Gilroy-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A6942C32AAF476E003D7813 /* Gilroy-HeavyItalic.ttf */; };
+		6A6A99A42AB22BBD0060527F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8839120428DCA5D6006A4EAB /* GoogleService-Info.plist */; };
+		6A6A99A62AB320910060527F /* SubscriptionDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6A99A52AB320910060527F /* SubscriptionDetailVC.swift */; };
+		6A7F69F12AB3664400B500BE /* PaymentMethodSubscribeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7F69F02AB3664400B500BE /* PaymentMethodSubscribeVC.swift */; };
+		6A7F69F32AB370C100B500BE /* SubscriptionPaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7F69F22AB370C100B500BE /* SubscriptionPaymentVC.swift */; };
+		6A9E369A2AB1C4B700693807 /* SubscriptionListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9E36992AB1C4B700693807 /* SubscriptionListVC.swift */; };
 		88015D30289D5FDF00515452 /* UpdatePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88015D2F289D5FDF00515452 /* UpdatePasswordVC.swift */; };
 		880164FA28F986AD00FE6D15 /* CustomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880164F928F986AD00FE6D15 /* CustomNavController.swift */; };
 		8803234B28FE98DD00D63F7A /* DocumentPickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8803234A28FE98DD00D63F7A /* DocumentPickerManager.swift */; };
@@ -32,7 +59,6 @@
 		8836F3C528DF158D003D8285 /* MyCircleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836F3C428DF158D003D8285 /* MyCircleVC.swift */; };
 		88375AAE28ABD64F00819660 /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88375AAC28ABD64F00819660 /* MediaCell.swift */; };
 		88375AAF28ABD64F00819660 /* MediaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88375AAD28ABD64F00819660 /* MediaCell.xib */; };
-		8839120528DCA5D6006A4EAB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8839120428DCA5D6006A4EAB /* GoogleService-Info.plist */; };
 		8839120728DCAC77006A4EAB /* NotificationDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8839120628DCAC77006A4EAB /* NotificationDM.swift */; };
 		8839120928DCB33E006A4EAB /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8839120828DCB33E006A4EAB /* NotificationVC.swift */; };
 		883BB2A428E364B300CC96F5 /* CardDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883BB2A328E364B300CC96F5 /* CardDM.swift */; };
@@ -192,11 +218,6 @@
 		FA1386EF2818A1CA003FC8F7 /* Swarm_CircleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1386EE2818A1CA003FC8F7 /* Swarm_CircleTests.swift */; };
 		FA1386F92818A1CA003FC8F7 /* Swarm_CircleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1386F82818A1CA003FC8F7 /* Swarm_CircleUITests.swift */; };
 		FA1386FB2818A1CB003FC8F7 /* Swarm_CircleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1386FA2818A1CB003FC8F7 /* Swarm_CircleUITestsLaunchTests.swift */; };
-		FA1387102818A844003FC8F7 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA13870B2818A844003FC8F7 /* Gilroy-Bold.ttf */; };
-		FA1387112818A844003FC8F7 /* Gilroy-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA13870C2818A844003FC8F7 /* Gilroy-Light.ttf */; };
-		FA1387122818A844003FC8F7 /* Gilroy-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA13870D2818A844003FC8F7 /* Gilroy-Medium.ttf */; };
-		FA1387132818A844003FC8F7 /* Gilroy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA13870E2818A844003FC8F7 /* Gilroy-Regular.ttf */; };
-		FA1387142818A844003FC8F7 /* Gilroy-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA13870F2818A844003FC8F7 /* Gilroy-Heavy.ttf */; };
 		FA1387152818A84A003FC8F7 /* CamptonBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA1387082818A7D3003FC8F7 /* CamptonBold.otf */; };
 		FA1387182818AB0B003FC8F7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1387172818AB0B003FC8F7 /* UIView+Extension.swift */; };
 		FA13871A2818AB5C003FC8F7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1387192818AB5C003FC8F7 /* Login.storyboard */; };
@@ -299,21 +320,6 @@
 		FAD38A9F289BF56100B613D5 /* LoginDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD38A9E289BF56100B613D5 /* LoginDM.swift */; };
 		FAD38AA1289BF58A00B613D5 /* UserDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD38AA0289BF58A00B613D5 /* UserDM.swift */; };
 		FAD50E80286F3B89004888F0 /* CardViewMaterialObsolute.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD50E7F286F3B89004888F0 /* CardViewMaterialObsolute.swift */; };
-		FAD50E902872D742004888F0 /* Gilroy-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAD50E812872D741004888F0 /* Gilroy-MediumItalic.ttf */; };
-		FAD50E912872D742004888F0 /* Gilroy-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAD50E822872D741004888F0 /* Gilroy-Black.ttf */; };
-		FAD50E922872D742004888F0 /* Gilroy-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAD50E832872D741004888F0 /* Gilroy-Thin.ttf */; };
-		FAD50E932872D742004888F0 /* Gilroy-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAD50E842872D741004888F0 /* Gilroy-ExtraBold.ttf */; };
-		FAD50E942872D742004888F0 /* Gilroy-UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAD50E852872D741004888F0 /* Gilroy-UltraLight.ttf */; };
-		FAD50E952872D742004888F0 /* Gilroy-UltraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAD50E862872D741004888F0 /* Gilroy-UltraLightItalic.ttf */; };
-		FAD50E962872D742004888F0 /* Gilroy-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAD50E872872D742004888F0 /* Gilroy-SemiBold.ttf */; };
-		FAD50E972872D742004888F0 /* Gilroy-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAD50E882872D742004888F0 /* Gilroy-HeavyItalic.ttf */; };
-		FAD50E982872D742004888F0 /* Gilroy-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAD50E892872D742004888F0 /* Gilroy-SemiBoldItalic.ttf */; };
-		FAD50E992872D742004888F0 /* Gilroy-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAD50E8A2872D742004888F0 /* Gilroy-BlackItalic.ttf */; };
-		FAD50E9A2872D742004888F0 /* Gilroy-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAD50E8B2872D742004888F0 /* Gilroy-ExtraBoldItalic.ttf */; };
-		FAD50E9B2872D742004888F0 /* Gilroy-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAD50E8C2872D742004888F0 /* Gilroy-LightItalic.ttf */; };
-		FAD50E9C2872D742004888F0 /* Gilroy-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAD50E8D2872D742004888F0 /* Gilroy-BoldItalic.ttf */; };
-		FAD50E9D2872D742004888F0 /* Gilroy-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAD50E8E2872D742004888F0 /* Gilroy-RegularItalic.ttf */; };
-		FAD50E9E2872D742004888F0 /* Gilroy-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAD50E8F2872D742004888F0 /* Gilroy-ThinItalic.ttf */; };
 		FAD50EA12872FE59004888F0 /* InviteFriendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD50EA02872FE59004888F0 /* InviteFriendVC.swift */; };
 		FAD50EA3287302CC004888F0 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD50EA2287302CC004888F0 /* HomeVC.swift */; };
 		FAD883B8289177E300FDA318 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD883B7289177E300FDA318 /* NavigationController.swift */; };
@@ -348,6 +354,32 @@
 		2E237DAA5B8E3066715EB12E /* Pods-Swarm CircleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swarm CircleTests.debug.xcconfig"; path = "Target Support Files/Pods-Swarm CircleTests/Pods-Swarm CircleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3B4458A829B15D8921990BB0 /* Pods-Swarm Circle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swarm Circle.debug.xcconfig"; path = "Target Support Files/Pods-Swarm Circle/Pods-Swarm Circle.debug.xcconfig"; sourceTree = "<group>"; };
 		55F64F76A74BAAABC76639B3 /* Pods_Swarm_Circle_Swarm_CircleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swarm_Circle_Swarm_CircleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A2918B92AB1E1800067BBBB /* SubscriptionListDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionListDM.swift; sourceTree = "<group>"; };
+		6A5028002AAF2D1F00E3B398 /* Subscription.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Subscription.storyboard; sourceTree = "<group>"; };
+		6A6942B02AAF476B003D7813 /* Gilroy-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Black.ttf"; sourceTree = "<group>"; };
+		6A6942B12AAF476B003D7813 /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.ttf"; sourceTree = "<group>"; };
+		6A6942B22AAF476B003D7813 /* Gilroy-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Heavy.ttf"; sourceTree = "<group>"; };
+		6A6942B32AAF476C003D7813 /* Gilroy-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.ttf"; sourceTree = "<group>"; };
+		6A6942B42AAF476C003D7813 /* Gilroy-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-MediumItalic.ttf"; sourceTree = "<group>"; };
+		6A6942B52AAF476C003D7813 /* Gilroy-RegularItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-RegularItalic.ttf"; sourceTree = "<group>"; };
+		6A6942B62AAF476C003D7813 /* Gilroy-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Thin.ttf"; sourceTree = "<group>"; };
+		6A6942B72AAF476C003D7813 /* Gilroy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.ttf"; sourceTree = "<group>"; };
+		6A6942B82AAF476C003D7813 /* Gilroy-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraBold.ttf"; sourceTree = "<group>"; };
+		6A6942B92AAF476D003D7813 /* Gilroy-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-BlackItalic.ttf"; sourceTree = "<group>"; };
+		6A6942BA2AAF476D003D7813 /* Gilroy-UltraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-UltraLight.ttf"; sourceTree = "<group>"; };
+		6A6942BB2AAF476D003D7813 /* Gilroy-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-BoldItalic.ttf"; sourceTree = "<group>"; };
+		6A6942BC2AAF476D003D7813 /* Gilroy-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-SemiBold.ttf"; sourceTree = "<group>"; };
+		6A6942BD2AAF476D003D7813 /* Gilroy-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-LightItalic.ttf"; sourceTree = "<group>"; };
+		6A6942BE2AAF476E003D7813 /* Gilroy-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		6A6942BF2AAF476E003D7813 /* Gilroy-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ThinItalic.ttf"; sourceTree = "<group>"; };
+		6A6942C02AAF476E003D7813 /* Gilroy-UltraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-UltraLightItalic.ttf"; sourceTree = "<group>"; };
+		6A6942C12AAF476E003D7813 /* Gilroy-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		6A6942C22AAF476E003D7813 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
+		6A6942C32AAF476E003D7813 /* Gilroy-HeavyItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-HeavyItalic.ttf"; sourceTree = "<group>"; };
+		6A6A99A52AB320910060527F /* SubscriptionDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionDetailVC.swift; sourceTree = "<group>"; };
+		6A7F69F02AB3664400B500BE /* PaymentMethodSubscribeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodSubscribeVC.swift; sourceTree = "<group>"; };
+		6A7F69F22AB370C100B500BE /* SubscriptionPaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionPaymentVC.swift; sourceTree = "<group>"; };
+		6A9E36992AB1C4B700693807 /* SubscriptionListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionListVC.swift; sourceTree = "<group>"; };
 		8355F7B4B6A7CBD796E983AA /* Pods-Swarm CircleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swarm CircleTests.release.xcconfig"; path = "Target Support Files/Pods-Swarm CircleTests/Pods-Swarm CircleTests.release.xcconfig"; sourceTree = "<group>"; };
 		88015D2F289D5FDF00515452 /* UpdatePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordVC.swift; sourceTree = "<group>"; };
 		880164F928F986AD00FE6D15 /* CustomNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavController.swift; sourceTree = "<group>"; };
@@ -541,11 +573,6 @@
 		FA1386F82818A1CA003FC8F7 /* Swarm_CircleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swarm_CircleUITests.swift; sourceTree = "<group>"; };
 		FA1386FA2818A1CB003FC8F7 /* Swarm_CircleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swarm_CircleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FA1387082818A7D3003FC8F7 /* CamptonBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CamptonBold.otf; sourceTree = "<group>"; };
-		FA13870B2818A844003FC8F7 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
-		FA13870C2818A844003FC8F7 /* Gilroy-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.ttf"; sourceTree = "<group>"; };
-		FA13870D2818A844003FC8F7 /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.ttf"; sourceTree = "<group>"; };
-		FA13870E2818A844003FC8F7 /* Gilroy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.ttf"; sourceTree = "<group>"; };
-		FA13870F2818A844003FC8F7 /* Gilroy-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Heavy.ttf"; sourceTree = "<group>"; };
 		FA1387172818AB0B003FC8F7 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		FA1387192818AB5C003FC8F7 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		FA13871C2818B490003FC8F7 /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
@@ -647,21 +674,6 @@
 		FAD38A9E289BF56100B613D5 /* LoginDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDM.swift; sourceTree = "<group>"; };
 		FAD38AA0289BF58A00B613D5 /* UserDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDM.swift; sourceTree = "<group>"; };
 		FAD50E7F286F3B89004888F0 /* CardViewMaterialObsolute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewMaterialObsolute.swift; sourceTree = "<group>"; };
-		FAD50E812872D741004888F0 /* Gilroy-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-MediumItalic.ttf"; sourceTree = "<group>"; };
-		FAD50E822872D741004888F0 /* Gilroy-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Black.ttf"; sourceTree = "<group>"; };
-		FAD50E832872D741004888F0 /* Gilroy-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Thin.ttf"; sourceTree = "<group>"; };
-		FAD50E842872D741004888F0 /* Gilroy-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraBold.ttf"; sourceTree = "<group>"; };
-		FAD50E852872D741004888F0 /* Gilroy-UltraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-UltraLight.ttf"; sourceTree = "<group>"; };
-		FAD50E862872D741004888F0 /* Gilroy-UltraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-UltraLightItalic.ttf"; sourceTree = "<group>"; };
-		FAD50E872872D742004888F0 /* Gilroy-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-SemiBold.ttf"; sourceTree = "<group>"; };
-		FAD50E882872D742004888F0 /* Gilroy-HeavyItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-HeavyItalic.ttf"; sourceTree = "<group>"; };
-		FAD50E892872D742004888F0 /* Gilroy-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
-		FAD50E8A2872D742004888F0 /* Gilroy-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-BlackItalic.ttf"; sourceTree = "<group>"; };
-		FAD50E8B2872D742004888F0 /* Gilroy-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
-		FAD50E8C2872D742004888F0 /* Gilroy-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-LightItalic.ttf"; sourceTree = "<group>"; };
-		FAD50E8D2872D742004888F0 /* Gilroy-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-BoldItalic.ttf"; sourceTree = "<group>"; };
-		FAD50E8E2872D742004888F0 /* Gilroy-RegularItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-RegularItalic.ttf"; sourceTree = "<group>"; };
-		FAD50E8F2872D742004888F0 /* Gilroy-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ThinItalic.ttf"; sourceTree = "<group>"; };
 		FAD50EA02872FE59004888F0 /* InviteFriendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendVC.swift; sourceTree = "<group>"; };
 		FAD50EA2287302CC004888F0 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		FAD883B7289177E300FDA318 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -709,6 +721,17 @@
 				C7B3DA9566ED4A4870E9F7A7 /* Pods_Swarm_CircleTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A9E36982AB1C48400693807 /* Subscription */ = {
+			isa = PBXGroup;
+			children = (
+				6A9E36992AB1C4B700693807 /* SubscriptionListVC.swift */,
+				6A6A99A52AB320910060527F /* SubscriptionDetailVC.swift */,
+				6A7F69F02AB3664400B500BE /* PaymentMethodSubscribeVC.swift */,
+				6A7F69F22AB370C100B500BE /* SubscriptionPaymentVC.swift */,
+			);
+			path = Subscription;
 			sourceTree = "<group>";
 		};
 		882ABB7728AFB2290075FEC7 /* InteractionControllers */ = {
@@ -986,26 +1009,26 @@
 		FA13870A2818A833003FC8F7 /* Gilroy */ = {
 			isa = PBXGroup;
 			children = (
-				FAD50E822872D741004888F0 /* Gilroy-Black.ttf */,
-				FAD50E8A2872D742004888F0 /* Gilroy-BlackItalic.ttf */,
-				FAD50E8D2872D742004888F0 /* Gilroy-BoldItalic.ttf */,
-				FAD50E842872D741004888F0 /* Gilroy-ExtraBold.ttf */,
-				FAD50E8B2872D742004888F0 /* Gilroy-ExtraBoldItalic.ttf */,
-				FAD50E882872D742004888F0 /* Gilroy-HeavyItalic.ttf */,
-				FAD50E8C2872D742004888F0 /* Gilroy-LightItalic.ttf */,
-				FAD50E812872D741004888F0 /* Gilroy-MediumItalic.ttf */,
-				FAD50E8E2872D742004888F0 /* Gilroy-RegularItalic.ttf */,
-				FAD50E872872D742004888F0 /* Gilroy-SemiBold.ttf */,
-				FAD50E892872D742004888F0 /* Gilroy-SemiBoldItalic.ttf */,
-				FAD50E832872D741004888F0 /* Gilroy-Thin.ttf */,
-				FAD50E8F2872D742004888F0 /* Gilroy-ThinItalic.ttf */,
-				FAD50E852872D741004888F0 /* Gilroy-UltraLight.ttf */,
-				FAD50E862872D741004888F0 /* Gilroy-UltraLightItalic.ttf */,
-				FA13870B2818A844003FC8F7 /* Gilroy-Bold.ttf */,
-				FA13870F2818A844003FC8F7 /* Gilroy-Heavy.ttf */,
-				FA13870C2818A844003FC8F7 /* Gilroy-Light.ttf */,
-				FA13870D2818A844003FC8F7 /* Gilroy-Medium.ttf */,
-				FA13870E2818A844003FC8F7 /* Gilroy-Regular.ttf */,
+				6A6942B02AAF476B003D7813 /* Gilroy-Black.ttf */,
+				6A6942B92AAF476D003D7813 /* Gilroy-BlackItalic.ttf */,
+				6A6942C22AAF476E003D7813 /* Gilroy-Bold.ttf */,
+				6A6942BB2AAF476D003D7813 /* Gilroy-BoldItalic.ttf */,
+				6A6942B82AAF476C003D7813 /* Gilroy-ExtraBold.ttf */,
+				6A6942BE2AAF476E003D7813 /* Gilroy-ExtraBoldItalic.ttf */,
+				6A6942B22AAF476B003D7813 /* Gilroy-Heavy.ttf */,
+				6A6942C32AAF476E003D7813 /* Gilroy-HeavyItalic.ttf */,
+				6A6942B32AAF476C003D7813 /* Gilroy-Light.ttf */,
+				6A6942BD2AAF476D003D7813 /* Gilroy-LightItalic.ttf */,
+				6A6942B12AAF476B003D7813 /* Gilroy-Medium.ttf */,
+				6A6942B42AAF476C003D7813 /* Gilroy-MediumItalic.ttf */,
+				6A6942B72AAF476C003D7813 /* Gilroy-Regular.ttf */,
+				6A6942B52AAF476C003D7813 /* Gilroy-RegularItalic.ttf */,
+				6A6942BC2AAF476D003D7813 /* Gilroy-SemiBold.ttf */,
+				6A6942C12AAF476E003D7813 /* Gilroy-SemiBoldItalic.ttf */,
+				6A6942B62AAF476C003D7813 /* Gilroy-Thin.ttf */,
+				6A6942BF2AAF476E003D7813 /* Gilroy-ThinItalic.ttf */,
+				6A6942BA2AAF476D003D7813 /* Gilroy-UltraLight.ttf */,
+				6A6942C02AAF476E003D7813 /* Gilroy-UltraLightItalic.ttf */,
 			);
 			path = Gilroy;
 			sourceTree = "<group>";
@@ -1055,6 +1078,7 @@
 		FA13871E2818B4CA003FC8F7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6A9E36982AB1C48400693807 /* Subscription */,
 				FABB60742A2DD71800E05158 /* IdentifyControllers */,
 				8850D585292E526D00BD198C /* AVControllers */,
 				FA4D57F228B8EA08002E4A12 /* FriendsControllers */,
@@ -1116,6 +1140,7 @@
 				8819537228B9095E008D9AAE /* Profile.storyboard */,
 				8850D595292E614A00BD198C /* AVCalling.storyboard */,
 				FABB60722A2DD6E600E05158 /* Identify.storyboard */,
+				6A5028002AAF2D1F00E3B398 /* Subscription.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -1208,6 +1233,7 @@
 				88B407972963177800D2E5A9 /* UserListPollOptionDM.swift */,
 				88D9A96829642FF0005DB8B1 /* PrivacySettingsDM.swift */,
 				FAAE47082A2FC3F800B23B23 /* UploadOptions.swift */,
+				6A2918B92AB1E1800067BBBB /* SubscriptionListDM.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1449,54 +1475,52 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A6A99A42AB22BBD0060527F /* GoogleService-Info.plist in Resources */,
 				884351242955F03A006400BE /* UserCell.xib in Resources */,
+				6A6942D02AAF476F003D7813 /* Gilroy-SemiBold.ttf in Resources */,
 				FA088508288ADCBE001CB3CD /* CircleIntersectionCell.xib in Resources */,
 				88EC31D728FD4F62009B764E /* PostsHeaderView.xib in Resources */,
-				FAD50E952872D742004888F0 /* Gilroy-UltraLightItalic.ttf in Resources */,
+				6A6942CA2AAF476F003D7813 /* Gilroy-Thin.ttf in Resources */,
 				883DDBE029252CCA009A2588 /* AvatarHeaderView.xib in Resources */,
 				8850D596292E614A00BD198C /* AVCalling.storyboard in Resources */,
-				FAD50E912872D742004888F0 /* Gilroy-Black.ttf in Resources */,
 				FA312EA32876F5B10096FD31 /* Circle.storyboard in Resources */,
+				6A6942C52AAF476F003D7813 /* Gilroy-Medium.ttf in Resources */,
 				FA088504288A0EE4001CB3CD /* PastPollCell.xib in Resources */,
 				FA1386E42818A1CA003FC8F7 /* LaunchScreen.storyboard in Resources */,
-				FA1387122818A844003FC8F7 /* Gilroy-Medium.ttf in Resources */,
 				FA1386DF2818A1C9003FC8F7 /* Main.storyboard in Resources */,
 				FA0E619728ABB5140025D16C /* FeedsMediaCell.xib in Resources */,
-				FAD50E942872D742004888F0 /* Gilroy-UltraLight.ttf in Resources */,
 				FA0D1A4B2970CCDC006F4178 /* dialTone.mp3 in Resources */,
 				88599F022936201300F64352 /* GroupCallingCell.xib in Resources */,
+				6A6942D62AAF476F003D7813 /* Gilroy-Bold.ttf in Resources */,
+				6A6942C92AAF476F003D7813 /* Gilroy-RegularItalic.ttf in Resources */,
 				FA1387152818A84A003FC8F7 /* CamptonBold.otf in Resources */,
 				8869474228DDCBD3003C8DA9 /* NotificationCell.xib in Resources */,
-				FA1387142818A844003FC8F7 /* Gilroy-Heavy.ttf in Resources */,
 				FAC9CA8328B3C7D8000F463B /* SendTextCell.xib in Resources */,
+				6A5028012AAF2D1F00E3B398 /* Subscription.storyboard in Resources */,
+				6A6942D42AAF476F003D7813 /* Gilroy-UltraLightItalic.ttf in Resources */,
 				FA10572A2873AFD6007D9D6E /* EditProfileCell.xib in Resources */,
-				FAD50E962872D742004888F0 /* Gilroy-SemiBold.ttf in Resources */,
-				FA1387112818A844003FC8F7 /* Gilroy-Light.ttf in Resources */,
+				6A6942CE2AAF476F003D7813 /* Gilroy-UltraLight.ttf in Resources */,
 				88967D08295AE861000D465C /* TagCell.xib in Resources */,
 				8840F961293E2A8700D0457E /* GroupAVCallingCell.xib in Resources */,
+				6A6942CD2AAF476F003D7813 /* Gilroy-BlackItalic.ttf in Resources */,
 				888FDEC028AE30D800810563 /* BlockedFriendsCell.xib in Resources */,
-				FAD50E9A2872D742004888F0 /* Gilroy-ExtraBoldItalic.ttf in Resources */,
 				FAA57CC828857B32002ED19F /* CardsCell.xib in Resources */,
 				FA312E952876BAF00096FD31 /* InviteFriendsCell.xib in Resources */,
-				FAD50E9C2872D742004888F0 /* Gilroy-BoldItalic.ttf in Resources */,
 				FA312E9A2876BFC90096FD31 /* TransactionRecordCell.xib in Resources */,
-				FA1387132818A844003FC8F7 /* Gilroy-Regular.ttf in Resources */,
 				FA9091E72887F475009F2B2F /* BottomSheetOptionCell.xib in Resources */,
 				FA9091F92888CBE5009F2B2F /* CircleCell.xib in Resources */,
-				FAD50E972872D742004888F0 /* Gilroy-HeavyItalic.ttf in Resources */,
-				FAD50E9E2872D742004888F0 /* Gilroy-ThinItalic.ttf in Resources */,
 				882ABB7B28AFC15E0075FEC7 /* AddCommentsCell.xib in Resources */,
 				FAC9F94E291EADEF00900B97 /* ChatDateHeaderView.xib in Resources */,
 				FA9091ED28880065009F2B2F /* EditAvatarOptionsCell.xib in Resources */,
 				FAD9688428742A09000ABAC4 /* CircleOptionsCell.xib in Resources */,
 				FA9742B82886AFF7007AAD0C /* PollQuestionWithMenu.xib in Resources */,
-				FAD50E9D2872D742004888F0 /* Gilroy-RegularItalic.ttf in Resources */,
 				88375AAF28ABD64F00819660 /* MediaCell.xib in Resources */,
+				6A6942D52AAF476F003D7813 /* Gilroy-SemiBoldItalic.ttf in Resources */,
+				6A6942D72AAF476F003D7813 /* Gilroy-HeavyItalic.ttf in Resources */,
 				FA53C81828788F480079A69D /* Finance.storyboard in Resources */,
-				FAD50E902872D742004888F0 /* Gilroy-MediumItalic.ttf in Resources */,
+				6A6942C72AAF476F003D7813 /* Gilroy-Light.ttf in Resources */,
 				885B26EE28F0431C009397D2 /* BankAccountCell.xib in Resources */,
 				FA53C80E28785EC60079A69D /* PastPollQuestionCell.xib in Resources */,
-				FAD50E932872D742004888F0 /* Gilroy-ExtraBold.ttf in Resources */,
 				88D7DB7328B90F840003B252 /* PollOptionsViewCell.xib in Resources */,
 				8819537328B9095E008D9AAE /* Profile.storyboard in Resources */,
 				FAD9688B28742F6B000ABAC4 /* CirclesInfoCell.xib in Resources */,
@@ -1506,25 +1530,28 @@
 				886CB0C128AA7E7900B98716 /* FeedsTextCell.xib in Resources */,
 				885F41BD28B3AAB400678A7E /* SuggestedCircleCell.xib in Resources */,
 				FA13871A2818AB5C003FC8F7 /* Login.storyboard in Resources */,
+				6A6942CF2AAF476F003D7813 /* Gilroy-BoldItalic.ttf in Resources */,
+				6A6942C82AAF476F003D7813 /* Gilroy-MediumItalic.ttf in Resources */,
 				887594852926657700872CEB /* HeadingInfoCell.xib in Resources */,
 				FABB607E2A2E15B800E05158 /* DocumentTypeCell.xib in Resources */,
+				6A6942C62AAF476F003D7813 /* Gilroy-Heavy.ttf in Resources */,
 				FABB60732A2DD6E600E05158 /* Identify.storyboard in Resources */,
+				6A6942CB2AAF476F003D7813 /* Gilroy-Regular.ttf in Resources */,
 				887EE7C828AE8F79009C03F3 /* CommentsCell.xib in Resources */,
 				FA53C808287814DA0079A69D /* PollQuestionCell.xib in Resources */,
+				6A6942C42AAF476F003D7813 /* Gilroy-Black.ttf in Resources */,
 				887823F5296EB4AF00D25723 /* HashtagHeaderView.xib in Resources */,
-				FAD50E9B2872D742004888F0 /* Gilroy-LightItalic.ttf in Resources */,
-				FAD50E992872D742004888F0 /* Gilroy-BlackItalic.ttf in Resources */,
 				883DDBEE29253527009A2588 /* PollOptionsCell.xib in Resources */,
 				FAD060A8287593E900768471 /* FriendCell.xib in Resources */,
-				FA1387102818A844003FC8F7 /* Gilroy-Bold.ttf in Resources */,
 				887EE7CB28AE9765009C03F3 /* CommentsHeaderView.xib in Resources */,
+				6A6942D22AAF476F003D7813 /* Gilroy-ExtraBoldItalic.ttf in Resources */,
+				6A6942D32AAF476F003D7813 /* Gilroy-ThinItalic.ttf in Resources */,
 				FAD060A028746D3E00768471 /* FriendsListCell.xib in Resources */,
-				8839120528DCA5D6006A4EAB /* GoogleService-Info.plist in Resources */,
-				FAD50E922872D742004888F0 /* Gilroy-Thin.ttf in Resources */,
 				FA0E618E28ABAA7A0025D16C /* Posts.storyboard in Resources */,
+				6A6942D12AAF476F003D7813 /* Gilroy-LightItalic.ttf in Resources */,
 				FA9742B52885A8B8007AAD0C /* PollQuestionView.xib in Resources */,
+				6A6942CC2AAF476F003D7813 /* Gilroy-ExtraBold.ttf in Resources */,
 				88934D9728ABCB9600789A23 /* Assets.xcassets in Resources */,
-				FAD50E982872D742004888F0 /* Gilroy-SemiBoldItalic.ttf in Resources */,
 				FAC9F947291EA78100900B97 /* ReceivedTextCell.xib in Resources */,
 				883DDBE429252D5B009A2588 /* AvatarPropCell.xib in Resources */,
 			);
@@ -1694,7 +1721,9 @@
 				FAD0609A2874661400768471 /* CardViewMaterial.swift in Sources */,
 				8832CBFE28F00DEF0050866B /* AddBankAccountVC.swift in Sources */,
 				885F41BF28B3B8E700678A7E /* PendingCirclesVC.swift in Sources */,
+				6A7F69F12AB3664400B500BE /* PaymentMethodSubscribeVC.swift in Sources */,
 				FAD060A7287593E900768471 /* FriendCell.swift in Sources */,
+				6A2918BA2AB1E1800067BBBB /* SubscriptionListDM.swift in Sources */,
 				FAD0609C28746B6700768471 /* FriendsListVC.swift in Sources */,
 				FAD9688D28743C41000ABAC4 /* CreateCircleVC.swift in Sources */,
 				88FCD00B291175AB00E204C3 /* ReportVC.swift in Sources */,
@@ -1780,6 +1809,7 @@
 				8815306B28DAFE8C006C8ED8 /* WalletDetailDM.swift in Sources */,
 				888B2E89294871BF000AA9C8 /* StartGroupCallSessionDM.swift in Sources */,
 				88558DF828A6A1EF00E8284E /* CustomIntensityVisualEffectView.swift in Sources */,
+				6A7F69F32AB370C100B500BE /* SubscriptionPaymentVC.swift in Sources */,
 				FAC3AE36281B36C6009DAE08 /* BaseViewController.swift in Sources */,
 				888FDEBC28AE2F2900810563 /* BlockedFriendsVC.swift in Sources */,
 				8819537528B90B52008D9AAE /* NewPollVC.swift in Sources */,
@@ -1873,6 +1903,7 @@
 				FAD9688A28742F6B000ABAC4 /* CirclesInfoCell.swift in Sources */,
 				FA9091E92887FDC3009F2B2F /* EditAvatarVC.swift in Sources */,
 				FAA3A8CB296D6D2800C5EB6E /* GradientView.swift in Sources */,
+				6A9E369A2AB1C4B700693807 /* SubscriptionListVC.swift in Sources */,
 				8850D590292E60BF00BD198C /* SpeakerboxCall.swift in Sources */,
 				FAC9F94D291EADEF00900B97 /* ChatDateHeaderView.swift in Sources */,
 				FA9091F52888BFDA009F2B2F /* UIImage+Extension.swift in Sources */,
@@ -1901,6 +1932,7 @@
 				8836F3C528DF158D003D8285 /* MyCircleVC.swift in Sources */,
 				8889F6BF294789C200CF2997 /* CircleMemberListVC.swift in Sources */,
 				FA715310289A7B780024CCE6 /* API.swift in Sources */,
+				6A6A99A62AB320910060527F /* SubscriptionDetailVC.swift in Sources */,
 				8840F960293E2A8700D0457E /* GroupAVCallingCell.swift in Sources */,
 				FA312E912876B9F50096FD31 /* ConnectWithFriendsVC.swift in Sources */,
 			);
@@ -2084,7 +2116,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 23;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 77GZFPHFGQ;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Swarm Circle/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "App needs your camera access to post feeds, edit profile and create circle.";
@@ -2125,7 +2157,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 23;
-				DEVELOPMENT_TEAM = 77GZFPHFGQ;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Swarm Circle/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "App needs your camera access to post feeds, edit profile and create circle.";

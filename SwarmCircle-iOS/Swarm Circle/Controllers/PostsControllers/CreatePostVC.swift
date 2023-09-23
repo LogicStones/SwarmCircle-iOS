@@ -25,6 +25,9 @@ class CreatePostVC: BaseViewController {
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var dropShadowView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet var btnImageOL: UIButton!
+    @IBOutlet var btnVideoOL: UIButton!
+    @IBOutlet var constrainTagbnt: NSLayoutConstraint!
     
     let privacyOptions: [(String, UIAlertAction.Style)] = [
         ("Friends", UIAlertAction.Style.default),
@@ -106,6 +109,13 @@ class CreatePostVC: BaseViewController {
     // MARK: - Load data from API
     func initVariable() {
         self.viewModel.delegateNetworkResponse = self
+        self.getSubscriptionData()
+    }
+    
+    func getSubscriptionData() {
+        
+        self.showLoader()
+        self.viewModel.getSubscriptionDetails()
     }
     
     // MARK: - Save Post
@@ -144,7 +154,8 @@ class CreatePostVC: BaseViewController {
     }
     
     // MARK: - Convert Media Array to Data Array
-    func getMediaInData() -> ([Data], [Data], [Data]) {
+    func getMediaInData() -> ([Data], [Data], [Data])
+    {
         
         var imageDataArray: [Data] = []
         var videoDataArray: [Data] = []
@@ -598,6 +609,32 @@ extension CreatePostVC: NetworkResponseProtocols {
             
         } else {
             self.showToast(message: self.viewModel.addPostResponseV2?.message ?? "Some error occured", delay: 2, toastType: .red)
+        }
+    }
+    
+    func didGetSubscriptionDetails() {
+        self.hideLoader()
+
+        if self.viewModel.getSubscriptionDetailsResponse?.isSuccess ?? false {
+            if let subsdetails = self.viewModel.getSubscriptionDetailsResponse?.data
+            {
+                if let id = subsdetails.id, id > 1
+                {
+                    self.btnImageOL.isHidden = false
+                    self.btnVideoOL.isHidden = false
+                    self.constrainTagbnt.constant = 125
+                }
+                else
+                {
+                    self.btnImageOL.isHidden = true
+                    self.btnVideoOL.isHidden = true
+                    self.constrainTagbnt.constant = 15
+                }
+            }
+            else
+            {
+                self.showToast(message: self.viewModel.getSubscriptionDetailsResponse?.message ?? "Some error occured", delay: 2, toastType: .red)
+            }
         }
     }
 }

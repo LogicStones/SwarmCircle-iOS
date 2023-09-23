@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -183,7 +183,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HmN-aq-NO4">
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HmN-aq-NO4">
                                                         <rect key="frame" x="15" y="127" width="45" height="45"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="imageCircle"/>
@@ -191,12 +191,20 @@
                                                             <action selector="imgBtnTapped:" destination="ilM-mu-9Cg" eventType="touchUpInside" id="hzS-Sx-NPb"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNz-Ak-RFp">
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNz-Ak-RFp">
                                                         <rect key="frame" x="70" y="127" width="45" height="45"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="cameraCircle"/>
                                                         <connections>
                                                             <action selector="videoBtnTapped:" destination="ilM-mu-9Cg" eventType="touchUpInside" id="BLd-UE-bLe"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzW-ke-EeY">
+                                                        <rect key="frame" x="125" y="127" width="45" height="45"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="tagIcon"/>
+                                                        <connections>
+                                                            <action selector="tagBtnTapped:" destination="ilM-mu-9Cg" eventType="touchUpInside" id="ILF-Ns-bkg"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihB-Hi-zti">
@@ -220,14 +228,6 @@
                                                             <action selector="postBtnTapped:" destination="ilM-mu-9Cg" eventType="touchUpInside" id="6kr-ym-n49"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzW-ke-EeY">
-                                                        <rect key="frame" x="125" y="127" width="45" height="45"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="tagIcon"/>
-                                                        <connections>
-                                                            <action selector="tagBtnTapped:" destination="ilM-mu-9Cg" eventType="touchUpInside" id="ILF-Ns-bkg"/>
-                                                        </connections>
-                                                    </button>
                                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="verifiedIcon" translatesAutoresizingMaskIntoConstraints="NO" id="y1k-o2-CJZ">
                                                         <rect key="frame" x="174" y="21" width="12" height="12"/>
                                                     </imageView>
@@ -236,6 +236,7 @@
                                                 <constraints>
                                                     <constraint firstItem="HmN-aq-NO4" firstAttribute="leading" secondItem="dtb-ZJ-mPr" secondAttribute="leading" id="0qN-7E-uKI"/>
                                                     <constraint firstItem="PzW-ke-EeY" firstAttribute="centerY" secondItem="NNz-Ak-RFp" secondAttribute="centerY" id="1Pn-SJ-eXO"/>
+                                                    <constraint firstItem="PzW-ke-EeY" firstAttribute="leading" secondItem="0Tm-h0-tlR" secondAttribute="leading" constant="125" id="1an-9h-VWT"/>
                                                     <constraint firstItem="dtb-ZJ-mPr" firstAttribute="leading" secondItem="KUp-mf-VYq" secondAttribute="leading" id="3kS-UX-4vN"/>
                                                     <constraint firstItem="ihB-Hi-zti" firstAttribute="trailing" secondItem="dtb-ZJ-mPr" secondAttribute="trailing" id="9Ta-ON-8W5"/>
                                                     <constraint firstItem="NNz-Ak-RFp" firstAttribute="centerY" secondItem="HmN-aq-NO4" secondAttribute="centerY" id="ABb-vu-YoT"/>
@@ -251,7 +252,6 @@
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="y1k-o2-CJZ" secondAttribute="trailing" constant="10" id="rAy-Hs-eQq"/>
                                                     <constraint firstItem="Nq2-wJ-fjS" firstAttribute="top" secondItem="9mb-tO-4oL" secondAttribute="bottom" constant="5" id="rgW-NL-sMD"/>
                                                     <constraint firstItem="NNz-Ak-RFp" firstAttribute="leading" secondItem="HmN-aq-NO4" secondAttribute="trailing" constant="10" id="w6e-Pe-nbN"/>
-                                                    <constraint firstItem="PzW-ke-EeY" firstAttribute="leading" secondItem="NNz-Ak-RFp" secondAttribute="trailing" constant="10" id="x0B-ub-Vvx"/>
                                                     <constraint firstItem="ihB-Hi-zti" firstAttribute="centerY" secondItem="NNz-Ak-RFp" secondAttribute="centerY" id="x98-hr-ywo"/>
                                                     <constraint firstItem="9mb-tO-4oL" firstAttribute="top" secondItem="KUp-mf-VYq" secondAttribute="top" id="yLE-XE-4hf"/>
                                                     <constraint firstItem="KUp-mf-VYq" firstAttribute="leading" secondItem="0Tm-h0-tlR" secondAttribute="leading" constant="15" id="ygc-N7-IRC"/>
@@ -370,7 +370,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnImageOL" destination="HmN-aq-NO4" id="Ta8-n2-9q7"/>
+                        <outlet property="btnVideoOL" destination="NNz-Ak-RFp" id="5QI-wO-ZcM"/>
                         <outlet property="collectionView" destination="0aW-zD-9pr" id="Joc-fv-K3I"/>
+                        <outlet property="constrainTagbnt" destination="1an-9h-VWT" id="O20-EJ-Yk5"/>
                         <outlet property="crossBtn" destination="EN7-aI-pHy" id="DZv-3p-StU"/>
                         <outlet property="dropShadowView" destination="j4g-yr-fH9" id="Lfr-29-Ldk"/>
                         <outlet property="feedTextView" destination="Rvx-oC-zf0" id="DWl-0L-Qck"/>

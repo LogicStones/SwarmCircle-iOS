@@ -30,6 +30,8 @@ extension Notification.Name {
     // MARK: - Action for singe/group audio/video call, fired after user accepts/rejects call from CallKit
     static let actionForCall = Notification.Name("actionForCall")
     
+    static let refreshSubscription = Notification.Name("refreshSubscription")
+    
     static let protectedDataWillBecomeUnavailableNotification = UIApplication.protectedDataWillBecomeUnavailableNotification
     
     static let protectedDataDidBecomeAvailableNotification = UIApplication.protectedDataDidBecomeAvailableNotification

@@ -18,8 +18,8 @@ class ProfileVC: BaseViewController {
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     
-    var optionList = ["Edit Profile", "My Transactions", "Account Details", "My Avatar", "Settings", "Contact Us", "Terms & Conditions", "Privacy Policy", "Invite to SwarmCircle", "Delete my Account"]
-    var iconsList = ["edit", "money-stack", "id", "avatarIcon", "lockedLockIcon", "phone", "cost-estimate", "contract", "shareIcon", "deleteAccountIcon"]
+    var optionList = ["Edit Profile", "My Transactions", "Account Details", "My Avatar","Subscriptions", "Settings", "Contact Us", "Terms & Conditions", "Privacy Policy", "Invite to SwarmCircle", "Delete my Account"]
+    var iconsList = ["edit", "money-stack", "id", "avatarIcon","subscription", "lockedLockIcon", "phone", "cost-estimate", "contract", "shareIcon", "deleteAccountIcon"]
     
     let viewModel = ViewModel()
     
@@ -162,30 +162,35 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
                 self.getUserDetails()
             }
             
+            
         case 3:
             if let vc = AppStoryboard.Main.instance.instantiateViewController(withIdentifier: "MyAvatarVC") as? MyAvatarVC {
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         case 4:
+            if let vc = AppStoryboard.Subscriptions.instance.instantiateViewController(withIdentifier: "SubscriptionListVC") as? SubscriptionListVC {
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        case 5:
             if let vc = AppStoryboard.Main.instance.instantiateViewController(withIdentifier: "PrivacySettingsVC") as? PrivacySettingsVC {
                 vc.delegate = self
                 self.navigationController?.pushViewController(vc, animated: true)
             }
-        case 5:
-            if let vc = AppStoryboard.Profile.instance.instantiateViewController(withIdentifier: "ContactUsVC") as? ContactUsVC {
-                self.navigationController?.pushViewController(vc, animated: true)
-            }
         case 6:
-            if let vc = AppStoryboard.Profile.instance.instantiateViewController(withIdentifier: "AppInfoVC") as? AppInfoVC {
-                vc.sourceCell = .termsNConditions
+            if let vc = AppStoryboard.Profile.instance.instantiateViewController(withIdentifier: "ContactUsVC") as? ContactUsVC {
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         case 7:
             if let vc = AppStoryboard.Profile.instance.instantiateViewController(withIdentifier: "AppInfoVC") as? AppInfoVC {
-                vc.sourceCell = .privacyPolicy
+                vc.sourceCell = .termsNConditions
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         case 8:
+            if let vc = AppStoryboard.Profile.instance.instantiateViewController(withIdentifier: "AppInfoVC") as? AppInfoVC {
+                vc.sourceCell = .privacyPolicy
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        case 9:
 
             Utils.openShareIntent(self, description: "Hey, Checkout this Application...", shareLink: "\(AppConstants.baseURL)Account/Register?Referal=7f57bfb4")
 //            guard let shareLink = PreferencesManager.getUserModel()?.shareLink else {
@@ -193,7 +198,7 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
 //            }
 //            Utils.openShareIntent(self, description: "Hey, Checkout this Application...", shareLink: shareLink)
             
-        case 9:
+        case 10:
             
             Alert.sharedInstance.alertWindow(title: "Warning", message: "Are you sure you want to delete this account") { result in
                 if result {

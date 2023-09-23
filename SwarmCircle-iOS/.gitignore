@@ -1,2 +1,6 @@
 # Cocoapods
 Pods/
+#build
+build/
+#localPods
+LocalPods/

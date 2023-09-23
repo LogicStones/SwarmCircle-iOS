@@ -8,7 +8,7 @@
 import Moya
 
 enum API {
-
+    
     /// Login & Session Endpoints
     case loginUser(params: [String: Any])
     case registerUser(params: [String: Any])
@@ -104,7 +104,7 @@ enum API {
     
     
     case getCommentList(pageNumber: Int, pageLimit: Int = 20, commentId: Int, postId: Int)
-    case getReplyList(pageNumber: Int, pageLimit: Int = 20, replyId: Int, commentId: Int) // page limit will not be used here 
+    case getReplyList(pageNumber: Int, pageLimit: Int = 20, replyId: Int, commentId: Int) // page limit will not be used here
     case saveCommentReply(params: [String: Any])
     case saveLike(params: [String: Any])
     case deletePost(postId: Int)
@@ -136,7 +136,7 @@ enum API {
     case getAllAvatarPropsByGender
     case getCurrentAvatar
     case saveUserAvatar(params: [String: Any])
-      
+    
     // App Information
     case termsNConditions
     case privacyPolicy
@@ -160,6 +160,14 @@ enum API {
     
     case getAMLKYCUploadOptions
     case verifyAMLKYC(frontImage: Data, backImage: Data?)
+    
+    //subscription
+    case getSubcriptionList
+    case getSubcriptionDetail
+    case subscriptionThroughWallet(params: [String: Any])
+    case subscriptionThroughSaveCard(params: [String: Any])
+    case subscriptionThroughNewCard(params: [String: Any])
+    case downgradeSubscription(params:[String:Any])
     
 }
 
@@ -193,7 +201,7 @@ extension API: TargetType, AccessTokenAuthorizable{
             return "api/ApiAccount/Logout"
         case .deleteAccount:
             return "api/ApiAccount/DeleteAccount"
-        
+            
             
             /// Users & Friends Endpoints
         case .getUsersList:
@@ -361,14 +369,14 @@ extension API: TargetType, AccessTokenAuthorizable{
             
             
             
-        // Report
+            // Report
         case .getReportTypeList:
             return "api/ApiReport/GetReportTypes"
         case .saveReport:
             return "api/ApiReport/SaveReport"
             
             
-        // User
+            // User
         case .getUserDetails:
             return "api/ApiUser/GetUserDetails"
         case .updateProfile:
@@ -409,7 +417,7 @@ extension API: TargetType, AccessTokenAuthorizable{
         case .contactUs:
             return "api/ApiAbout/SaveContactUs"
             
-        // Calling
+            // Calling
         case .startCallSession:
             return "api/ApiVideo/StartCallSession"
         case .groupCallHostStop:
@@ -441,6 +449,20 @@ extension API: TargetType, AccessTokenAuthorizable{
             return "api/ApiUser/GetAMLKYCUploadOptions"
         case .verifyAMLKYC:
             return "api/ApiUser/VerifyAMLKYC"
+            
+            //Subscriptions
+        case .getSubcriptionList:
+            return "api/ApiSubcription/GetSubcriptionList"
+        case .getSubcriptionDetail:
+            return "api/ApiSubcription/GetSubscriptionDetail"
+        case .subscriptionThroughWallet:
+            return "api/ApiSubcription/PaymentThroughWallet"
+        case .subscriptionThroughSaveCard:
+            return "api/ApiSubcription/PaymentThroughDefautCard"
+        case .subscriptionThroughNewCard:
+            return "api/ApiSubcription/PaymentThroughNewCard"
+        case .downgradeSubscription:
+            return "api/ApiSubcription/DowngradeSubscription"
         }
     }
     
@@ -545,11 +567,11 @@ extension API: TargetType, AccessTokenAuthorizable{
             formData.append(MultipartFormData(provider: .data(memberIds.data(using: .utf8)!), name: "MembersIDs"))
             formData.append(MultipartFormData(provider: .data(circleName.data(using: .utf8)!), name: "CircleName"))
             return .uploadMultipart(formData)
-        
+            
         case .createCircleV2(memberIds: let memberIds, circleName: let circleName, imageFile: let imageFile, circleCategory: let circleCategory, privacy: let privacy):
             
             var formData: [MultipartFormData] = []
-
+            
             formData.append(MultipartFormData(provider: .data(imageFile), name: "ImageFile", fileName: "circleImage.jpeg", mimeType: "image/jpeg"))
             formData.append(MultipartFormData(provider: .data(memberIds.data(using: .utf8)!), name: "MembersIDs"))
             formData.append(MultipartFormData(provider: .data(circleName.data(using: .utf8)!), name: "CircleName"))
@@ -561,7 +583,7 @@ extension API: TargetType, AccessTokenAuthorizable{
         case .editCircleV2(id: let id, memberIds: let memberIds, circleName: let circleName, imageFile: let imageFile, circleCategory: let circleCategory, privacy: let privacy):
             
             var formData: [MultipartFormData] = []
-
+            
             formData.append(MultipartFormData(provider: .data("\(id)".data(using: .utf8)!), name: "ID"))
             if let imageFile {
                 formData.append(MultipartFormData(provider: .data(imageFile), name: "ImageFile", fileName: "circleImage.jpeg", mimeType: "image/jpeg"))
@@ -643,7 +665,7 @@ extension API: TargetType, AccessTokenAuthorizable{
             
         case .getTrendingCircleCategoryList(search: let search):
             return .requestParameters(parameters: ["search": search], encoding: URLEncoding.queryString)
-        
+            
         case .deleteCirclePoll(pollId: let pollId):
             return .requestParameters(parameters: ["PollID": pollId], encoding: URLEncoding.queryString)
             
@@ -736,7 +758,7 @@ extension API: TargetType, AccessTokenAuthorizable{
             for (i, videoThumbnail) in videoThumbnails.enumerated() {
                 formData.append(MultipartFormData(provider: .data(videoThumbnail), name: "videoThumbnail[\(i)]", fileName: "feedThumbnail.jpeg", mimeType: "image/jpeg"))
             }
-
+            
             return .uploadMultipart(formData)
             
         case .savePostV2(content: let content, privacyType: let privacyType, imageFiles: let imageFiles, videoFiles: let videoFiles, videoThumbnails: let videoThumbnails, deletePostMediaIds: let deletePostMediaIds, postId: let postId, friendIds: let friendIds, shareWithFriendIds: let shareWithFriendIds):
@@ -767,7 +789,7 @@ extension API: TargetType, AccessTokenAuthorizable{
             for (i, shareWithFriendId) in shareWithFriendIds.enumerated() {
                 formData.append(MultipartFormData(provider: .data("\(shareWithFriendId)".data(using: .utf8)!), name: "ShareWithFriendIds[\(i)]"))
             }
-
+            
             return .uploadMultipart(formData)
             
             
@@ -792,25 +814,25 @@ extension API: TargetType, AccessTokenAuthorizable{
             return .requestParameters(parameters: params, encoding: JSONEncoding.default)
         case .editReply(params: let params):
             return .requestParameters(parameters: params, encoding: JSONEncoding.default)
-    
             
             
             
             
-    // Report
+            
+            // Report
         case .getReportTypeList:
             return .requestPlain
         case .saveReport(params: let params):
             return .requestParameters(parameters: params, encoding: JSONEncoding.default)
             
-        // User
+            // User
         case .getUserDetails:
             return .requestPlain
             
         case .updateProfile(userDetail: let userDetail):
             
             var formData: [MultipartFormData] = []
-
+            
             if let imgData = userDetail.imageFile {
                 formData.append(MultipartFormData(provider: .data(imgData), name: "ImageFile", fileName: "user.jpeg", mimeType: "image/jpeg"))
             }
@@ -877,7 +899,7 @@ extension API: TargetType, AccessTokenAuthorizable{
         case .saveUserAvatar(params: let params):
             return .requestParameters(parameters: params, encoding: JSONEncoding.default)
             
-        // App Information
+            // App Information
         case .termsNConditions:
             return .requestPlain
         case .privacyPolicy:
@@ -885,7 +907,7 @@ extension API: TargetType, AccessTokenAuthorizable{
         case .contactUs(params: let params):
             return .requestParameters(parameters: params, encoding: JSONEncoding.default)
             
-        // Calling
+            // Calling
         case .startCallSession(callTo: let callTo, callType: let callType):
             return .requestParameters(parameters: ["call_to": callTo, "callType": callType], encoding: URLEncoding.queryString)
         case .groupCallHostStop(broadcastId: let broadcastId):
@@ -919,18 +941,35 @@ extension API: TargetType, AccessTokenAuthorizable{
         case .verifyAMLKYC(frontImage: let frontImage, backImage: let backImage):
             
             var formData: [MultipartFormData] = []
-
+            
             formData.append(MultipartFormData(provider: .data(frontImage), name: "NationalityCardFront", fileName: "user.jpeg", mimeType: "image/jpeg"))
             if let imgData = backImage {
                 formData.append(MultipartFormData(provider: .data(imgData), name: "NationalityCardBack", fileName: "user.jpeg", mimeType: "image/jpeg"))
             }
             return .uploadMultipart(formData)
+            
+        case .getSubcriptionList:
+            return .requestPlain
+            
+        case .getSubcriptionDetail:
+            return .requestPlain
+            
+        case .subscriptionThroughWallet(params:  let params):
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
+        case .subscriptionThroughNewCard(params:  let params):
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
+        case .subscriptionThroughSaveCard(params:  let params):
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
+        case .downgradeSubscription(params:  let params):
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
         }
+        
+        
     }
     
     var method: Method {
         switch self {
-        case .loginUser, .registerUser, .verify2FA, .verifyForgetPassword, .verifyEmail, .forgotPassword, .updatePassword, .changePassword, .logout, .sendFriendRequest, .blockFriend, .unblockFriend, .acceptFriendInviteRequest, .removeFriend, .rejectFriendInviteRequest, .createCircle, .createCircleV2, .editCircleV2, .sendCircleRequest, .isDiscoverable, .acceptCircleJoinRequest, .createPoll, .rejectCircleJoinRequest, .acceptCircleInviteRequest, .rejectCircleInviteRequest, .submitPollAnswer, .inviteFriendToCircle, .getCircleMembersByCircleIdsList, .getCirclePollsByCircleIdsList, .createCircleInterection, .getTrendingCircleCategoryList, .cryptoWithdraw, .transferToFriend, .getPaymentIntent, .makeDefaultCardStripe, .depositWithDefaultCardStripe, .saveCheckoutOrderDetailPayPal, .depositWithNewCardStripe, .withdrawAmountToBankAccount, .removeBankAccount, .createBankAccount, .savePost, .savePostV2, .saveCommentReply, .saveLike, .deletePost, .deleteComment, .deleteReply, .editComment, .editReply, .saveReport, .updateProfile,  .sendMessage, .deleteMessages, .updatePollPrivacy, .removeAnsweredPollOption, .saveUserAvatar, .contactUs, .startCallSession, .callMemberStop, .groupCallSession, .broadCastCall, .callReceived, .resendTransferCode, .changePrivacySetting, .twoFactorAuthenticationToggle, .verifyTransferCode, .deleteCirclePoll, .deleteAccount, .verifyAMLKYC: //, .saveUserCardStripe
+        case .loginUser, .registerUser, .verify2FA, .verifyForgetPassword, .verifyEmail, .forgotPassword, .updatePassword, .changePassword, .logout, .sendFriendRequest, .blockFriend, .unblockFriend, .acceptFriendInviteRequest, .removeFriend, .rejectFriendInviteRequest, .createCircle, .createCircleV2, .editCircleV2, .sendCircleRequest, .isDiscoverable, .acceptCircleJoinRequest, .createPoll, .rejectCircleJoinRequest, .acceptCircleInviteRequest, .rejectCircleInviteRequest, .submitPollAnswer, .inviteFriendToCircle, .getCircleMembersByCircleIdsList, .getCirclePollsByCircleIdsList, .createCircleInterection, .getTrendingCircleCategoryList, .cryptoWithdraw, .transferToFriend, .getPaymentIntent, .makeDefaultCardStripe, .depositWithDefaultCardStripe, .saveCheckoutOrderDetailPayPal, .depositWithNewCardStripe, .withdrawAmountToBankAccount, .removeBankAccount, .createBankAccount, .savePost, .savePostV2, .saveCommentReply, .saveLike, .deletePost, .deleteComment, .deleteReply, .editComment, .editReply, .saveReport, .updateProfile,  .sendMessage, .deleteMessages, .updatePollPrivacy, .removeAnsweredPollOption, .saveUserAvatar, .contactUs, .startCallSession, .callMemberStop, .groupCallSession, .broadCastCall, .callReceived, .resendTransferCode, .changePrivacySetting, .twoFactorAuthenticationToggle, .verifyTransferCode, .deleteCirclePoll, .deleteAccount, .verifyAMLKYC, .subscriptionThroughWallet, .subscriptionThroughNewCard, .subscriptionThroughSaveCard, .downgradeSubscription: //, .saveUserCardStripe
             return .post
         default:
             return .get

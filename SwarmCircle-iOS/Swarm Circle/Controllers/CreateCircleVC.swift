@@ -18,7 +18,7 @@ class CreateCircleVC: BaseViewController {
     @IBOutlet weak var createCircleBtn: UIButton!
     @IBOutlet weak var setPrivacyBtn: UIButton!
     
-    let privacyOptions: [(String, UIAlertAction.Style)] = [
+    var privacyOptions: [(String, UIAlertAction.Style)] = [
         ("Public", UIAlertAction.Style.default),
         ("Friends", UIAlertAction.Style.default),
         ("Only Members", UIAlertAction.Style.default),
@@ -31,7 +31,7 @@ class CreateCircleVC: BaseViewController {
     var friendListSelected: [FriendDM] = []
     
     let viewModel = ViewModel()
-    
+    var SelctedSubscriptionID = 0
     var delegate: AppProtocol?
     
     override func viewDidLoad() {
@@ -59,6 +59,13 @@ class CreateCircleVC: BaseViewController {
     // MARK: - Load data from API
     func initVariable() {
         self.viewModel.delegateNetworkResponse = self
+        self.getSubscriptionData()
+    }
+    
+    func getSubscriptionData() {
+        
+        self.showLoader()
+        self.viewModel.getSubscriptionDetails()
     }
     
     // MARK: - Create Circle
@@ -92,7 +99,8 @@ class CreateCircleVC: BaseViewController {
     // MARK: - Set privacy button tapped
     @IBAction func setPrivacyBtnTapped(_ sender: UIButton) {
         Alert.sharedInstance.showActionsheet(vc: self, title: "Select Audience", message: "Who can see your circle?", actions: self.privacyOptions) { index, _ in
-            if index < 3 { // Set Privacy
+            let selectedIndex = self.SelctedSubscriptionID > 1 ? 3 : 1
+            if index < selectedIndex { // Set Privacy
                 self.setPrivacyBtn.setTitle(self.privacyOptions[index].0, for: .normal)
                 self.selectedPrivacyIndex = index + 1
             }
@@ -250,6 +258,29 @@ extension CreateCircleVC: NetworkResponseProtocols {
         self.categoryTF.text = ""
 //        self.selectedFriends.array = []
         self.friendListSelected = []
+    }
+    
+    func didGetSubscriptionDetails() {
+        self.hideLoader()
+
+        if self.viewModel.getSubscriptionDetailsResponse?.isSuccess ?? false {
+            if let subsdetails = self.viewModel.getSubscriptionDetailsResponse?.data
+            {
+                if let id = subsdetails.id
+                {
+                    self.SelctedSubscriptionID = id
+                    if id == 1
+                    {
+                        self.privacyOptions.remove(at: 1)
+                        self.privacyOptions.remove(at: 1)
+                    }
+                }
+            }
+            else
+            {
+                self.showToast(message: self.viewModel.getSubscriptionDetailsResponse?.message ?? "Some error occured", delay: 2, toastType: .red)
+            }
+        }
     }
 }
 

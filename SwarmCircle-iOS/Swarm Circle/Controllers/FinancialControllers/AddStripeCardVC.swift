@@ -14,8 +14,11 @@ class AddStripeCardVC: BaseViewController {
     @IBOutlet var checkmarkBtn: UIButton!
     @IBOutlet var payBtn: UIButton!
     
-    var amount: Double?
     
+    var amount: Double?
+    var isFromSubscription = false
+    var subscriptionName = ""
+    var subscriptionID = ""
 //    var clientSecret: String = ""
     
     let viewModel = ViewModel()
@@ -27,7 +30,7 @@ class AddStripeCardVC: BaseViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.topItem?.backButtonTitle = "Back To Deposit"
+        self.navigationController?.navigationBar.topItem?.backButtonTitle = self.isFromSubscription ? "Back To Subscription" : "Back To Deposit"
     }
 
     // MARK: - Get card details (type, last 4 digits, paymentMethodID i.e. Stripe id)
@@ -76,19 +79,39 @@ class AddStripeCardVC: BaseViewController {
         if self.validateCardInfo() {
         
             self.getCardDetails { paymentMethodId, cardLast4Digits, cardType in
-                
-                if let vc = AppStoryboard.Finance.instance.instantiateViewController(withIdentifier: "ConfirmPaymentVC") as? ConfirmPaymentVC {
-                    
-                    vc.isNewCardStripe = true
-                    vc.paymentMethodID = paymentMethodId
-                    vc.cardNumber = cardLast4Digits
-                    vc.cardType = cardType
-                    vc.amount = self.amount!
-                    
-                    vc.paymentGateway = .Stripe
-                    
-                    self.navigationController?.pushViewController(vc, animated: true)
+                if self.isFromSubscription
+                {
+                    if let vc = AppStoryboard.Subscriptions.instance.instantiateViewController(withIdentifier: "SubscriptionPaymentVC") as? SubscriptionPaymentVC
+                    {
+                        vc.amount = self.amount
+                        vc.isNewCardStripe = true
+                        vc.paymentMethodID = paymentMethodId
+                        vc.cardNumber = cardLast4Digits
+                        vc.cardType = cardType
+                        vc.amount = self.amount!
+                        vc.subscriptionName = self.subscriptionName
+                        vc.subscriptionID = self.subscriptionID
+                        vc.paymentGateway = .Stripe
+                        
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
                 }
+                else
+                {
+                    if let vc = AppStoryboard.Finance.instance.instantiateViewController(withIdentifier: "ConfirmPaymentVC") as? ConfirmPaymentVC {
+                        
+                        vc.isNewCardStripe = true
+                        vc.paymentMethodID = paymentMethodId
+                        vc.cardNumber = cardLast4Digits
+                        vc.cardType = cardType
+                        vc.amount = self.amount!
+                        
+                        vc.paymentGateway = .Stripe
+                        
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
+                }
+                
             }
         }
     }

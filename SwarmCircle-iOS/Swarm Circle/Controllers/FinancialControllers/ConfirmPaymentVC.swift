@@ -11,6 +11,7 @@ import PayPalCheckout
 enum PaymentGateway: String {
     case Stripe
     case PayPal
+    case Wallet
 }
 
 class ConfirmPaymentVC: BaseViewController {

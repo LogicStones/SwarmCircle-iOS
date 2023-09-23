@@ -162,6 +162,13 @@ import Foundation
     @objc optional func diduploadOptions()
     @objc optional func didIdentityVerificationDoc()
     
+    //Subscriptions
+    @objc optional func didGetSubscriptionList()
+    @objc optional func didGetSubscriptionDetails()
+    @objc optional func didSubscriptionThroughWallet()
+    @objc optional func didSubscriptionThroughNewCard()
+    @objc optional func didSubscriptionThroughSaveCard()
+    @objc optional func didDowngradSubscription()
 }
 
 class ViewModel {
@@ -341,6 +348,14 @@ class ViewModel {
     fileprivate(set) var getUploadOptionsResponse: BaseResponse<UploadOptions>?
     fileprivate(set) var identityVerificationDocResponse: BaseResponse<Bool>?
     
+    //Subscription
+    fileprivate(set) var getSubscriptionPackagesResponse: BaseResponse<[SubscriptionListDM]>?
+    fileprivate(set) var getSubscriptionDetailsResponse: BaseResponse<SubscriptionListDM>?
+    fileprivate(set) var subscriptionThroughWalletResponse: BaseResponse<Bool>?
+    fileprivate(set) var subscriptionThroughNewCardResponse: BaseResponse<Bool>?
+    fileprivate(set) var subscriptionThroughSaveCardResponse: BaseResponse<Bool>?
+    fileprivate(set) var downgradSubscriptionResponse: BaseResponse<Bool>?
+
     // MARK: Login
     func loginUser(params: [String: Any]) {
         //        ActivityIndicator.sharedInstance.showLoader()
@@ -2763,4 +2778,125 @@ class ViewModel {
             }
         }
     }
+    
+    // MARK: Get List of subscription packages
+    func getSubscriptionPackages() {
+        networkManager.getSubscriptionsList { [weak self] result in
+            
+            guard let strongSelf = self else { return }
+            
+            switch result {
+                
+            case .success(let apiResponse):
+                print(apiResponse)
+                strongSelf.getSubscriptionPackagesResponse = apiResponse
+                strongSelf.delegateNetworkResponse?.didGetSubscriptionList?()
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                strongSelf.getSubscriptionPackagesResponse = nil
+                strongSelf.delegateNetworkResponse?.didGetSubscriptionList?()
+            }
+        }
+    }
+
+    func getSubscriptionDetails() {
+        networkManager.getSubcriptionDetail { [weak self] result in
+            
+            guard let strongSelf = self else { return }
+            
+            switch result {
+                
+            case .success(let apiResponse):
+                print(apiResponse)
+                strongSelf.getSubscriptionDetailsResponse = apiResponse
+                strongSelf.delegateNetworkResponse?.didGetSubscriptionDetails?()
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                strongSelf.getSubscriptionDetailsResponse = nil
+                strongSelf.delegateNetworkResponse?.didGetSubscriptionDetails?()
+            }
+        }
+    }
+    
+    func subscriptionThroughWallet(params: [String: Any]) {
+        networkManager.subscriptionThroughWallet(params: params) { [weak self] result in
+            
+            guard let strongSelf = self else { return }
+            
+            switch result {
+                
+            case .success(let apiResponse):
+                print(apiResponse)
+                strongSelf.subscriptionThroughWalletResponse = apiResponse
+                strongSelf.delegateNetworkResponse?.didSubscriptionThroughWallet?()
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                strongSelf.subscriptionThroughWalletResponse = nil
+                strongSelf.delegateNetworkResponse?.didSubscriptionThroughWallet?()
+            }
+        }
+    }
+    func subscriptionThroughNewCardStripe(params: [String: Any]) {
+        networkManager.subscriptionThroughNewCard(params: params) { [weak self] result in
+            
+            guard let strongSelf = self else { return }
+            
+            switch result {
+                
+            case .success(let apiResponse):
+                print(apiResponse)
+                strongSelf.subscriptionThroughNewCardResponse = apiResponse
+                strongSelf.delegateNetworkResponse?.didSubscriptionThroughNewCard?()
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                strongSelf.subscriptionThroughNewCardResponse = nil
+                strongSelf.delegateNetworkResponse?.didSubscriptionThroughNewCard?()
+            }
+        }
+    }
+    
+    func subscriptionThroughSaveCardStripe(params: [String: Any]) {
+        networkManager.subscriptionThroughSaveCard(params: params) { [weak self] result in
+            
+            guard let strongSelf = self else { return }
+            
+            switch result {
+                
+            case .success(let apiResponse):
+                print(apiResponse)
+                strongSelf.subscriptionThroughSaveCardResponse = apiResponse
+                strongSelf.delegateNetworkResponse?.didSubscriptionThroughSaveCard?()
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                strongSelf.getSubscriptionDetailsResponse = nil
+                strongSelf.delegateNetworkResponse?.didSubscriptionThroughSaveCard?()
+            }
+        }
+    }
+    
+    func postDowngradSubscription(params: [String: Any]) {
+        networkManager.postDowngradSubscription(params: params) { [weak self] result in
+            
+            guard let strongSelf = self else { return }
+            
+            switch result {
+                
+            case .success(let apiResponse):
+                print(apiResponse)
+                strongSelf.downgradSubscriptionResponse = apiResponse
+                strongSelf.delegateNetworkResponse?.didDowngradSubscription?()
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                strongSelf.downgradSubscriptionResponse = nil
+                strongSelf.delegateNetworkResponse?.didDowngradSubscription?()
+            }
+        }
+    }
+
 }

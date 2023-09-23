@@ -21,7 +21,9 @@ class CircleDetailVC: BaseViewController {
     @IBOutlet var circleMemberImgViewCollection: [UIImageView]!
     @IBOutlet weak var circlePrivacyView: UIView!
     @IBOutlet weak var circlePrivacyLbl: UILabel!
-     
+    @IBOutlet var btnAudioOL: UIButton!
+    @IBOutlet var btnVideoOL: UIButton!
+    
     let viewModel = ViewModel()
     
     var circleIdentifier: String? // To hit circle detail Api
@@ -31,6 +33,8 @@ class CircleDetailVC: BaseViewController {
     var circleMemberList: [CircleMemberDM] = []
     
     var delegate: AppProtocol?
+    
+    var subscriptionDetails:SubscriptionListDM?
     
     let chatHubConnection = SignalRService.signalRService.connection
     
@@ -74,6 +78,11 @@ class CircleDetailVC: BaseViewController {
         self.showLoader()
         self.postGetCircleDetails(identifier: identifier)
         self.signalRGroupChatDeletedByAdmin()
+        self.getSubscriptionData()
+    }
+    
+    func getSubscriptionData() {
+        self.viewModel.getSubscriptionDetails()
     }
     
     // MARK: - Circle member button tapped
@@ -196,14 +205,28 @@ class CircleDetailVC: BaseViewController {
     
     // MARK: - Video Call Button Tapped
     @IBAction func videoCallBtnTapped(_ sender: UIButton) {
-        
-        self.openCircleMemberListVC(destinationController: .groupAVCallingVC, selection: .multiple, additionalParameters: [.circleId: self.circleDetails?.circleID, .callType: CallType.videoGroup], provideMemberList: false, delegate: true)
+        if self.subscriptionDetails?.remainingAudioCallMinutes ?? 0 <= 0
+        {
+            Alert.sharedInstance.alertOkWindow(title: "Alert!", message: "Exceeded daily limit", completion: { result in
+            })
+        }
+        else
+        {
+            self.openCircleMemberListVC(destinationController: .groupAVCallingVC, selection: .multiple, additionalParameters: [.circleId: self.circleDetails?.circleID, .callType: CallType.videoGroup], provideMemberList: false, delegate: true)
+        }
     }
     
     // MARK: - Audio Call Button Tapped
     @IBAction func audioCallBtnTapped(_ sender: UIButton) {
-        
-        self.openCircleMemberListVC(destinationController: .groupAVCallingVC, selection: .multiple, additionalParameters: [.circleId: self.circleDetails?.circleID, .callType: CallType.audioGroup], provideMemberList: false, delegate: true)
+        if self.subscriptionDetails?.remainingAudioCallMinutes ?? 0 <= 0
+        {
+            Alert.sharedInstance.alertOkWindow(title: "Alert!", message: "Exceeded daily limit", completion: { result in
+            })
+        }
+        else
+        {
+            self.openCircleMemberListVC(destinationController: .groupAVCallingVC, selection: .multiple, additionalParameters: [.circleId: self.circleDetails?.circleID, .callType: CallType.audioGroup], provideMemberList: false, delegate: true)
+        }
     }
     
     func openCircleMemberListVC(controllerTitle: CircleMemberListVC.ControllerTitle = .selectMembers, destinationController: CircleMemberListVC.DestinationController, selection: CircleMemberListVC.SelectionType, additionalParameters: [CircleMemberListVC.AdditionalParamsKey: Any?], provideMemberList: Bool, delegate: Bool) {
@@ -441,6 +464,22 @@ extension CircleDetailVC: NetworkResponseProtocols {
         }
         else {
             self.showToast(message: self.viewModel.groupCallSessionResponse?.message ?? "Something went wrong", toastType: .red)
+        }
+    }
+    
+    func didGetSubscriptionDetails() {
+        self.hideLoader()
+
+        if self.viewModel.getSubscriptionDetailsResponse?.isSuccess ?? false
+        {
+            if let subsdetails = self.viewModel.getSubscriptionDetailsResponse?.data
+            {
+                self.subscriptionDetails = subsdetails
+            }
+            else
+            {
+                self.showToast(message: self.viewModel.getSubscriptionDetailsResponse?.message ?? "Some error occured", delay: 2, toastType: .red)
+            }
         }
     }
 }

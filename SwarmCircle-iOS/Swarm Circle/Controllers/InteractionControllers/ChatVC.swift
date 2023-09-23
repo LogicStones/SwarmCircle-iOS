@@ -36,6 +36,7 @@ class ChatVC: BaseViewController {
     var msgs: [MessagesRecordDM] = []
     
     var currentMessage: ChatList?
+    var subscriptionDetails:SubscriptionListDM?
     
     //    var chatHubConnection: HubConnection?
     //
@@ -157,8 +158,13 @@ class ChatVC: BaseViewController {
         self.viewModel.delegateNetworkResponse = self
         self.showLoader()
         self.getChat()
+        self.getSubscriptionData()
     }
     
+    func getSubscriptionData()
+    {
+        self.viewModel.getSubscriptionDetails()
+    }
     // MARK: - Fetch Messages List
     private func getChat() {
         self.viewModel.getChat(pageNumber: self.pageNumber, identifier: self.identifier, isCircle: self.isCircle)
@@ -345,12 +351,29 @@ class ChatVC: BaseViewController {
     
     // MARK: - Audio call button tapped
     @IBAction func audioCallButtonTapped(_ sender: UIButton) {
-        self.goToSingleCallingVC(callType: .audioSingle)
+        if self.subscriptionDetails?.remainingAudioCallMinutes ?? 0 <= 0
+        {
+            Alert.sharedInstance.alertOkWindow(title: "Alert!", message: "Exceeded daily limit", completion: { result in
+            })
+
+        }
+        else
+        {
+            self.goToSingleCallingVC(callType: .audioSingle)
+        }
     }
         
     // MARK: - Video call button tapped
     @IBAction func videoCallButtonTapped(_ sender: UIButton) {
-        self.goToSingleCallingVC(callType: .videoSingle)
+        if self.subscriptionDetails?.remainingAudioCallMinutes ?? 0 <= 0
+        {
+            Alert.sharedInstance.alertOkWindow(title: "Alert!", message: "Exceeded daily limit", completion: { result in
+            })
+        }
+        else
+        {
+            self.goToSingleCallingVC(callType: .videoSingle)
+        }
     }
     
     // MARK: - Go to SingleAVCallingVC after user tapped audio/video calling button
@@ -779,6 +802,21 @@ extension ChatVC: NetworkResponseProtocols{
         }
         else {
             self.showToast(message: self.viewModel.startCallSessionResponse?.message ?? "Something went wrong", toastType: .red)
+        }
+    }
+    
+    func didGetSubscriptionDetails() {
+        self.hideLoader()
+
+        if self.viewModel.getSubscriptionDetailsResponse?.isSuccess ?? false {
+            if let subsdetails = self.viewModel.getSubscriptionDetailsResponse?.data
+            {
+                self.subscriptionDetails = subsdetails
+            }
+            else
+            {
+                self.showToast(message: self.viewModel.getSubscriptionDetailsResponse?.message ?? "Some error occured", delay: 2, toastType: .red)
+            }
         }
     }
 }
