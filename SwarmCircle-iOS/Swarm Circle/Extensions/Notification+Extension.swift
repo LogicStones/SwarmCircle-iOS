@@ -32,6 +32,9 @@ extension Notification.Name {
     
     static let refreshSubscription = Notification.Name("refreshSubscription")
     
+    static let refreshAvatarSubscription = Notification.Name("refreshAvatarSubscription")
+    static let refreshProfileImage = Notification.Name("refreshProfileImage")
+    
     static let protectedDataWillBecomeUnavailableNotification = UIApplication.protectedDataWillBecomeUnavailableNotification
     
     static let protectedDataDidBecomeAvailableNotification = UIApplication.protectedDataDidBecomeAvailableNotification

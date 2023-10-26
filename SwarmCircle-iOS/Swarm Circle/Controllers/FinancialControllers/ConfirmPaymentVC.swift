@@ -14,6 +14,12 @@ enum PaymentGateway: String {
     case Wallet
 }
 
+enum SubscriptionType:String
+{
+    case DesignYourself
+    case AppSubscription
+}
+
 class ConfirmPaymentVC: BaseViewController {
     
     @IBOutlet weak var receiverFullNameLbl: UILabel!

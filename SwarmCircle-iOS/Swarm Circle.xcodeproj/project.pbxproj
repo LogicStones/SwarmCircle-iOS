@@ -34,7 +34,13 @@
 		6A6A99A62AB320910060527F /* SubscriptionDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6A99A52AB320910060527F /* SubscriptionDetailVC.swift */; };
 		6A7F69F12AB3664400B500BE /* PaymentMethodSubscribeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7F69F02AB3664400B500BE /* PaymentMethodSubscribeVC.swift */; };
 		6A7F69F32AB370C100B500BE /* SubscriptionPaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7F69F22AB370C100B500BE /* SubscriptionPaymentVC.swift */; };
+		6A8C9F872ACAD3B000BE516D /* AvatarSubscriptionListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8C9F862ACAD3B000BE516D /* AvatarSubscriptionListVC.swift */; };
+		6A8C9F892ACB2D5100BE516D /* AvatarListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8C9F882ACB2D5100BE516D /* AvatarListVC.swift */; };
+		6A8C9F8B2ACC430F00BE516D /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8C9F8A2ACC430F00BE516D /* AvatarCell.swift */; };
+		6A8C9F8D2ACC52C300BE516D /* AvatarGallaryDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8C9F8C2ACC52C300BE516D /* AvatarGallaryDM.swift */; };
+		6A8C9F8F2ACC5E5500BE516D /* EnlargAvatarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8C9F8E2ACC5E5500BE516D /* EnlargAvatarVC.swift */; };
 		6A9E369A2AB1C4B700693807 /* SubscriptionListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9E36992AB1C4B700693807 /* SubscriptionListVC.swift */; };
+		6AAD18BF2ABEE50300F48E99 /* DesignYourself.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AAD18BE2ABEE50300F48E99 /* DesignYourself.storyboard */; };
 		88015D30289D5FDF00515452 /* UpdatePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88015D2F289D5FDF00515452 /* UpdatePasswordVC.swift */; };
 		880164FA28F986AD00FE6D15 /* CustomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880164F928F986AD00FE6D15 /* CustomNavController.swift */; };
 		8803234B28FE98DD00D63F7A /* DocumentPickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8803234A28FE98DD00D63F7A /* DocumentPickerManager.swift */; };
@@ -379,7 +385,13 @@
 		6A6A99A52AB320910060527F /* SubscriptionDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionDetailVC.swift; sourceTree = "<group>"; };
 		6A7F69F02AB3664400B500BE /* PaymentMethodSubscribeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodSubscribeVC.swift; sourceTree = "<group>"; };
 		6A7F69F22AB370C100B500BE /* SubscriptionPaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionPaymentVC.swift; sourceTree = "<group>"; };
+		6A8C9F862ACAD3B000BE516D /* AvatarSubscriptionListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarSubscriptionListVC.swift; sourceTree = "<group>"; };
+		6A8C9F882ACB2D5100BE516D /* AvatarListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarListVC.swift; sourceTree = "<group>"; };
+		6A8C9F8A2ACC430F00BE516D /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		6A8C9F8C2ACC52C300BE516D /* AvatarGallaryDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarGallaryDM.swift; sourceTree = "<group>"; };
+		6A8C9F8E2ACC5E5500BE516D /* EnlargAvatarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnlargAvatarVC.swift; sourceTree = "<group>"; };
 		6A9E36992AB1C4B700693807 /* SubscriptionListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionListVC.swift; sourceTree = "<group>"; };
+		6AAD18BE2ABEE50300F48E99 /* DesignYourself.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DesignYourself.storyboard; sourceTree = "<group>"; };
 		8355F7B4B6A7CBD796E983AA /* Pods-Swarm CircleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swarm CircleTests.release.xcconfig"; path = "Target Support Files/Pods-Swarm CircleTests/Pods-Swarm CircleTests.release.xcconfig"; sourceTree = "<group>"; };
 		88015D2F289D5FDF00515452 /* UpdatePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordVC.swift; sourceTree = "<group>"; };
 		880164F928F986AD00FE6D15 /* CustomNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavController.swift; sourceTree = "<group>"; };
@@ -721,6 +733,16 @@
 				C7B3DA9566ED4A4870E9F7A7 /* Pods_Swarm_CircleTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A8C9F852ACAD06900BE516D /* DesignYourself */ = {
+			isa = PBXGroup;
+			children = (
+				6A8C9F862ACAD3B000BE516D /* AvatarSubscriptionListVC.swift */,
+				6A8C9F882ACB2D5100BE516D /* AvatarListVC.swift */,
+				6A8C9F8E2ACC5E5500BE516D /* EnlargAvatarVC.swift */,
+			);
+			path = DesignYourself;
 			sourceTree = "<group>";
 		};
 		6A9E36982AB1C48400693807 /* Subscription */ = {
@@ -1078,6 +1100,7 @@
 		FA13871E2818B4CA003FC8F7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6A8C9F852ACAD06900BE516D /* DesignYourself */,
 				6A9E36982AB1C48400693807 /* Subscription */,
 				FABB60742A2DD71800E05158 /* IdentifyControllers */,
 				8850D585292E526D00BD198C /* AVControllers */,
@@ -1141,6 +1164,7 @@
 				8850D595292E614A00BD198C /* AVCalling.storyboard */,
 				FABB60722A2DD6E600E05158 /* Identify.storyboard */,
 				6A5028002AAF2D1F00E3B398 /* Subscription.storyboard */,
+				6AAD18BE2ABEE50300F48E99 /* DesignYourself.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -1234,6 +1258,7 @@
 				88D9A96829642FF0005DB8B1 /* PrivacySettingsDM.swift */,
 				FAAE47082A2FC3F800B23B23 /* UploadOptions.swift */,
 				6A2918B92AB1E1800067BBBB /* SubscriptionListDM.swift */,
+				6A8C9F8C2ACC52C300BE516D /* AvatarGallaryDM.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1361,6 +1386,7 @@
 				88DFA97C28B629480045264C /* InterestsTagCell.xib */,
 				8840F95E293E2A8700D0457E /* GroupAVCallingCell.swift */,
 				8840F95F293E2A8700D0457E /* GroupAVCallingCell.xib */,
+				6A8C9F8A2ACC430F00BE516D /* AvatarCell.swift */,
 			);
 			path = CollectionViewCell;
 			sourceTree = "<group>";
@@ -1494,6 +1520,7 @@
 				6A6942D62AAF476F003D7813 /* Gilroy-Bold.ttf in Resources */,
 				6A6942C92AAF476F003D7813 /* Gilroy-RegularItalic.ttf in Resources */,
 				FA1387152818A84A003FC8F7 /* CamptonBold.otf in Resources */,
+				6AAD18BF2ABEE50300F48E99 /* DesignYourself.storyboard in Resources */,
 				8869474228DDCBD3003C8DA9 /* NotificationCell.xib in Resources */,
 				FAC9CA8328B3C7D8000F463B /* SendTextCell.xib in Resources */,
 				6A5028012AAF2D1F00E3B398 /* Subscription.storyboard in Resources */,
@@ -1713,6 +1740,7 @@
 				88A906B82937D60D00BE923B /* DefaultAudioDevice.swift in Sources */,
 				FA9742BD2886E488007AAD0C /* PollsBottomSheetVC.swift in Sources */,
 				FAA57CCA288583B6002ED19F /* AddCardVC.swift in Sources */,
+				6A8C9F892ACB2D5100BE516D /* AvatarListVC.swift in Sources */,
 				FAD883B8289177E300FDA318 /* NavigationController.swift in Sources */,
 				882ABB7A28AFC15E0075FEC7 /* AddCommentsCell.swift in Sources */,
 				FA312E9E2876CA980096FD31 /* UIButton+Extension.swift in Sources */,
@@ -1740,6 +1768,7 @@
 				FABB60802A2E1E9500E05158 /* DocumentTypeVC.swift in Sources */,
 				FA0E619628ABB5140025D16C /* FeedsMediaCell.swift in Sources */,
 				FAC3AE38281B3786009DAE08 /* ActivityIndicator+Extension.swift in Sources */,
+				6A8C9F872ACAD3B000BE516D /* AvatarSubscriptionListVC.swift in Sources */,
 				FA53C80D28785EC60079A69D /* PastPollQuestionCell.swift in Sources */,
 				FA0E619328ABB2280025D16C /* FeedsMediaController.swift in Sources */,
 				88CD713C28C8DE5600F85C82 /* BlockedFriendDM.swift in Sources */,
@@ -1803,6 +1832,7 @@
 				FAD883BA289191CD00FDA318 /* UIViewController+Extension.swift in Sources */,
 				FA9091FB2888CEF4009F2B2F /* CreateCircleIntersectionVC.swift in Sources */,
 				888BD50A28E1AA8B00768002 /* AppProtocol.swift in Sources */,
+				6A8C9F8D2ACC52C300BE516D /* AvatarGallaryDM.swift in Sources */,
 				8848450D2954C9A100F9EC58 /* PrivacySettingsVC.swift in Sources */,
 				8850D592292E60E800BD198C /* SpeakerboxCallManager.swift in Sources */,
 				FAC3AE3228196518009DAE08 /* ResetPasswordVC.swift in Sources */,
@@ -1847,9 +1877,11 @@
 				FAA007102899650100B9AC6F /* Utils.swift in Sources */,
 				88444AEB28ED984C00941201 /* PostDM.swift in Sources */,
 				FA9091EC28880065009F2B2F /* EditAvatarOptionsCell.swift in Sources */,
+				6A8C9F8F2ACC5E5500BE516D /* EnlargAvatarVC.swift in Sources */,
 				888FDEBF28AE30D800810563 /* BlockedFriendsCell.swift in Sources */,
 				FA2FF65328194D3100A2F94B /* RegisterVC.swift in Sources */,
 				88967D07295AE861000D465C /* TagCell.swift in Sources */,
+				6A8C9F8B2ACC430F00BE516D /* AvatarCell.swift in Sources */,
 				883DDBEA29253124009A2588 /* AvatarPropsDM.swift in Sources */,
 				FA715312289AB5B10024CCE6 /* APIManager.swift in Sources */,
 				FAD060AC2875B3BD00768471 /* ChangePasswordVC.swift in Sources */,

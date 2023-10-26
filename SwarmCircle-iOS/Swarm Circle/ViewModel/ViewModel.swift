@@ -169,6 +169,19 @@ import Foundation
     @objc optional func didSubscriptionThroughNewCard()
     @objc optional func didSubscriptionThroughSaveCard()
     @objc optional func didDowngradSubscription()
+    
+    //Design Yourself Subscriptions
+    @objc optional func didGetAvatarSubscriptionList()
+    @objc optional func didGetAvatarSubscriptionDetails()
+    @objc optional func didAvatarSubscriptionThroughWallet()
+    @objc optional func didAvatarSubscriptionThroughNewCard()
+    @objc optional func didAvatarSubscriptionThroughSaveCard()
+    @objc optional func didAvatarDowngradSubscription()
+    
+    @objc optional func didGetAvatarGalleryList()
+    @objc optional func didGetAvatarMonthlyRemainingLimit()
+    @objc optional func didSaveMirrorAiAvatar()
+    @objc optional func didSetAvatarProfilePicture()
 }
 
 class ViewModel {
@@ -355,6 +368,19 @@ class ViewModel {
     fileprivate(set) var subscriptionThroughNewCardResponse: BaseResponse<Bool>?
     fileprivate(set) var subscriptionThroughSaveCardResponse: BaseResponse<Bool>?
     fileprivate(set) var downgradSubscriptionResponse: BaseResponse<Bool>?
+    
+    //Design Yourself Subscription
+    fileprivate(set) var getAvatarSubscriptionPackagesResponse: BaseResponse<[SubscriptionListDM]>?
+    fileprivate(set) var getAvatarSubscriptionDetailsResponse: BaseResponse<SubscriptionListDM>?
+    fileprivate(set) var avatarSubscriptionThroughWalletResponse: BaseResponse<Bool>?
+    fileprivate(set) var avatarSubscriptionThroughNewCardResponse: BaseResponse<Bool>?
+    fileprivate(set) var avatarSubscriptionThroughSaveCardResponse: BaseResponse<Bool>?
+    fileprivate(set) var avatarDowngradSubscriptionResponse: BaseResponse<Bool>?
+    //gallary and save avatar
+    fileprivate(set) var getAvatarGalleryListResponse: BaseResponse<[AvatarGallaryDM]>?
+    fileprivate(set) var getAvatarMonthlyRemainingLimitResponse: BaseResponse<Int>?
+    fileprivate(set) var saveMirrorAiAvatarResponse: BaseResponse<Bool>?
+    fileprivate(set) var setAvatarProfilePictureResponse: BaseResponse<Bool>?
 
     // MARK: Login
     func loginUser(params: [String: Any]) {
@@ -2895,6 +2921,206 @@ class ViewModel {
                 print(error.localizedDescription)
                 strongSelf.downgradSubscriptionResponse = nil
                 strongSelf.delegateNetworkResponse?.didDowngradSubscription?()
+            }
+        }
+    }
+    
+    // MARK: Avatar of subscription
+    func getAvatarSubscriptionPackages() {
+        networkManager.getAvatarSubscriptionsList { [weak self] result in
+            
+            guard let strongSelf = self else { return }
+            
+            switch result {
+                
+            case .success(let apiResponse):
+                print(apiResponse)
+                strongSelf.getAvatarSubscriptionPackagesResponse = apiResponse
+                strongSelf.delegateNetworkResponse?.didGetAvatarSubscriptionList?()
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                strongSelf.getAvatarSubscriptionPackagesResponse = nil
+                strongSelf.delegateNetworkResponse?.didGetAvatarSubscriptionList?()
+            }
+        }
+    }
+
+    func getAvatarSubcriptionDetail() {
+        networkManager.getAvatarSubcriptionDetail { [weak self] result in
+            
+            guard let strongSelf = self else { return }
+            
+            switch result {
+                
+            case .success(let apiResponse):
+                print(apiResponse)
+                strongSelf.getAvatarSubscriptionDetailsResponse = apiResponse
+                strongSelf.delegateNetworkResponse?.didGetAvatarSubscriptionDetails?()
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                strongSelf.getAvatarSubscriptionDetailsResponse = nil
+                strongSelf.delegateNetworkResponse?.didGetAvatarSubscriptionDetails?()
+            }
+        }
+    }
+    
+    func avatarSubscriptionThroughWallet(params: [String: Any]) {
+        networkManager.avatarSubscriptionThroughWallet(params: params) { [weak self] result in
+            
+            guard let strongSelf = self else { return }
+            
+            switch result {
+                
+            case .success(let apiResponse):
+                print(apiResponse)
+                strongSelf.avatarSubscriptionThroughWalletResponse = apiResponse
+                strongSelf.delegateNetworkResponse?.didAvatarSubscriptionThroughWallet?()
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                strongSelf.avatarSubscriptionThroughWalletResponse = nil
+                strongSelf.delegateNetworkResponse?.didAvatarSubscriptionThroughWallet?()
+            }
+        }
+    }
+    func avatarSubscriptionThroughNewCard(params: [String: Any]) {
+        networkManager.avatarSubscriptionThroughNewCard(params: params) { [weak self] result in
+            
+            guard let strongSelf = self else { return }
+            
+            switch result {
+                
+            case .success(let apiResponse):
+                print(apiResponse)
+                strongSelf.avatarSubscriptionThroughNewCardResponse = apiResponse
+                strongSelf.delegateNetworkResponse?.didAvatarSubscriptionThroughNewCard?()
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                strongSelf.avatarSubscriptionThroughNewCardResponse = nil
+                strongSelf.delegateNetworkResponse?.didAvatarSubscriptionThroughNewCard?()
+            }
+        }
+    }
+    
+    func avatarSubscriptionThroughSaveCard(params: [String: Any]) {
+        networkManager.avatarSubscriptionThroughSaveCard(params: params) { [weak self] result in
+            
+            guard let strongSelf = self else { return }
+            
+            switch result {
+                
+            case .success(let apiResponse):
+                print(apiResponse)
+                strongSelf.avatarSubscriptionThroughSaveCardResponse = apiResponse
+                strongSelf.delegateNetworkResponse?.didAvatarSubscriptionThroughSaveCard?()
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                strongSelf.avatarSubscriptionThroughSaveCardResponse = nil
+                strongSelf.delegateNetworkResponse?.didAvatarSubscriptionThroughSaveCard?()
+            }
+        }
+    }
+    
+    func postAvatarDowngradSubscription(params: [String: Any]) {
+        networkManager.postAvatarDowngradSubscription(params: params) { [weak self] result in
+            
+            guard let strongSelf = self else { return }
+            
+            switch result {
+                
+            case .success(let apiResponse):
+                print(apiResponse)
+                strongSelf.avatarDowngradSubscriptionResponse = apiResponse
+                strongSelf.delegateNetworkResponse?.didAvatarDowngradSubscription?()
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                strongSelf.avatarDowngradSubscriptionResponse = nil
+                strongSelf.delegateNetworkResponse?.didAvatarDowngradSubscription?()
+            }
+        }
+    }
+    
+    // MARK: Avatar Gallart
+    func getAvatarGalleryList() {
+        networkManager.getAvatarGalleryList { [weak self] result in
+            
+            guard let strongSelf = self else { return }
+            
+            switch result {
+                
+            case .success(let apiResponse):
+                print(apiResponse)
+                strongSelf.getAvatarGalleryListResponse = apiResponse
+                strongSelf.delegateNetworkResponse?.didGetAvatarGalleryList?()
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                strongSelf.getAvatarGalleryListResponse = nil
+                strongSelf.delegateNetworkResponse?.didGetAvatarGalleryList?()
+            }
+        }
+    }
+
+    func getAvatarMonthlyRemainingLimit() {
+        networkManager.getAvatarMonthlyRemainingLimit { [weak self] result in
+            
+            guard let strongSelf = self else { return }
+            
+            switch result {
+                
+            case .success(let apiResponse):
+                print(apiResponse)
+                strongSelf.getAvatarMonthlyRemainingLimitResponse = apiResponse
+                strongSelf.delegateNetworkResponse?.didGetAvatarMonthlyRemainingLimit?()
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                strongSelf.getAvatarMonthlyRemainingLimitResponse = nil
+                strongSelf.delegateNetworkResponse?.didGetAvatarMonthlyRemainingLimit?()
+            }
+        }
+    }
+    
+    func saveMirrorAiAvatar(params: [String: Any]) {
+        networkManager.saveMirrorAiAvatar(params: params) { [weak self] result in
+            
+            guard let strongSelf = self else { return }
+            
+            switch result {
+                
+            case .success(let apiResponse):
+                print(apiResponse)
+                strongSelf.saveMirrorAiAvatarResponse = apiResponse
+                strongSelf.delegateNetworkResponse?.didSaveMirrorAiAvatar?()
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                strongSelf.saveMirrorAiAvatarResponse = nil
+                strongSelf.delegateNetworkResponse?.didSaveMirrorAiAvatar?()
+            }
+        }
+    }
+    func setAvatarProfilePicture(params: [String: Any]) {
+        networkManager.setAvatarProfilePicture(params: params) { [weak self] result in
+            
+            guard let strongSelf = self else { return }
+            
+            switch result {
+                
+            case .success(let apiResponse):
+                print(apiResponse)
+                strongSelf.setAvatarProfilePictureResponse = apiResponse
+                strongSelf.delegateNetworkResponse?.didSetAvatarProfilePicture?()
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                strongSelf.setAvatarProfilePictureResponse = nil
+                strongSelf.delegateNetworkResponse?.didSetAvatarProfilePicture?()
             }
         }
     }

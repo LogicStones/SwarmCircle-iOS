@@ -169,6 +169,18 @@ enum API {
     case subscriptionThroughNewCard(params: [String: Any])
     case downgradeSubscription(params:[String:Any])
     
+    //design yourself
+    case getAvatarSubcriptionList
+    case getAvatarSubcriptionDetail
+    case avatarSubscriptionThroughWallet(params: [String: Any])
+    case avatarSubscriptionThroughSaveCard(params: [String: Any])
+    case avatarSubscriptionThroughNewCard(params: [String: Any])
+    case avatarDowngradeSubscription(params:[String:Any])
+    case getAvatarGalleryList
+    case getAvatarMonthlyRemainingLimit
+    case saveMirrorAiAvatar(params: [String: Any])
+    case setAvatarProfilePicture(params: [String: Any])
+    
 }
 
 extension API: TargetType, AccessTokenAuthorizable{
@@ -463,6 +475,28 @@ extension API: TargetType, AccessTokenAuthorizable{
             return "api/ApiSubcription/PaymentThroughNewCard"
         case .downgradeSubscription:
             return "api/ApiSubcription/DowngradeSubscription"
+            
+            //design yourself
+        case .getAvatarSubcriptionList:
+            return "api/ApiDesignYourself/GetSubcriptionList"
+        case .getAvatarSubcriptionDetail:
+            return "api/ApiDesignYourself/GetSubscriptionDetail"
+        case .avatarSubscriptionThroughWallet:
+            return "api/ApiDesignYourself/PaymentThroughWallet"
+        case .avatarSubscriptionThroughSaveCard:
+            return "api/ApiDesignYourself/PaymentThroughDefautCard"
+        case .avatarSubscriptionThroughNewCard:
+            return "api/ApiDesignYourself/PaymentThroughNewCard"
+        case .avatarDowngradeSubscription:
+            return "api/ApiDesignYourself/DowngradeSubscription"
+        case .getAvatarGalleryList:
+            return "api/ApiDesignYourself/Gallery"
+        case .getAvatarMonthlyRemainingLimit:
+            return "api/ApiDesignYourself/GetMonthlyRemainingLimit"
+        case .saveMirrorAiAvatar:
+            return "api/ApiDesignYourself/SaveUserAvatar"
+        case .setAvatarProfilePicture:
+            return "api/ApiDesignYourself/SetProfilePicture"
         }
     }
     
@@ -948,6 +982,7 @@ extension API: TargetType, AccessTokenAuthorizable{
             }
             return .uploadMultipart(formData)
             
+         //Subscription
         case .getSubcriptionList:
             return .requestPlain
             
@@ -962,6 +997,31 @@ extension API: TargetType, AccessTokenAuthorizable{
             return .requestParameters(parameters: params, encoding: JSONEncoding.default)
         case .downgradeSubscription(params:  let params):
             return .requestParameters(parameters: params, encoding: JSONEncoding.default)
+        
+            //DesignYourself
+        case .getAvatarSubcriptionList:
+            return .requestPlain
+            
+        case .getAvatarSubcriptionDetail:
+            return .requestPlain
+            
+        case .avatarSubscriptionThroughWallet(params:  let params):
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
+        case .avatarSubscriptionThroughNewCard(params:  let params):
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
+        case .avatarSubscriptionThroughSaveCard(params:  let params):
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
+        case .avatarDowngradeSubscription(params:  let params):
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
+        
+        case .getAvatarGalleryList:
+            return .requestPlain
+        case .getAvatarMonthlyRemainingLimit:
+            return .requestPlain
+        case .saveMirrorAiAvatar(params:  let params):
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
+        case .setAvatarProfilePicture(params:  let params):
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
         }
         
         
@@ -969,7 +1029,7 @@ extension API: TargetType, AccessTokenAuthorizable{
     
     var method: Method {
         switch self {
-        case .loginUser, .registerUser, .verify2FA, .verifyForgetPassword, .verifyEmail, .forgotPassword, .updatePassword, .changePassword, .logout, .sendFriendRequest, .blockFriend, .unblockFriend, .acceptFriendInviteRequest, .removeFriend, .rejectFriendInviteRequest, .createCircle, .createCircleV2, .editCircleV2, .sendCircleRequest, .isDiscoverable, .acceptCircleJoinRequest, .createPoll, .rejectCircleJoinRequest, .acceptCircleInviteRequest, .rejectCircleInviteRequest, .submitPollAnswer, .inviteFriendToCircle, .getCircleMembersByCircleIdsList, .getCirclePollsByCircleIdsList, .createCircleInterection, .getTrendingCircleCategoryList, .cryptoWithdraw, .transferToFriend, .getPaymentIntent, .makeDefaultCardStripe, .depositWithDefaultCardStripe, .saveCheckoutOrderDetailPayPal, .depositWithNewCardStripe, .withdrawAmountToBankAccount, .removeBankAccount, .createBankAccount, .savePost, .savePostV2, .saveCommentReply, .saveLike, .deletePost, .deleteComment, .deleteReply, .editComment, .editReply, .saveReport, .updateProfile,  .sendMessage, .deleteMessages, .updatePollPrivacy, .removeAnsweredPollOption, .saveUserAvatar, .contactUs, .startCallSession, .callMemberStop, .groupCallSession, .broadCastCall, .callReceived, .resendTransferCode, .changePrivacySetting, .twoFactorAuthenticationToggle, .verifyTransferCode, .deleteCirclePoll, .deleteAccount, .verifyAMLKYC, .subscriptionThroughWallet, .subscriptionThroughNewCard, .subscriptionThroughSaveCard, .downgradeSubscription: //, .saveUserCardStripe
+        case .loginUser, .registerUser, .verify2FA, .verifyForgetPassword, .verifyEmail, .forgotPassword, .updatePassword, .changePassword, .logout, .sendFriendRequest, .blockFriend, .unblockFriend, .acceptFriendInviteRequest, .removeFriend, .rejectFriendInviteRequest, .createCircle, .createCircleV2, .editCircleV2, .sendCircleRequest, .isDiscoverable, .acceptCircleJoinRequest, .createPoll, .rejectCircleJoinRequest, .acceptCircleInviteRequest, .rejectCircleInviteRequest, .submitPollAnswer, .inviteFriendToCircle, .getCircleMembersByCircleIdsList, .getCirclePollsByCircleIdsList, .createCircleInterection, .getTrendingCircleCategoryList, .cryptoWithdraw, .transferToFriend, .getPaymentIntent, .makeDefaultCardStripe, .depositWithDefaultCardStripe, .saveCheckoutOrderDetailPayPal, .depositWithNewCardStripe, .withdrawAmountToBankAccount, .removeBankAccount, .createBankAccount, .savePost, .savePostV2, .saveCommentReply, .saveLike, .deletePost, .deleteComment, .deleteReply, .editComment, .editReply, .saveReport, .updateProfile,  .sendMessage, .deleteMessages, .updatePollPrivacy, .removeAnsweredPollOption, .saveUserAvatar, .contactUs, .startCallSession, .callMemberStop, .groupCallSession, .broadCastCall, .callReceived, .resendTransferCode, .changePrivacySetting, .twoFactorAuthenticationToggle, .verifyTransferCode, .deleteCirclePoll, .deleteAccount, .verifyAMLKYC, .subscriptionThroughWallet, .subscriptionThroughNewCard, .subscriptionThroughSaveCard, .downgradeSubscription, .avatarSubscriptionThroughWallet, .avatarSubscriptionThroughNewCard, .avatarSubscriptionThroughSaveCard, .avatarDowngradeSubscription, .saveMirrorAiAvatar, .setAvatarProfilePicture: //, .saveUserCardStripe
             return .post
         default:
             return .get

@@ -170,6 +170,39 @@ protocol Networkable {
     func verifyTransferCode(code: String, completion: @escaping (Result<BaseResponse<String>, Error>) -> ())
     func getUploadOptions(completion: @escaping (Result<BaseResponse<UploadOptions>, Error>) -> ())
     func postIdentityVerificationDoc(frontImage: Data, backImage: Data?, completion: @escaping (Result<BaseResponse<Bool>, Error>) -> ())
+    
+    func getSubscriptionsList(completion: @escaping (Result<BaseResponse<[SubscriptionListDM]>, Error>) -> ())
+    
+    func getSubcriptionDetail(completion: @escaping (Result<BaseResponse<SubscriptionListDM>, Error>) -> ())
+    
+    func subscriptionThroughWallet(params: [String : Any], completion: @escaping (Result<BaseResponse<Bool>, Error>) -> ())
+    
+    func subscriptionThroughNewCard(params: [String : Any], completion: @escaping (Result<BaseResponse<Bool>, Error>) -> ())
+    
+    func subscriptionThroughSaveCard(params: [String : Any], completion: @escaping (Result<BaseResponse<Bool>, Error>) -> ())
+    
+    func postDowngradSubscription(params: [String : Any], completion: @escaping (Result<BaseResponse<Bool>, Error>) -> ())
+    
+    //Mark Design yourself Subscriptions
+    func getAvatarSubscriptionsList(completion: @escaping (Result<BaseResponse<[SubscriptionListDM]>, Error>) -> ())
+    
+    func getAvatarSubcriptionDetail(completion: @escaping (Result<BaseResponse<SubscriptionListDM>, Error>) -> ())
+    
+    func avatarSubscriptionThroughWallet(params: [String : Any], completion: @escaping (Result<BaseResponse<Bool>, Error>) -> ())
+    
+    func avatarSubscriptionThroughNewCard(params: [String : Any], completion: @escaping (Result<BaseResponse<Bool>, Error>) -> ())
+    
+    func avatarSubscriptionThroughSaveCard(params: [String : Any], completion: @escaping (Result<BaseResponse<Bool>, Error>) -> ())
+    
+    func postAvatarDowngradSubscription(params: [String : Any], completion: @escaping (Result<BaseResponse<Bool>, Error>) -> ())
+    
+    func getAvatarGalleryList(completion: @escaping (Result<BaseResponse<[AvatarGallaryDM]>, Error>) -> ())
+    
+    func getAvatarMonthlyRemainingLimit(completion: @escaping (Result<BaseResponse<Int>, Error>) -> ())
+    
+    func saveMirrorAiAvatar(params: [String : Any], completion: @escaping (Result<BaseResponse<Bool>, Error>) -> ())
+    
+    func setAvatarProfilePicture(params: [String : Any], completion: @escaping (Result<BaseResponse<Bool>, Error>) -> ()) 
 }
 
 class APIManager: Networkable {
@@ -650,6 +683,47 @@ class APIManager: Networkable {
     
     func postDowngradSubscription(params: [String : Any], completion: @escaping (Result<BaseResponse<Bool>, Error>) -> ()) {
         request(target: .downgradeSubscription(params: params), completion: completion)
+    }
+    
+    //Mark Design yourself Subscriptions
+    func getAvatarSubscriptionsList(completion: @escaping (Result<BaseResponse<[SubscriptionListDM]>, Error>) -> ()) {
+        request(target: .getAvatarSubcriptionList, completion: completion)
+    }
+    
+    func getAvatarSubcriptionDetail(completion: @escaping (Result<BaseResponse<SubscriptionListDM>, Error>) -> ()) {
+        request(target: .getAvatarSubcriptionDetail, completion: completion)
+    }
+    
+    func avatarSubscriptionThroughWallet(params: [String : Any], completion: @escaping (Result<BaseResponse<Bool>, Error>) -> ()) {
+        request(target: .avatarSubscriptionThroughWallet(params: params), completion: completion)
+    }
+    
+    func avatarSubscriptionThroughNewCard(params: [String : Any], completion: @escaping (Result<BaseResponse<Bool>, Error>) -> ()) {
+        request(target: .avatarSubscriptionThroughNewCard(params: params), completion: completion)
+    }
+    
+    func avatarSubscriptionThroughSaveCard(params: [String : Any], completion: @escaping (Result<BaseResponse<Bool>, Error>) -> ()) {
+        request(target: .avatarSubscriptionThroughSaveCard(params: params), completion: completion)
+    }
+    
+    func postAvatarDowngradSubscription(params: [String : Any], completion: @escaping (Result<BaseResponse<Bool>, Error>) -> ()) {
+        request(target: .avatarDowngradeSubscription(params: params), completion: completion)
+    }
+    
+    func getAvatarGalleryList(completion: @escaping (Result<BaseResponse<[AvatarGallaryDM]>, Error>) -> ()) {
+        request(target: .getAvatarGalleryList, completion: completion)
+    }
+    
+    func getAvatarMonthlyRemainingLimit(completion: @escaping (Result<BaseResponse<Int>, Error>) -> ()) {
+        request(target: .getAvatarMonthlyRemainingLimit, completion: completion)
+    }
+    
+    func saveMirrorAiAvatar(params: [String : Any], completion: @escaping (Result<BaseResponse<Bool>, Error>) -> ()) {
+        request(target: .saveMirrorAiAvatar(params: params), completion: completion)
+    }
+    
+    func setAvatarProfilePicture(params: [String : Any], completion: @escaping (Result<BaseResponse<Bool>, Error>) -> ()) {
+        request(target: .setAvatarProfilePicture(params: params), completion: completion)
     }
     
 }

@@ -47,7 +47,7 @@ class SubscriptionDetailVC: BaseViewController {
         
     }
     
-    // MARK: - Subscribe with Wallet
+    // MARK: - Subscribe 
     private func downgradSubscription() {
         
         self.showLoader()
@@ -78,6 +78,7 @@ class SubscriptionDetailVC: BaseViewController {
                 vc.amount = Double(details.price ?? 0)
                 vc.subscriptionName = self.details.name ?? ""
                 vc.subscriptionID = "\(self.details.id ?? 0)"
+                vc.subscriptionType = .AppSubscription
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }

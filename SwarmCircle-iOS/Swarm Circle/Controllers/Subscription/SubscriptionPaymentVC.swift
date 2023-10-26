@@ -25,6 +25,7 @@ class SubscriptionPaymentVC: BaseViewController {
     var subscriptionName = ""
     var subscriptionID = ""
     var fees:Double?
+    var subscriptionType:SubscriptionType?
     
     var cardNumber: String? // Default Card (Stripe) eg: ****** 4566, New Card (Stripe) eg: New card, PayPal eg: either hide the field or New card
     var paymentGateway: PaymentGateway? // Stripe or PayPal
@@ -115,8 +116,15 @@ class SubscriptionPaymentVC: BaseViewController {
             "subscriptionId": Int(self.subscriptionID)!,
             "amount": String(format: "%.1f", self.amount! + self.fees!)
         ] as [String : Any]
+        if self.subscriptionType == .AppSubscription
+        {
+            self.viewModel.subscriptionThroughWallet(params: params)
+        }
+        else
+        {
+            self.viewModel.avatarSubscriptionThroughWallet(params: params)
+        }
         
-        self.viewModel.subscriptionThroughWallet(params: params)
     }
     // MARK: - Deposit with new Card (Stripe)
     func subscribeWithNewCardStripe() {
@@ -133,8 +141,15 @@ class SubscriptionPaymentVC: BaseViewController {
               "amount": self.amount! + self.fees!,
             "subscriptionId": Int(self.subscriptionID)!
         ] as [String : Any]
+        if self.subscriptionType == .AppSubscription
+        {
+            self.viewModel.subscriptionThroughNewCardStripe(params: params)
+        }
+        else
+        {
+            self.viewModel.avatarSubscriptionThroughNewCard(params: params)
+        }
         
-        self.viewModel.subscriptionThroughNewCardStripe(params: params)
     }
     
     // MARK: - Deposit with default Card (Stripe)
@@ -148,7 +163,15 @@ class SubscriptionPaymentVC: BaseViewController {
             "subscriptionId": Int(self.subscriptionID)!,
             "amount": String(format: "%.1f", self.amount! + self.fees!)
         ] as [String : Any]
-        self.viewModel.subscriptionThroughSaveCardStripe(params: params)
+        if self.subscriptionType == .AppSubscription
+        {
+            self.viewModel.subscriptionThroughSaveCardStripe(params: params)
+        }
+        else
+        {
+            self.viewModel.avatarSubscriptionThroughSaveCard(params: params)
+        }
+        
     }
         
     // MARK: - Checkmark Button Tapped
@@ -262,9 +285,82 @@ extension SubscriptionPaymentVC: NetworkResponseProtocols {
                     _ =  self.navigationController!.popToViewController(controller, animated: true)
                     break
                 }
+                else if controller.isKind(of: AvatarSubscriptionListVC.self) {
+                    _ =  self.navigationController!.popToViewController(controller, animated: true)
+                    break
+                }
             }
     }
     
+}
+
+extension SubscriptionPaymentVC {
+    
+    // MARK: - Design your self
+    
+    func didAvatarSubscriptionThroughNewCard() {
+        
+        self.hideLoader()
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        self.navigationController?.navigationBar.isUserInteractionEnabled = true
+        
+        if self.viewModel.avatarSubscriptionThroughNewCardResponse?.isSuccess ?? false {
+            Alert.sharedInstance.alertOkWindow(title: "Success", message: self.viewModel.avatarSubscriptionThroughNewCardResponse?.message ?? "Some error occured") { result in
+                if result {
+                    // refresh wallet amount in MyWalletVC
+                    NotificationCenter.default.post(name: .refreshAvatarSubscription, object: nil)
+                    self.popToSubscription()
+                }
+            }
+        } else {
+            self.showToast(message: self.viewModel.avatarSubscriptionThroughNewCardResponse?.message ?? "Some error occured", delay: 2, toastType: .red)
+        }
+    }
+    
+    // MARK: - Deposit with default card Response (Stripe)
+    func didAvatarSubscriptionThroughSaveCard() {
+        
+        self.hideLoader()
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        self.navigationController?.navigationBar.isUserInteractionEnabled = true
+        
+        if self.viewModel.avatarSubscriptionThroughSaveCardResponse?.isSuccess ?? false {
+            Alert.sharedInstance.alertOkWindow(title: "Success", message: self.viewModel.avatarSubscriptionThroughSaveCardResponse?.message ?? "Some error occured") { result in
+                if result {
+                    // refresh wallet amount in MyWalletVC
+                    NotificationCenter.default.post(name: .refreshAvatarSubscription, object: nil)
+                    self.popToSubscription()
+                }
+            }
+        } else {
+            self.showToast(message: self.viewModel.avatarSubscriptionThroughSaveCardResponse?.message ?? "Some error occured", delay: 2, toastType: .red)
+        }
+    }
+    
+    // MARK: -  Response wallet
+    func didAvatarSubscriptionThroughWallet() {
+        self.hideLoader()
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        self.navigationController?.navigationBar.isUserInteractionEnabled = true
+        
+        if self.viewModel.avatarSubscriptionThroughWalletResponse?.isSuccess ?? false {
+            
+            
+            
+            Alert.sharedInstance.alertOkWindow(title: "Success", message: self.viewModel.avatarSubscriptionThroughWalletResponse?.message ?? "Some error occured") { result in
+                if result {
+                    // refresh wallet amount in MyWalletVC
+                    NotificationCenter.default.post(name: .refreshAvatarSubscription, object: nil)
+                    self.popToSubscription()
+                    
+                }
+            }
+        }
+        else
+        {
+            self.showToast(message: self.viewModel.avatarSubscriptionThroughWalletResponse?.message ?? "Some error occured", delay: 2, toastType: .red)
+        }
+    }
 }
 
 

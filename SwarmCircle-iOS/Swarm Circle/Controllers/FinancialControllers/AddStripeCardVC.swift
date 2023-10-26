@@ -17,6 +17,8 @@ class AddStripeCardVC: BaseViewController {
     
     var amount: Double?
     var isFromSubscription = false
+    var subscriptionType:SubscriptionType?
+    
     var subscriptionName = ""
     var subscriptionID = ""
 //    var clientSecret: String = ""
@@ -92,7 +94,7 @@ class AddStripeCardVC: BaseViewController {
                         vc.subscriptionName = self.subscriptionName
                         vc.subscriptionID = self.subscriptionID
                         vc.paymentGateway = .Stripe
-                        
+                        vc.subscriptionType = self.subscriptionType
                         self.navigationController?.pushViewController(vc, animated: true)
                     }
                 }

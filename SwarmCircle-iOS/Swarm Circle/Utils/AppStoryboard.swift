@@ -19,6 +19,7 @@ enum AppStoryboard : String {
     case AVCalling = "AVCalling"
     case Identify = "Identify"
     case Subscriptions = "Subscription"
+    case DesignYourself = "DesignYourself"
     
     var instance : UIStoryboard {
         return UIStoryboard(name: self.rawValue, bundle: Bundle.main)

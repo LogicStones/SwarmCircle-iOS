@@ -18,8 +18,8 @@ class ProfileVC: BaseViewController {
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     
-    var optionList = ["Edit Profile", "My Transactions", "Account Details", "My Avatar","Subscriptions", "Settings", "Contact Us", "Terms & Conditions", "Privacy Policy", "Invite to SwarmCircle", "Delete my Account"]
-    var iconsList = ["edit", "money-stack", "id", "avatarIcon","subscription", "lockedLockIcon", "phone", "cost-estimate", "contract", "shareIcon", "deleteAccountIcon"]
+    var optionList = ["Edit Profile", "My Transactions", "Account Details", "My Avatar","Subscriptions", "Design Your Self", "Settings", "Contact Us", "Terms & Conditions", "Privacy Policy", "Invite to SwarmCircle", "Delete my Account"]
+    var iconsList = ["edit", "money-stack", "id", "avatarIcon","subscription", "subscription", "lockedLockIcon", "phone", "cost-estimate", "contract", "shareIcon", "deleteAccountIcon"]
     
     let viewModel = ViewModel()
     
@@ -29,6 +29,7 @@ class ProfileVC: BaseViewController {
         // Do any additional setup after loading the view.
         self.initUI()
         self.initVariable()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.setProfileImage), name: .refreshProfileImage, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,18 +52,19 @@ class ProfileVC: BaseViewController {
         self.nameLbl.text = "\(PreferencesManager.getUserModel()?.firstName?.capitalized ?? "") \(PreferencesManager.getUserModel()?.lastName?.capitalized ?? "")"
         
         self.idLbl.text = PreferencesManager.getUserModel()?.userID ?? ""
-        
+        self.setProfileImage()
+        self.tableView.register(UINib(nibName: "EditProfileCell", bundle: nil), forCellReuseIdentifier: "EditProfileCell")
+    }
+    
+    @objc private func setProfileImage()
+    {
         self.profilePicImgView.kf.indicatorType = .activity
-        
         if let imgURL = Utils.getCompleteURL(urlString: PreferencesManager.getUserModel()?.displayImageURL) {
             self.profilePicImgView.kf.setImage(with: imgURL, placeholder: UIImage(named: "defaultProfileImage"))
         } else {
             self.profilePicImgView.image = UIImage(named: "defaultProfileImage")!
         }
-        
-        self.tableView.register(UINib(nibName: "EditProfileCell", bundle: nil), forCellReuseIdentifier: "EditProfileCell")
     }
-    
     // MARK: - Load data from API
     func initVariable() {
         self.viewModel.delegateNetworkResponse = self
@@ -172,25 +174,29 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         case 5:
+            if let vc = AppStoryboard.DesignYourself.instance.instantiateViewController(withIdentifier: "AvatarSubscriptionListVC") as? AvatarSubscriptionListVC {
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        case 6:
             if let vc = AppStoryboard.Main.instance.instantiateViewController(withIdentifier: "PrivacySettingsVC") as? PrivacySettingsVC {
                 vc.delegate = self
                 self.navigationController?.pushViewController(vc, animated: true)
             }
-        case 6:
-            if let vc = AppStoryboard.Profile.instance.instantiateViewController(withIdentifier: "ContactUsVC") as? ContactUsVC {
-                self.navigationController?.pushViewController(vc, animated: true)
-            }
         case 7:
-            if let vc = AppStoryboard.Profile.instance.instantiateViewController(withIdentifier: "AppInfoVC") as? AppInfoVC {
-                vc.sourceCell = .termsNConditions
+            if let vc = AppStoryboard.Profile.instance.instantiateViewController(withIdentifier: "ContactUsVC") as? ContactUsVC {
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         case 8:
             if let vc = AppStoryboard.Profile.instance.instantiateViewController(withIdentifier: "AppInfoVC") as? AppInfoVC {
-                vc.sourceCell = .privacyPolicy
+                vc.sourceCell = .termsNConditions
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         case 9:
+            if let vc = AppStoryboard.Profile.instance.instantiateViewController(withIdentifier: "AppInfoVC") as? AppInfoVC {
+                vc.sourceCell = .privacyPolicy
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        case 10:
 
             Utils.openShareIntent(self, description: "Hey, Checkout this Application...", shareLink: "\(AppConstants.baseURL)Account/Register?Referal=7f57bfb4")
 //            guard let shareLink = PreferencesManager.getUserModel()?.shareLink else {
@@ -198,7 +204,7 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
 //            }
 //            Utils.openShareIntent(self, description: "Hey, Checkout this Application...", shareLink: shareLink)
             
-        case 10:
+        case 11:
             
             Alert.sharedInstance.alertWindow(title: "Warning", message: "Are you sure you want to delete this account") { result in
                 if result {

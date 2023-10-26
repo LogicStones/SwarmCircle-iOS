@@ -21,7 +21,7 @@ class PaymentMethodSubscribeVC: BaseViewController {
     ]
     
     var amount: Double?
-    
+    var subscriptionType:SubscriptionType?
     var subscriptionName = ""
     var subscriptionID = ""
     let viewModel = ViewModel()
@@ -108,6 +108,7 @@ class PaymentMethodSubscribeVC: BaseViewController {
                 vc.isNewCardStripe = false
                 vc.subscriptionName = self.subscriptionName
                 vc.subscriptionID = self.subscriptionID
+                vc.subscriptionType = self.subscriptionType
                 guard let indexPath = self.tableView.indexPathForSelectedRow else {
                     return
                 }
@@ -217,6 +218,7 @@ extension PaymentMethodSubscribeVC: NetworkResponseProtocols {
                 vc.isFromSubscription = true
                 vc.subscriptionName = self.subscriptionName
                 vc.subscriptionID = self.subscriptionID
+                vc.subscriptionType = self.subscriptionType
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         } else {
